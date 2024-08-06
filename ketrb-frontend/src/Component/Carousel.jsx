@@ -9,6 +9,18 @@ const images = [
   {
     className: "image2",
     text: "Transport and Logistics"
+  },
+  {
+    className: "image3",
+    text: "Transport and Logistics"
+  },
+  {
+    className: "image4",
+    text: "Transport and Logistics"
+  },
+  {
+    className: "image5",
+    text: "Transport and Logistics"
   }
 ];
 

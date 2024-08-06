@@ -29,18 +29,6 @@ const Footer = () => {
                             <ul>
                                 <li><Link to="/" className="footer-link">Home</Link></li>
                                 <li><Link to="/about" className="footer-link">About Us</Link></li>
-                                <li>
-                                    <Link to="#" className="footer-link">Our Product and Services</Link>
-                                    <ul className="sub-menu">
-                                        <li><Link to="" className="sub-footer-link">Drip Irrigation</Link></li>
-                                        <li><Link to="" className="sub-footer-link">Greenhouse Installation</Link></li>
-                                        <li><Link to="" className="sub-footer-link">Dam Lining and Construction</Link></li>
-                                        <li><Link to="" className="sub-footer-link">Agronomic Activities</Link></li>
-                                        <li><Link to="" className="sub-footer-link">Hydroponic Systems Installation</Link></li>
-                                        <li><Link to="" className="sub-footer-link">Avocado Propagation and Planting</Link></li>
-                                    </ul>
-                                </li>
-                                <li><Link to="/" className="footer-link">Portfolio</Link></li>
                                 <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
                             </ul>
                         </section>
@@ -54,7 +42,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-lg-3">
-                        <section className="widget widget_contact_widget">
+                    <section className="widget widget_contact_widget">
                             <h3 className="footer-title">Contact Us</h3>
                             <ul className="fa-ul">
                                 <li className="flex items-center">

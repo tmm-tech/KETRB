@@ -26,6 +26,15 @@
   .u-image.image2 {
     background-image: url('../Asset/IMG_0093.JPG');
   }
+  .u-image.image3 {
+    background-image: url('../Asset/IMG_0114.JPG');
+  }
+  .u-image.image4 {
+    background-image: url('../Asset/IMG_0136.JPG');
+  }
+  .u-image.image5 {
+    background-image: url('../Asset/IMG_0289.JPG');
+  }
   
   .u-container-layout {
     display: flex;
