@@ -1,7 +1,7 @@
 /* Footer styles */
 
 .footer-top {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0307.JPG');
+    background-color: #000;
     background-size: cover;
     background-position: center;
     padding: 60px 0;

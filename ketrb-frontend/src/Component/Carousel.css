@@ -20,20 +20,20 @@
   }
   
   .u-image.image1 {
-    background-image: url('../Asset/IMG_0026.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0026.JPG');
   }
   
   .u-image.image2 {
-    background-image: url('../Asset/IMG_0093.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0093.JPG');
   }
   .u-image.image3 {
-    background-image: url('../Asset/IMG_0114.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0114.JPG');
   }
   .u-image.image4 {
-    background-image: url('../Asset/IMG_0136.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0136.JPG');
   }
   .u-image.image5 {
-    background-image: url('../Asset/IMG_0289.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../Asset/IMG_0289.JPG');
   }
   
   .u-container-layout {
