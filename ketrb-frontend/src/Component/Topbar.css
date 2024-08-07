@@ -7,7 +7,7 @@
     color: #5b92e5;
     font-weight: 600;
     padding: 10px;
-    border-bottom:2px #f39c12 solid;
+    border-bottom:6px #f39c12 solid;
     position: relative; /* Keep this for the border */
   }
   
@@ -45,7 +45,7 @@
   .account-link {
     display: flex;
     align-items: center;
-    color: #fff;
+    color: #5b92e5;
     transition: color 0.2s ease;
     
   }
