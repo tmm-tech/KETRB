@@ -1,4 +1,8 @@
 import React from 'react'
+import logo from '../Asset/Logo/ketrb.png';
+import { Link } from 'react-router-dom';
+import { Element } from 'react-scroll';
+import CountUp from 'countup';
 
 const Facts = () => {
   return (
