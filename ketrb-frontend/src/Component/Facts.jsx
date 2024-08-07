@@ -3,7 +3,7 @@ import logo from '../Asset/Logo/ketrb.png';
 import { Link } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import CountUp from 'countup';
-
+import "./facts.css";
 const Facts = () => {
   return (
     <div>
