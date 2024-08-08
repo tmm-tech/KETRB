@@ -99,10 +99,7 @@ img.img-fluid {
     /* Color of the scrollbar corner */
   }
   
-  /* Media query for responsive layout */
-  @media (max-width: 768px) {
-    /* Add responsive styles here if needed */
-  }
+
   
   /* Container styles */
   .container-xxl {
@@ -157,7 +154,6 @@ img.img-fluid {
   .container-fact .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; /* Adjust gap as needed */
   }
   
   
