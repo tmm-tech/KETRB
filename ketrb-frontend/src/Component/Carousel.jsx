@@ -3,6 +3,12 @@ import "./Carousel.css";
 
 const images = [
   {
+    className: "image0",
+    coreValueTitle: "KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD",
+    coreValueContent:
+      "",
+  },
+  {
     className: "image1",
     coreValueTitle: "Accountability",
     coreValueContent:

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './faq.css';
-
+import TopBar from "../Component/Topbar";
+import Footer from "../Component/Footer";
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -25,6 +26,8 @@ const FAQ = () => {
   };
 
   return (
+    <>
+    <TopBar/>
     <div className="faq-container">
       <h2 className="faq-title">Frequently Asked Questions</h2>
       <div className="faq-list">
@@ -44,6 +47,8 @@ const FAQ = () => {
         ))}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
