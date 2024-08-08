@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Asset/Logo/ketrb.png";
+import Image1 from "../Asset/IMG_3198.JPG";
 import { Element } from "react-scroll";
 import CountUp from "react-countup";
 import "./facts.css";
@@ -58,7 +58,7 @@ const Facts = () => {
         <div className="containers">
           <div className="row">
             <div className="col-lg-6 mb-4 mb-lg-0">
-              <img src={logo} alt="About Us" className="img-fluid rounded" />
+              <img src={Image1} alt="About Us" className="img-fluid rounded" />
             </div>
             <div className="col-lg-6">
               <h2 className="mb-4 home-about">About Us</h2>
