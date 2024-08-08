@@ -1,9 +1,17 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaYoutube
+} from "react-icons/fa";
+import TopBar from "../Component/Topbar";
+import Footer from "../Component/Footer";
 const Contact = () => {
   return (
     <>
+      <TopBar />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center">
           <div className="bg-white py-8 rounded shadow w-full md:w-1/2">
