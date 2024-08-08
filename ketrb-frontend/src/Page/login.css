@@ -310,3 +310,10 @@ button:focus {
     color: #333; 
     transition: color
   }  
+
+ 
+@media (max-width: 768px) {
+    .overlay-container {
+      display: none; 
+    }
+  }
