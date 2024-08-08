@@ -3,6 +3,7 @@ import "./faq.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
+
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -19,13 +20,14 @@ const FAQ = () => {
   if (loading) {
     return <Loading />;
   }
+
   const faqs = [
     {
       question: "How to Create an Account?",
-      answer: `a)Click the link https://portal.ketrb.go.ke:81. 
-        b)In the landing page, click sign in. On creating an account.
-        c)Select whether you want to register as an individual, consulting firm, or training institution.
-        d)Fill in the required fields and accept terms and conditions.`,
+      answer: `a) Click the link https://portal.ketrb.go.ke:81. 
+        b) In the landing page, click sign in. On creating an account.
+        c) Select whether you want to register as an individual, consulting firm, or training institution.
+        d) Fill in the required fields and accept terms and conditions.`,
     },
     {
       question: "First Time Application?",
@@ -87,8 +89,14 @@ const FAQ = () => {
       <div className="faq-container">
         <h2>Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <div className="faq-question" onClick={() => toggleFAQ(index)}>
+          <div
+            key={index}
+            className={`faq-item ${activeIndex === index ? 'active' : ''}`}
+          >
+            <div
+              className={`faq-question ${activeIndex === index ? 'active' : ''}`}
+              onClick={() => toggleFAQ(index)}
+            >
               {faq.question}
             </div>
             {activeIndex === index && (
