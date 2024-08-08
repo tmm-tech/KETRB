@@ -10,8 +10,8 @@
     height: auto;
     border-radius: 10px;
   } */
-   
-  .about-content .home-about {
+
+.home-about {
     font-size: 30px;
     font-weight: bold;
     color: #333333;
@@ -33,7 +33,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  .about-content .btn-primary:hover {
+.btn-primary:hover {
     background-color: #f39c12;
   }
   
