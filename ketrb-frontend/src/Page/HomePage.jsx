@@ -3,6 +3,7 @@ import TopBar from '../Component/Topbar';
 import Carousel from '../Component/Carousel';
 import Footer from '../Component/Footer';
 import Facts from '../Component/Facts';
+import HomeAbout from "../Component/HomeAbout";
 import Loading from "../Component/Loading";
 
 function HomePage() {
@@ -28,6 +29,7 @@ function HomePage() {
       <TopBar />
       <Carousel />
       <Facts />
+      <HomeAbout/>
       <Footer />
     </div>
   );
