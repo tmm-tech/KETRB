@@ -19,7 +19,6 @@ const TopBar = () => {
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/about" className="nav-link">About Us</Link>
         <Link to="/contact" className="nav-link">Contact Us</Link>
-        <Link to="/partner" className="nav-link">Partners</Link>
         <Link to="/news&events" className="nav-link">News & Events</Link>
         <Link to="/faq" className="nav-link">FAQ</Link>
         <div className="account-dropdown">
