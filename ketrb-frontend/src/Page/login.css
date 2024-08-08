@@ -27,6 +27,7 @@
 
 .container h1 {
     font-weight: bold;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -43,7 +44,7 @@
 }
 
 .container span {
-    font-size: 12px;
+    font-size: 20px;
 }
 
 .container a {
