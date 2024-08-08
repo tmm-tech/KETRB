@@ -11,7 +11,7 @@
     border-radius: 10px;
   }
   
-  .about-section h2 {
+  .about-section .home-about {
     font-size: 30px;
     font-weight: bold;
     color: #333333;
@@ -34,8 +34,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
-  .about-section button:hover {
+ .btn-primary:hover {
     background-color: #f39c12;
   }
   
