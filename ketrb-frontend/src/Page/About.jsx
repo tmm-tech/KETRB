@@ -1,7 +1,7 @@
 import React from "react";
 import Image1 from "../Asset/IMG_0289.JPG";
 import "./about.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 const About = () => {
