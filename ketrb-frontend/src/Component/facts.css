@@ -44,12 +44,26 @@
     .about-section {
       text-align: center;
     }
-  
+    .fact-item {
+      padding: 4rem;
+    }
+
     .about-section img {
       margin-bottom: 20px;
     }
   }
-  
+
+
+@media (max-width: 576px) {
+  .fact-item {
+    padding: 3rem;
+  }
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
   
   /* Styling the scrollbar track */
   ::-webkit-scrollbar {
