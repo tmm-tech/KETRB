@@ -48,12 +48,11 @@ const About = () => {
                 licenses to qualified persons as per the provision of the Act.
               </p>
               <br />
+              <div className="about-subheading">
+              Specialities
+            </div>
               <p>
-                At San Africa Agribusiness, we are proud to have worked with over
-                50,000 farmers across all 47 counties in Kenya. We started by
-                offering extension services before starting a nursery in Eldoret
-                after identifying a major gap in access to good quality planting
-                materials by farmers.
+              Take disciplinary measures in accordance with the provisions of The Act, Issue licences to qualified persons under the provisions of the Act, Enter and Inspect sites where Construction, Installation, Erection, Alteration, Renovation, Maintenance, Processing or Manufacturing works, Recommend for the suspension of any Engineering Technology Professional Services, Works, Projects, Installation process or any other Engineering Technology works, which are done without meeting the standards, Assess, approve or reject engineering technology qualifications of foreign persons intending to offer engineering technology professional services or works in Kenya, Enter and inspect business premises for verification purposes or for monitoring works, services and goods rendered by Professional Engineering Technologists, Set Standards for Engineering Technologists in Management, Marketing, Professional Ethics, Environmental Issues, Safety, Legal matters or any other relevant field, Conduct Professional Examinations for the purposes of registration where applicable, Plan, Arrange, Co-ordinate and oversee professional training and facilitate Internship of Engineering Technologists, Determine the fees to be charged by Engineering Technologists and firms for Professional services rendered from time to time, and Collaborate with Engineering Technology Training Institutions and Organisations, Professional Associations and other relevant bodies in matters relating to Training and Professional Development of Engineering Technologists
               </p>
             </div>
           </div>

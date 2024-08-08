@@ -38,8 +38,8 @@ const Contact = () => {
                 loading="lazy"
               ></iframe>
               <div className="mt-4">
-                <p className="text-lg font-semibold">Location</p>
-                <p>Lower Kabete, Nairobi</p>
+              <p className="text-xl font-semibold">Location</p>
+                <p>National Bank Building, 11th floor,Harambee Avenue, Nairobi</p>
               </div>
             </div>
           </div>
@@ -48,17 +48,17 @@ const Contact = () => {
         <div className="flex flex-wrap justify-between mt-8">
           {/* Contact Information */}
           <div className="bg-white p-8 rounded shadow w-full md:w-1/2">
-            <div className="text-xl font-bold text-green-500 mb-4">
+            <div className="text-xl font-bold mb-4" style={{ color: '#5b92e5' }}>
               CONTACT US
             </div>
             <div className="text-gray-800">
               <p>
                 Call/Text/WhatsApp Us:{" "}
-                <a href="tel:+2547240274351">+254 7240274351</a>
+                <a href="tel:+254724027435">+254 724027435</a>
               </p>
               <p>
                 Email:{" "}
-                <a href="mailto:kipkogeit@gmail.com">kipkogeit@gmail.com</a>
+                <a href="mailto:info@ketrb.go.ke">info@ketrb.go.ke</a>
               </p>
               <p>
                 Click here to WhatsApp Us:{" "}
@@ -69,14 +69,14 @@ const Contact = () => {
 
           {/* Operating Hours and Social Media */}
           <div className="bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0">
-            <div className="text-xl font-bold text-green-500 mb-4">
+            <div className="text-xl font-bold mb-4" style={{ color: '#5b92e5' }}>
               OUR HOURS
             </div>
             <div className="text-gray-800 mb-6">
               <p>MON-FRI 09:00 am – 5:00 pm</p>
               <p>SAT-SUN 9:00 am – noon</p>
             </div>
-            <div className="text-xl font-bold text-green-500 mb-4">
+            <div className="text-xl font-bold mb-4" style={{ color: '#5b92e5' }}>
               FOLLOW US
             </div>
             <div className="text-gray-800">
