@@ -16,16 +16,17 @@
   margin: 0 auto;
 }
 
-
 .footer-container .row {
   display: flex;
   flex-wrap: wrap;
+  width: 100%; /* Ensures the row takes full width */
 }
 
 .footer-container .col-lg-3 {
   flex: 1;
   padding: 10px;
   box-sizing: border-box;
+  width: calc(25% - 20px); /* Adjust the width for spacing */
 }
 
 .footer-title {
@@ -59,8 +60,8 @@
 }
 
 .col-lg-3 {
-  width: calc(25% - 30px);
-  margin-right: 30px;
+  width: calc(25% - 30px); /* Adjust for spacing between columns */
+  margin-right: 30px; /* Space between columns */
 }
 
 .col-lg-3:last-child {
@@ -99,15 +100,11 @@
   color: #ffc107;
 }
 
-
-
 .footer-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
 }
-
-
 
 .footer-link {
   color: #ffffff;
@@ -131,11 +128,9 @@
   text-decoration: underline;
 }
 
-
 .recent-post {
   margin-bottom: 20px;
 }
-
 
 .widget_nav_menu.quick-links {
   padding-bottom: 20px;
@@ -188,10 +183,8 @@
   text-decoration: underline;
 }
 
-/* Add this to your CSS file */
 .widget_contact_widget {
   padding-bottom: 20px;
-  /* Adjust as needed */
 }
 
 .widget_contact_widget .footer-title {
@@ -229,7 +222,6 @@
   color: #ffc107;
   text-decoration: underline;
 }
-
 
 .widget_finoptissocialiconwi_widget {
   padding-bottom: 20px;
@@ -269,13 +261,19 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .footer-container .col-lg-3 {
-      flex: 0 0 50%;
+  .col-lg-3 {
+    width: calc(50% - 20px); /* Two columns in a row */
+    margin-right: 20px; /* Adjust spacing between columns */
+  }
+
+  .col-lg-3:last-child {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 576px) {
-  .footer-container .col-lg-3 {
-      flex: 0 0 100%;
+  .col-lg-3 {
+    width: 100%; /* Single column layout */
+    margin-right: 0;
   }
 }
