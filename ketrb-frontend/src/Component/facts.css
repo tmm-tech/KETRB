@@ -36,7 +36,7 @@
   }
   
   .about-section button:hover {
-    background-color: #0056b3;
+    background-color: #f39c12;
   }
   
   /* Media query for responsive layout */
@@ -99,8 +99,9 @@
     background-color: #fff;
   }
   
-  .containers {
+  .container-fact {
     width: 100%;
+    height: auto;
     margin: 0 auto;
   }
   
@@ -120,7 +121,10 @@
   .fact-item .fa {
     color: #5b92e5;
   }
-  
+  .fact-item .fa:hover {
+    color:#f39c12;
+  }
+
   .fact-item h5 {
     font-size: 18px;
     font-weight: bold;

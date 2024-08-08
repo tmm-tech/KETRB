@@ -4,24 +4,34 @@ import "./Carousel.css";
 const images = [
   {
     className: "image1",
-    text: "On Top of the World"
+    coreValueTitle: "Accountability",
+    coreValueContent:
+      "We take responsibility for our actions and decisions, ensuring transparency and trust.",
   },
   {
     className: "image2",
-    text: "Transport and Logistics"
+    coreValueTitle: "Teamwork",
+    coreValueContent:
+      "We collaborate and support each other to achieve common goals.",
   },
   {
     className: "image3",
-    text: "Transport and Logistics"
+    coreValueTitle: "Integrity",
+    coreValueContent:
+      "We adhere to the highest ethical standards, demonstrating honesty and fairness in every action.",
   },
   {
     className: "image4",
-    text: "Transport and Logistics"
+    coreValueTitle: "Innovation",
+    coreValueContent:
+      "We foster a culture of creativity and continuous improvement, embracing new ideas and technologies.",
   },
   {
     className: "image5",
-    text: "Transport and Logistics"
-  }
+    coreValueTitle: "Commitment",
+    coreValueContent:
+      "We are dedicated to achieving excellence in everything we do, putting our best efforts into every task.",
+  },
 ];
 
 function Carousel() {
@@ -61,7 +71,10 @@ function Carousel() {
             >
               <div className={`u-image u-shading ${image.className}`}>
                 <div className="u-container-layout">
-                  <h2 className="u-text">{image.text}</h2>
+                  <div className="u-core-values">
+                    <h2>{image.coreValueTitle}</h2>
+                    <p>{image.coreValueContent}</p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,101 +1,137 @@
 .u-carousel {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
+}
+
+.u-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.u-carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.u-image {
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.u-image.image1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0026.JPG');
+}
+
+.u-image.image2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0093.JPG');
+}
+
+.u-image.image3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0114.JPG');
+}
+
+.u-image.image4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0136.JPG');
+}
+
+.u-image.image5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0289.JPG');
+}
+
+.u-container-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.u-text {
+  color: white;
+  font-size: 24px;
+}
+
+.u-carousel-control-prev,
+.u-carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.u-carousel-control-prev {
+  left: 10px;
+}
+
+.u-carousel-control-next {
+  right: 10px;
+}
+
+.u-carousel-control-prev svg,
+.u-carousel-control-next svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.u-carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.u-carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.u-carousel-indicators .u-active {
+  opacity: 1;
+}
+
+.u-core-values {
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s forwards ease-in-out;
+}
+
+.u-core-values h2 {
+  font-size: 50px;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.u-core-values p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: white;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  
-  .u-carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .u-carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .u-image {
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-  }
-  
-  .u-image.image1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0026.JPG');
-  }
-  
-  .u-image.image2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0093.JPG');
-  }
-  .u-image.image3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0114.JPG');
-  }
-  .u-image.image4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/IMG_0136.JPG');
-  }
-  .u-image.image5 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../Asset/IMG_0289.JPG');
-  }
-  
-  .u-container-layout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .u-text {
-    color: white;
-    font-size: 24px;
-  }
-  
-  .u-carousel-control-prev,
-  .u-carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-  }
-  
-  .u-carousel-control-prev {
-    left: 10px;
-  }
-  
-  .u-carousel-control-next {
-    right: 10px;
-  }
-  
-  .u-carousel-control-prev svg,
-  .u-carousel-control-next svg {
-    width: 20px;
-    height: 20px;
-    fill: white;
-  }
-  
-  .u-carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .u-carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    margin: 0 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    opacity: 0.5;
-  }
-  
-  .u-carousel-indicators .u-active {
+  to {
     opacity: 1;
-  }  
+    transform: translateY(0);
+  }
+}

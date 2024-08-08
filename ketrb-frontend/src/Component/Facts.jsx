@@ -1,15 +1,15 @@
 import React from 'react'
 import logo from '../Asset/Logo/ketrb.png';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Element } from 'react-scroll';
-import CountUp from 'countup';
+import CountUp from 'react-countup';
 import "./facts.css";
 const Facts = () => {
   return (
     <div>
         {/* Facts Start */}
         <Element name="facts" className="container-xxl py-5">
-                <div className="containers">
+                <div className="container-fact">
                     <div className="row g-4">
                         <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div className="fact-item bg-light rounded text-center h-100 p-5">
@@ -66,10 +66,10 @@ const Facts = () => {
                         <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
                             <h2 className="mb-4">About Us</h2>
                             <p>
-                                The United Nations, referred to informally as the UN, is an intergovernmental organization whose stated purposes are to maintain international peace and security, develop friendly relations among nations, achieve international cooperation, and serve as a centre for harmonizing the actions of nations.
+                            The Kenya Engineering Technology Registration Board (KETRB) was established in accordance with the Engineering Technology Act No 23 of 2016 Part II Section 3. (1) to set standards for engineering technologists and technicians, register and issue licenses to qualified persons as per the provision of the Act. 
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, urna vel bibendum ultricies, purus odio convallis odio, a consectetur ipsum elit at massa. Nullam gravida, nisi a elementum accumsan, quam velit sollicitudin metus, eu eleifend velit libero in dolor.
+                                The Board is also mandated to verify that engineering professional services and works are undertaken by persons registered under the Act as well as ensure that standards and professional ethics for health and safety of the public are observed. The members of the Board were appointed to office on 24th October, 2016 by the CS Ministry of Education.
                             </p>
                             <button className="btn btn-primary">Learn More</button>
                         </div>

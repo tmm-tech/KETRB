@@ -9,8 +9,8 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-lg-3">
                         <section className="widget widget_finoptissocialiconwi_widget">
-                            <h3 className="footer-title">About Us</h3>
-                            <p>The Kenya Engineering Technology Registration Board (KETRB) was established in accordance with the Engineering Technology Act No 23 of 2016 Part II Section 3. (1) to set standards for engineering technologists and technicians, register and issue licenses to qualified persons as per the provision of the Act. The Board is also mandated to verify that engineering professional services and works are undertaken by persons registered under the Act as well as ensure that standards and professional ethics for health and safety of the public are observed. The members of the Board were appointed to office on 24th October, 2016 by the CS Ministry of Education.</p>
+                            <h3 className="footer-title">Location</h3>
+
                         </section>
                         <section className="widget widget_finoptissocialiconwi_widget">
                             <br />
@@ -30,12 +30,15 @@ const Footer = () => {
                                 <li><Link to="/" className="footer-link">Home</Link></li>
                                 <li><Link to="/about" className="footer-link">About Us</Link></li>
                                 <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
+                                <li><Link to="/news&events" className="footer-link">News & Events</Link></li>
+                                <li><Link to="/partner" className="footer-link">Partners</Link></li>
+                                <li><Link to="/faq" className="footer-link">FAQ</Link></li>
                             </ul>
                         </section>
                     </div>
                     <div className="col-lg-3">
                         <div className="recent-widget">
-                            <h3 className="footer-title">Recent Posts</h3>
+                            <h3 className="footer-title">News & Events</h3>
                             <div className="recent-post-widget widget clearfix">
                                
                             </div>
@@ -47,19 +50,23 @@ const Footer = () => {
                             <ul className="fa-ul">
                                 <li className="flex items-center">
                                     <i className="fa fa-globe mr-2 text-lg"></i>
-                                    Lower Kabete, Kiplombe Eldoret
-                                </li>
-                                <li className="flex items-center">
-                                    <i className="fa fa-phone mr-2 text-lg"></i>
-                                    <Link to="tel:+254724027435" className="text-m"> +254 7240274351</Link>
+                                    National Bank Building, 11th floor,Harambee Avenue, Nairobi
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fa fa-envelope mr-2 text-lg"></i>
-                                    <Link to="mailto:kipkogeit@gmail.com" className="text-m">kipkogeit@gmail.com</Link>
+                                    <Link to="#" className="text-m">P. O. Box 37046-0200</Link>
+                                </li>
+                                <li className="flex items-center">
+                                    <i className="fa fa-phone mr-2 text-lg"></i>
+                                    <Link to="tel:+254740137877" className="text-m"> +254 740137877</Link>
+                                </li>
+                                <li className="flex items-center">
+                                    <i className="fa fa-envelope mr-2 text-lg"></i>
+                                    <Link to="mailto:info@ketrb.go.ke" className="text-m">info@ketrb.go.ke</Link>
                                 </li>
                                 <li className="flex items-center">
                                     <i className="mr-2 text-lg"><FaWhatsapp /></i>
-                                    <Link to="https://wa.me/2547240274351" className="text-m">+254724027435</Link>
+                                    <Link to="https://wa.me/254724027435" className="text-m">+254724027435</Link>
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fa fa-clock mr-2 text-m"></i>
