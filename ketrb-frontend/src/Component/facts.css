@@ -4,24 +4,25 @@
   
   }
   
-  .about-section img {
+  /* .about-section img {
     width: 100%;
     max-width: 400px;
     height: auto;
     border-radius: 10px;
-  }
-  .about-section .home-about {
+  } */
+   
+  .about-content .home-about {
     font-size: 30px;
     font-weight: bold;
     color: #333333;
   }
-  .about-section p {
+  .about-content p {
     font-size: 16px;
     line-height: 1.6;
     color: #555555;
   }
   
-  .about-section button {
+  .about-content button {
     margin-top: 25px;
     padding: 10px 20px;
     background-color: #5b92e5;
