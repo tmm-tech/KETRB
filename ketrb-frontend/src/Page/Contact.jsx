@@ -38,7 +38,7 @@ const Contact = () => {
                 loading="lazy"
               ></iframe>
               <div className="mt-4">
-              <p className="text-xl font-semibold">Location</p>
+              <p className="text-xl font-bold mb-4" style={{ color: '#000' }}>Location</p>
                 <p>National Bank Building, 11th floor,Harambee Avenue, Nairobi</p>
               </div>
             </div>
