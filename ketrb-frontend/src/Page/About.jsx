@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image1 from "../Asset/IMG_0289.JPG";
 import "./about.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
+import Loading from "../Component/Loading";
 import partner1 from "../Asset/Partners/cars.jpeg";
 import partner2 from "../Asset/Partners/subaru.jpeg";
 import partner3 from "../Asset/Partners/mercedes.jpeg";
 import partner4 from "../Asset/Partners/honda.jpeg";
+
 const About = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+   
+    const loadData = async () => {
+     
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setLoading(false);
+    };
+
+    loadData();
+  }, []);
+
+  if (loading) {
+    return <Loading />; 
+  }
   return (
     <>
       <TopBar />

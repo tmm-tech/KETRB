@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./news.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
+import Loading from "../Component/Loading";
+
 const newsArticles = [
   {
     image: "https://via.placeholder.com/150",
@@ -83,6 +85,22 @@ const newsArticles = [
 ];
 
 const News = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a delay for loading, in real scenario you may wait for API data or image loading
+    const loadData = async () => {
+      // Simulate network request or heavy loading task
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setLoading(false);
+    };
+
+    loadData();
+  }, []);
+
+  if (loading) {
+    return <Loading />; // Show the loading spinner until the content is loaded
+  }
   return (
     <>
       <TopBar />

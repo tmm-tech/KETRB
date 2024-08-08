@@ -1,10 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import './faq.css';
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
+import Loading from "../Component/Loading";
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const loadData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setLoading(false);
+    };
+
+    loadData();
+  }, []);
+
+  if (loading) {
+    return <Loading />; 
+  }
   const faqs = [
     {
       question: 'What is ketrb?',

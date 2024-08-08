@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
 import { FaArrowLeft } from "react-icons/fa";
 import logo from "../Asset/Logo/ketrbl.jpeg";
+import Loading from "../Component/Loading";
 
 function LoginPage() {
   const [isSignUpActive, setIsSignUpActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setLoading(false);
+    };
+
+    loadData();
+  }, []);
+
+  if (loading) {
+    return <Loading />; 
+  }
+
   const handleSignUpClick = () => {
     setIsSignUpActive(true);
   };
