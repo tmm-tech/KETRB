@@ -160,23 +160,6 @@ img.img-fluid {
     gap: 1rem; /* Adjust gap as needed */
   }
   
-  .container-fact .col-lg-3 {
-    flex: 1 1 25%; /* 4 columns */
-  }
-  
-  .container-fact .col-md-6 {
-    flex: 1 1 50%; /* 2 columns */
-  }
-  
-  .container-fact .col-12 {
-    flex: 1 1 100%; /* 1 column */
-  }
-  
-  @media (max-width: 1199px) {
-    .container-fact .col-lg-3 {
-      flex: 1 1 50%; /* 2 columns */
-    }
-  }
   
   @media (max-width: 767px) {
     .container-fact .col-lg-3, .container-fact .col-md-6 {
