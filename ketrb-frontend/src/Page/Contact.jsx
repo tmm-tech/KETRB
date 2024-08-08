@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
+import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 const Contact = () => {
   return (
     <>
