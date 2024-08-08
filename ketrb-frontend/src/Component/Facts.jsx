@@ -55,12 +55,12 @@ const Facts = () => {
 
       {/* About Start */}
       <div className="container-xxl py-5">
-        <div className="containers">
+        <div className="about-containers">
           <div className="row">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <img src={Image1} alt="About Us" className="img-fluid rounded" />
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 about-content">
               <h2 className="mb-4 home-about">About Us</h2>
               <p>
                 The Kenya Engineering Technology Registration Board (KETRB) was
