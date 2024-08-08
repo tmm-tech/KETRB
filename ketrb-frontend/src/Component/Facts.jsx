@@ -55,7 +55,7 @@ const Facts = () => {
 
       {/* About Start */}
       <div className="container-xxl py-5">
-        <div className="about-containers">
+        <div className="containers">
           <div className="row">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <img src={Image1} alt="About Us" className="img-fluid rounded" />
