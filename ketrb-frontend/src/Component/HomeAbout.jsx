@@ -1,6 +1,7 @@
 import React from "react";
 import Image1 from "../Asset/IMG_3198.JPG";
 import "./homeabout.css";
+import { Link } from "react-router-dom";
 
 const HomeAbout = () => {
   return (
@@ -29,7 +30,7 @@ const HomeAbout = () => {
                 observed. The members of the Board were appointed to office on
                 24th October, 2016 by the CS Ministry of Education.
               </p>
-              <button className="btn btn-primary">Learn More</button>
+              <button className="btn btn-primary"><Link to="/about">Learn More</Link></button>
             </div>
           </div>
         </div>
