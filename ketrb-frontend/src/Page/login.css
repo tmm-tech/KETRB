@@ -316,4 +316,15 @@ button:focus {
     .overlay-container {
       display: none; 
     }
+    .sign-up-container {
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+    }
+    .sign-in-container {
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    }
   }
