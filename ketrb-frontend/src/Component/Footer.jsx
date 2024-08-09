@@ -53,7 +53,7 @@ const Footer = () => {
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fa fa-envelope mr-2 text-lg"></i>
-                                    <Link to="#" className="text-m">P. O. Box 37046-0200</Link>
+                                    P. O. Box 37046-0200
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fa fa-phone mr-2 text-lg"></i>
@@ -69,7 +69,7 @@ const Footer = () => {
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fa fa-clock mr-2 text-m"></i>
-                                    08:00 - 16:00
+                                    Mon-Fri 09:00 AM – 5:00 PM
                                 </li>
                             </ul>
 
