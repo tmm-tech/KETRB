@@ -38,12 +38,12 @@ const Contact = () => {
                 loading="lazy"
               ></iframe>
               <div className="mt-4">
-                <p
+                <h2
                   className="text-2xl font-extrabold mb-4"
                   style={{ color: "#000" }}
                 >
                   Location
-                </p>
+                </h2>
                 <p>
                   National Bank Building, 11th floor,Harambee Avenue, Nairobi
                 </p>
