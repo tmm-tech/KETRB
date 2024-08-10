@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook,FaTwitter, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 const Footer = () => {
@@ -48,7 +48,7 @@ const Footer = () => {
                             <h3 className="footer-title">Contact Us</h3>
                             <ul className="fa-ul">
                                 <li className="flex items-center">
-                                    <i className="fa fa-globe mr-2 text-lg"></i>
+                                    <i className="fa fa-map mr-2 text-lg"></i>
                                     National Bank Building, 11th floor,Harambee Avenue, Nairobi
                                 </li>
                                 <li className="flex items-center">
@@ -57,7 +57,7 @@ const Footer = () => {
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fa fa-phone mr-2 text-lg"></i>
-                                    <Link to="tel:+254740137877" className="text-m"> +254 740137877</Link>
+                                    <Link to="tel:+254740137877" className="text-m">     vm +254 740137877</Link>
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fa fa-envelope mr-2 text-lg"></i>
