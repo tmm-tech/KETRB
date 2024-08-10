@@ -37,7 +37,7 @@ const Facts = () => {
                 </h1>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 col-12">
+            <div className="col-lg-3 col-md-6 col-12 mb-4">
               <div className="fact-item bg-light rounded text-center h-100 p-5">
                 <i className="fa fa-check fa-4x text-primary mb-4"></i>
                 <h5 className="mb-3">Projects Done</h5>
