@@ -1,17 +1,18 @@
 .top-bar {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   background-color: #fff;
   color: #5b92e5;
   font-weight: 600;
   padding: 10px;
   border-bottom: 6px #f39c12 solid;
   position: relative;
+  z-index: 1000; /* Ensure top-bar stays on top */
 }
 
 .logo-container {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .logo-img {
@@ -73,7 +74,7 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   width: 150px;
   padding: 8px 0;
-  z-index: 1;
+  z-index: 10;
   opacity: 0;
   transform-origin: top center;
   transform: scaleY(0);
@@ -156,7 +157,7 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   width: 200px;
   padding: 8px 0;
-  z-index: 1;
+  z-index: 10;
   opacity: 0;
   transform-origin: top center;
   transform: scaleY(0);
@@ -168,14 +169,15 @@
   text-decoration: none;
   padding: 10px 20px;
   display: block;
+  transition: background-color 0.2s ease;
 }
 
 .dropdown-menu .dropdown-item:hover {
   color: #f39c12;
+  background-color: #f3f3f3;
 }
 
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   transform: scaleY(1);
 }
-
