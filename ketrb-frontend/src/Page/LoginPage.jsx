@@ -6,6 +6,7 @@ import logo from "../Asset/Logo/ketrbl.jpeg";
 import Loading from "../Component/Loading";
 
 function LoginPage() {
+  const [isSignUpActive, setIsSignUpActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [loading, setLoading] = useState(true);
 
@@ -19,9 +20,16 @@ function LoginPage() {
   }, []);
 
   if (loading) {
-    return <Loading />;
+    return <Loading />; 
   }
 
+  const handleSignUpClick = () => {
+    setIsSignUpActive(true);
+  };
+
+  const handleSignInClick = () => {
+    setIsSignUpActive(false);
+  };
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
@@ -30,32 +38,8 @@ function LoginPage() {
     <div className="body_login">
       <div className="background"></div>
       <div
-        className={`container ${isSignUpActive ? "right-panel-active" : ""}`}
+        className="container"
       >
-        <div className="form-container sign-up-container">
-          <div className="back-icon">
-            <Link to="/">
-              <FaArrowLeft size={20} />
-            </Link>
-          </div>
-          <div className="language-selector">
-            <select value={selectedLanguage} onChange={handleLanguageChange}>
-              <option value="English">English</option>
-              <option value="Spanish">Spanish</option>
-              <option value="French">French</option>
-            </select>
-          </div>
-          <form action="">
-            <h1>Create Account</h1>
-            <span>use your company email for registration</span>
-            <br />
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <input type="password" name="password" placeholder="Password" />
-            <br />
-            <button>Sign Up</button>
-          </form>
-        </div>
         <div className="form-container sign-in-container">
           <div className="back-icon">
             <Link to="/">
