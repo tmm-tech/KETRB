@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image1 from "../Asset/IMG_0289.JPG";
-import Image2 from "../Asset/IMG_0988.JPG";
+import Image2 from "../Asset/IMG_0723.JPG";
 import "./about.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
