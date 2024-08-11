@@ -16,9 +16,6 @@ const TopBar = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
-
-
   return (
     <header className="top-bar">
       <div className=".logo-container">
@@ -29,9 +26,7 @@ const TopBar = () => {
           Home
         </Link>
         <div className="dropdown">
-          <div
-            className="dropdown-toggle"
-            onClick={toggleDropdown}>
+          <div className="dropdown-link" onClick={toggleDropdown}>
             Who We Are{" "}
             <i
               className={`fas ${
@@ -41,16 +36,16 @@ const TopBar = () => {
           </div>
           {showDropdown && (
             <div className="dropdown-content">
-              <Link to="/about" className="nav-link">
+              <Link to="/about">
                 About Us
               </Link>
-              <Link to="/our-mandate" className="dropdown-item">
+              <Link to="/our-mandate" >
                 Our Mandate
               </Link>
-              <Link to="/leadership" className="dropdown-item">
+              <Link to="/leadership" >
                 Leadership
               </Link>
-              <Link to="/department" className="dropdown-item">
+              <Link to="/department">
                 Department
               </Link>
             </div>
@@ -60,9 +55,9 @@ const TopBar = () => {
         <Link to="/contact" className="nav-link">
           Contact Us
         </Link>
-        <div className="news-dropdown">
+        <div className="dropdown">
           <div
-            className="news-link"
+            className="dropdown-link"
             onClick={toggleDropdown}>
             News and Events{" "}
             <i
@@ -73,10 +68,10 @@ const TopBar = () => {
           </div>
           {showDropdown && (
             <div className="dropdown-content">
-              <Link to="/programs" className="dropdown-item">
+              <Link to="/programs">
                 Programs
               </Link>
-              <Link to="/news&events" className="nav-link">
+              <Link to="/news&events">
                 News & Events
               </Link>
             </div>
@@ -94,8 +89,8 @@ const TopBar = () => {
         <Link to="/faq" className="nav-link">
           FAQ
         </Link>
-        <div className="account-dropdown">
-          <div className="account-link" onClick={toggleDropdown}>
+        <div className="dropdown">
+          <div className="dropdown-link" onClick={toggleDropdown}>
             Account{" "}
             <i
               className={`fas ${
