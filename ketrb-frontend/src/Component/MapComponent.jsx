@@ -10,7 +10,7 @@ const MapComponent = () => {
       <MapContainer center={position} zoom={13} style={{ height: '100%', width: '100%' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='© OpenStreetMap contributors'
+          attribution=''
         />
         <Marker position={position}>
           <Popup>National Bank Building, Nairobi</Popup>
