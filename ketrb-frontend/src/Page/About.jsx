@@ -5,7 +5,7 @@ import "./about.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-import partner1 from "../Asset/Partners/cda.jpeg";
+import partner1 from "../Asset/Partners/cdacc.jpeg";
 import partner2 from "../Asset/Partners/cue.png";
 import partner3 from "../Asset/Partners/tvet.png";
 import partner4 from "../Asset/Partners/tveta.png";
