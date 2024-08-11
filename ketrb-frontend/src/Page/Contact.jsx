@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
@@ -20,6 +19,7 @@ const Contact = () => {
   if (loading) {
     return <Loading />;
   }
+
   return (
     <>
       <TopBar />
@@ -40,12 +40,12 @@ const Contact = () => {
               <div className="mt-4">
                 <h2
                   className="text-2xl font-extrabold mb-4"
-                  style={{ color: "#000" }}
+                  style={{ color: "#f39c12" }}
                 >
                   Location
                 </h2>
                 <p>
-                  National Bank Building, 11th floor,Harambee Avenue, Nairobi
+                  National Bank Building, 11th floor, Harambee Avenue, Nairobi
                 </p>
               </div>
             </div>
@@ -57,7 +57,7 @@ const Contact = () => {
           <div className="bg-white p-8 rounded shadow w-full md:w-1/2">
             <div
               className="text-xl font-bold mb-4"
-              style={{ color: "#5b92e5" }}
+              style={{ color: "#f39c12" }}
             >
               CONTACT US
             </div>
@@ -80,7 +80,7 @@ const Contact = () => {
           <div className="bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0">
             <div
               className="text-xl font-bold mb-4"
-              style={{ color: "#5b92e5" }}
+              style={{ color: "#f39c12" }}
             >
               OUR HOURS
             </div>
@@ -90,47 +90,51 @@ const Contact = () => {
             </div>
             <div
               className="text-xl font-bold mb-4"
-              style={{ color: "#5b92e5" }}
+              style={{ color: "#f39c12" }}
             >
               FOLLOW US
             </div>
             <div className="text-gray-800">
               <ul className="flex space-x-4">
                 <li>
-                  <Link
-                    to="https://web.facebook.com/profile.php?id=61555197753208"
+                  <a
+                    href="https://web.facebook.com/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-3xl text-blue-600 hover:text-blue-800"
                   >
                     <FaFacebook />
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="#"
+                  <a
+                    href="https://twitter.com/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-3xl text-blue-400 hover:text-blue-600"
                   >
                     <FaTwitter />
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="#"
+                  <a
+                    href="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-3xl text-blue-700 hover:text-blue-900"
                   >
                     <FaLinkedin />
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="#"
+                  <a
+                    href="https://www.youtube.com/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-3xl text-red-600 hover:text-red-800"
                   >
                     <FaYoutube />
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

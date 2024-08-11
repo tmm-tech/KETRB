@@ -41,7 +41,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" target="_blank" className="text-2xl">
+                  <Link to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/" target="_blank" className="text-2xl">
                     <FaLinkedin />
                   </Link>
                 </li>
