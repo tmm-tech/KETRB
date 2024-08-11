@@ -8,7 +8,7 @@ import MobileMenu from "./MobileMenu"; // Import the MobileMenu component
 const TopBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
- 
+
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
@@ -36,18 +36,20 @@ const TopBar = () => {
           </div>
           {showDropdown && (
             <div className="dropdown-content">
-              <Link to="/about">
-                About Us
-              </Link>
-              <Link to="/our-mandate" >
-                Our Mandate
-              </Link>
-              <Link to="/leadership" >
-                Leadership
-              </Link>
-              <Link to="/department">
-                Department
-              </Link>
+              <ul>
+                <li>
+                  <Link to="/about">About Us</Link>
+                </li>
+                <li>
+                  <Link to="/our-mandate">Our Mandate</Link>
+                </li>
+                <li>
+                  <Link to="/leadership">Leadership</Link>
+                </li>
+                <li>
+                  <Link to="/department">Department</Link>
+                </li>
+              </ul>
             </div>
           )}
         </div>
@@ -56,9 +58,7 @@ const TopBar = () => {
           Contact Us
         </Link>
         <div className="dropdown">
-          <div
-            className="dropdown-link"
-            onClick={toggleDropdown}>
+          <div className="dropdown-link" onClick={toggleDropdown}>
             News and Events{" "}
             <i
               className={`fas ${
@@ -68,12 +68,14 @@ const TopBar = () => {
           </div>
           {showDropdown && (
             <div className="dropdown-content">
-              <Link to="/programs">
-                Programs
-              </Link>
-              <Link to="/news&events">
-                News & Events
-              </Link>
+              <ul>
+                <li>
+                  <Link to="/programs">Programs</Link>
+                </li>
+                <li>
+                  <Link to="/news&events">News & Events</Link>
+                </li>
+              </ul>
             </div>
           )}
         </div>
