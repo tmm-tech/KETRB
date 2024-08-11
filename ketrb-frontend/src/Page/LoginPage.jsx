@@ -6,7 +6,6 @@ import logo from "../Asset/Logo/ketrbl.jpeg";
 import Loading from "../Component/Loading";
 
 function LoginPage() {
-  const [isSignUpActive, setIsSignUpActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [loading, setLoading] = useState(true);
 

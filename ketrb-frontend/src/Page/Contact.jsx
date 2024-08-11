@@ -29,7 +29,7 @@ const Contact = () => {
           {/* Map and Location Details */}
           <div className="bg-white py-8 rounded shadow w-full">
             <div className="text-center">
-             <MapComponent/>
+              <MapComponent />
               <div className="mt-4">
                 <div
                   className="text-xl font-bold mb-4"
@@ -60,10 +60,11 @@ const Contact = () => {
                 <a href="tel:+254724027435">+254 724027435</a>
               </p>
               <p>
-              <b>Email:</b> <a href="mailto:info@ketrb.go.ke">info@ketrb.go.ke</a>
+                <b>Email:</b>{" "}
+                <a href="mailto:info@ketrb.go.ke">info@ketrb.go.ke</a>
               </p>
               <p>
-              <b>Click here to WhatsApp Us:</b>{" "}
+                <b>Click here to WhatsApp Us:</b>{" "}
                 <a href="https://wa.me/2547240274351">WhatsApp</a>
               </p>
             </div>
@@ -78,8 +79,12 @@ const Contact = () => {
               OUR HOURS
             </div>
             <div className="text-gray-800 mb-6">
-              <p><b>MON-FRI 09:00 am – 5:00 pm</b></p>
-              <p><b>SAT-SUN 9:00 am – noon</b></p>
+              <p>
+                <b>MON-FRI 09:00 am – 5:00 pm</b>
+              </p>
+              <p>
+                <b>SAT-SUN 9:00 am – noon</b>
+              </p>
             </div>
             <div
               className="text-xl font-bold mb-4"
