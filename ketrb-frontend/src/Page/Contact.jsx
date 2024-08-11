@@ -3,6 +3,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
+import MapComponent from "../Component/MapComponent";
 import "./contact.css";
 const Contact = () => {
   const [loading, setLoading] = useState(true);
@@ -28,15 +29,7 @@ const Contact = () => {
           {/* Map and Location Details */}
           <div className="bg-white py-8 rounded shadow w-full">
             <div className="text-center">
-              <iframe
-                title="Google Map - Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.2371777449044!2d36.82447261431332!3d-1.2172884359931836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f178181c41f85%3A0x16c52e6708c1aa0a!2sq=LOWER%20KABETE%20%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1649235028032!5m2!1sen!2ske"
-                width="100%"
-                height="250"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
+             <MapComponent/>
               <div className="mt-4">
                 <div
                   className="text-xl font-bold mb-4"

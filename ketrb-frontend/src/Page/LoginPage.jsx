@@ -23,13 +23,6 @@ function LoginPage() {
     return <Loading />;
   }
 
-  const handleSignUpClick = () => {
-    setIsSignUpActive(true);
-  };
-
-  const handleSignInClick = () => {
-    setIsSignUpActive(false);
-  };
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);

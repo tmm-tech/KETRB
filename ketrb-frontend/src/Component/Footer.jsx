@@ -7,6 +7,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import MapComponent from "./MapComponent";
 import "./Footer.css";
 const Footer = () => {
   return (
@@ -16,15 +17,7 @@ const Footer = () => {
           <div className="col-lg-3">
             <section className="widget widget_finoptissocialiconwi_widget">
               <h3 className="footer-title">Location</h3>
-              <iframe
-                title="Google Map - Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.2371777449044!2d36.82447261431332!3d-1.2172884359931836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f178181c41f85%3A0x16c52e6708c1aa0a!2sq=LOWER%20KABETE%20%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1649235028032!5m2!1sen!2ske"
-                width="100%"
-                height="250"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
+              <MapComponent/>
             </section>
             <section className="widget widget_finoptissocialiconwi_widget">
               <br />
