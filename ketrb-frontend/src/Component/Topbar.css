@@ -1,19 +1,22 @@
-/* Top Bar styles */
 .top-bar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center; 
   background-color: #fff;
   color: #5b92e5;
   font-weight: 600;
   padding: 10px;
   border-bottom: 6px #f39c12 solid;
-  position: relative; /* Keep this for the border */
+  position: relative;
 }
 
-.logo {
+.logo-container {
+  margin-bottom: 10px; 
+}
+
+.logo-img {
   width: 100px;
-  height: 100px;
+  height: auto;
 }
 
 .nav-links {

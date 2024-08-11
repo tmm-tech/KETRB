@@ -19,7 +19,7 @@ const TopBar = () => {
 
   return (
     <header className="top-bar">
-      <div className="logo">
+      <div className=".logo-container">
         <img src={logo} alt="logo" className="logo-img" />
       </div>
       <nav className={`nav-links ${showMenu ? 'hidden' : ''}`}>
