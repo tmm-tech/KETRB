@@ -107,7 +107,7 @@ const Footer = () => {
                   <i className="fa fa-phone mr-2 text-lg"></i>
                   <Link to="tel:+254740137877" className="text-m">
                     {" "}
-                    vm +254 740137877
+                    +254 740137877
                   </Link>
                 </li>
                 <li className="flex items-center">
