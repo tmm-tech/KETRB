@@ -16,7 +16,8 @@ const About = () => {
   useEffect(() => {
     const loadData = async () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      setLoading(false);cc
+      setLoading(false);
+      cc;
     };
 
     loadData();
@@ -30,63 +31,70 @@ const About = () => {
       <TopBar />
       <div className="about-container mx-auto px-4 py-12">
         {/* About Section */}
-        <div className="about-content max-w-6xl mx-auto flex flex-wrap items-center">
+        <div className="about-content max-w-6xl mx-auto flex flex-wrap items-stretch">
           <div className="about-image-item w-full md:w-1/2">
             <img src={Image1} alt="About Us" className="w-full rounded" />
           </div>
-          <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0">
-            <div className="about-subheading">Who We Are</div>
-            <div className="text-gray-800">
-              <p>
-                The Kenya Engineering Technology Registration Board (KETRB) was
-                established in accordance with the Engineering Technology Act No
-                23 of 2016 Part II Section 3. (1) to set standards for
-                engineering technologists and technicians, register and issue
-                licenses to qualified persons as per the provision of the Act.
-              </p>
-              <br />
+          <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0 flex items-center">
+            <div>
+              <div className="about-subheading">Who We Are</div>
+              <div className="text-gray-800">
+                <p>
+                  The Kenya Engineering Technology Registration Board (KETRB)
+                  was established in accordance with the Engineering Technology
+                  Act No 23 of 2016 Part II Section 3. (1) to set standards for
+                  engineering technologists and technicians, register and issue
+                  licenses to qualified persons as per the provision of the Act.
+                </p>
+                <br />
+              </div>
             </div>
           </div>
         </div>
-        <div className="about-content max-w-6xl mx-auto flex flex-wrap items-center">
-          <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0">
-            <div className="about-subheading">Specialities</div>
-            <div className="text-gray-800">
-              <p>
-                Take disciplinary measures in accordance with the provisions of
-                The Act, Issue licences to qualified persons under the
-                provisions of the Act, Enter and Inspect sites where
-                Construction, Installation, Erection, Alteration, Renovation,
-                Maintenance, Processing or Manufacturing works, Recommend for
-                the suspension of any Engineering Technology Professional
-                Services, Works, Projects, Installation process or any other
-                Engineering Technology works, which are done without meeting the
-                standards, Assess, approve or reject engineering technology
-                qualifications of foreign persons intending to offer engineering
-                technology professional services or works in Kenya, Enter and
-                inspect business premises for verification purposes or for
-                monitoring works, services and goods rendered by Professional
-                Engineering Technologists, Set Standards for Engineering
-                Technologists in Management, Marketing, Professional Ethics,
-                Environmental Issues, Safety, Legal matters or any other
-                relevant field, Conduct Professional Examinations for the
-                purposes of registration where applicable, Plan, Arrange,
-                Co-ordinate and oversee professional training and facilitate
-                Internship of Engineering Technologists, Determine the fees to
-                be charged by Engineering Technologists and firms for
-                Professional services rendered from time to time, and
-                Collaborate with Engineering Technology Training Institutions
-                and Organisations, Professional Associations and other relevant
-                bodies in matters relating to Training and Professional
-                Development of Engineering Technologists
-              </p>
-              <br />
+
+        <div className="about-content max-w-6xl mx-auto flex flex-wrap items-stretch">
+          <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0 flex items-center">
+            <div>
+              <div className="about-subheading">Specialities</div>
+              <div className="text-gray-800">
+                <p>
+                  Take disciplinary measures in accordance with the provisions
+                  of The Act, Issue licences to qualified persons under the
+                  provisions of the Act, Enter and Inspect sites where
+                  Construction, Installation, Erection, Alteration, Renovation,
+                  Maintenance, Processing or Manufacturing works, Recommend for
+                  the suspension of any Engineering Technology Professional
+                  Services, Works, Projects, Installation process or any other
+                  Engineering Technology works, which are done without meeting
+                  the standards, Assess, approve or reject engineering
+                  technology qualifications of foreign persons intending to
+                  offer engineering technology professional services or works in
+                  Kenya, Enter and inspect business premises for verification
+                  purposes or for monitoring works, services and goods rendered
+                  by Professional Engineering Technologists, Set Standards for
+                  Engineering Technologists in Management, Marketing,
+                  Professional Ethics, Environmental Issues, Safety, Legal
+                  matters or any other relevant field, Conduct Professional
+                  Examinations for the purposes of registration where
+                  applicable, Plan, Arrange, Co-ordinate and oversee
+                  professional training and facilitate Internship of Engineering
+                  Technologists, Determine the fees to be charged by Engineering
+                  Technologists and firms for Professional services rendered
+                  from time to time, and Collaborate with Engineering Technology
+                  Training Institutions and Organisations, Professional
+                  Associations and other relevant bodies in matters relating to
+                  Training and Professional Development of Engineering
+                  Technologists
+                </p>
+                <br />
+              </div>
             </div>
           </div>
           <div className="about-image-item w-full md:w-1/2">
             <img src={Image2} alt="About Us" className="w-full rounded" />
           </div>
         </div>
+
         {/* Our Mission and Vision Section */}
         <div className="mission-vision-section my-12">
           <div className="max-w-6xl mx-auto text-center">
