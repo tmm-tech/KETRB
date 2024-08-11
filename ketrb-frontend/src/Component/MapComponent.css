@@ -1,0 +1,9 @@
+.map-container {
+    height: 400px; /* Set your desired height */
+    width: 100%;   /* Full width of the parent container */
+  }
+  
+  .widget_finoptissocialiconwi_widget {
+    margin: 20px;  /* Optional: add some margin to the widget section */
+  }
+  
