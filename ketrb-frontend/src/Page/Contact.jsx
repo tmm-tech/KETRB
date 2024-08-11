@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-
+import "./contact.css";
 const Contact = () => {
   const [loading, setLoading] = useState(true);
 
@@ -38,12 +38,12 @@ const Contact = () => {
                 loading="lazy"
               ></iframe>
               <div className="mt-4">
-                <h2
-                  className="text-2xl font-extrabold mb-4"
+                <div
+                  className="text-xl font-bold mb-4"
                   style={{ color: "#f39c12" }}
                 >
                   Location
-                </h2>
+                </div>
                 <p>
                   National Bank Building, 11th floor, Harambee Avenue, Nairobi
                 </p>
@@ -63,14 +63,14 @@ const Contact = () => {
             </div>
             <div className="text-gray-800">
               <p>
-                Call/Text/WhatsApp Us:{" "}
+                <b>Call/Text/WhatsApp Us:</b>{" "}
                 <a href="tel:+254724027435">+254 724027435</a>
               </p>
               <p>
-                Email: <a href="mailto:info@ketrb.go.ke">info@ketrb.go.ke</a>
+              <b>Email:</b> <a href="mailto:info@ketrb.go.ke">info@ketrb.go.ke</a>
               </p>
               <p>
-                Click here to WhatsApp Us:{" "}
+              <b>Click here to WhatsApp Us:</b>{" "}
                 <a href="https://wa.me/2547240274351">WhatsApp</a>
               </p>
             </div>
@@ -85,8 +85,8 @@ const Contact = () => {
               OUR HOURS
             </div>
             <div className="text-gray-800 mb-6">
-              <p>MON-FRI 09:00 am – 5:00 pm</p>
-              <p>SAT-SUN 9:00 am – noon</p>
+              <p><b>MON-FRI 09:00 am – 5:00 pm</b></p>
+              <p><b>SAT-SUN 9:00 am – noon</b></p>
             </div>
             <div
               className="text-xl font-bold mb-4"
@@ -94,9 +94,10 @@ const Contact = () => {
             >
               FOLLOW US
             </div>
+
             <div className="text-gray-800">
               <ul className="flex space-x-4">
-                <li>
+                <li className="social-icons">
                   <a
                     href="https://web.facebook.com/"
                     target="_blank"
@@ -106,7 +107,7 @@ const Contact = () => {
                     <FaFacebook />
                   </a>
                 </li>
-                <li>
+                <li className="social-icons">
                   <a
                     href="https://twitter.com/"
                     target="_blank"
@@ -116,7 +117,7 @@ const Contact = () => {
                     <FaTwitter />
                   </a>
                 </li>
-                <li>
+                <li className="social-icons">
                   <a
                     href="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
                     target="_blank"
@@ -126,7 +127,7 @@ const Contact = () => {
                     <FaLinkedin />
                   </a>
                 </li>
-                <li>
+                <li className="social-icons">
                   <a
                     href="https://www.youtube.com/"
                     target="_blank"
