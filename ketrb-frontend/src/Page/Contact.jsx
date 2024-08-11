@@ -37,9 +37,9 @@ const Contact = () => {
                 >
                   Location
                 </div>
-                <p>
+                <h3>
                   National Bank Building, 11th floor, Harambee Avenue, Nairobi
-                </p>
+                </h3>
               </div>
             </div>
           </div>
