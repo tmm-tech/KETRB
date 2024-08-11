@@ -20,7 +20,7 @@ function LoginPage() {
   }, []);
 
   if (loading) {
-    return <Loading />; 
+    return <Loading />;
   }
 
   const handleSignUpClick = () => {
@@ -98,20 +98,6 @@ function LoginPage() {
               <p>
                 To keep connected with us please login with your personal info
               </p>
-              <button className="ghost" onClick={handleSignInClick}>
-                Sign In
-              </button>
-            </div>
-            <div className="overlay-panel overlay-right">
-              <div className="logo-container">
-                <img className="company-logo" src={logo} alt="Company Logo" />
-              </div>
-
-              <h1>Hello, Friend!</h1>
-              <p>Enter your details and start the journey with us</p>
-              <button className="ghost" onClick={handleSignUpClick}>
-                Sign Up
-              </button>
             </div>
           </div>
         </div>
