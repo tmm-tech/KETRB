@@ -8,10 +8,7 @@ import MobileMenu from "./MobileMenu"; // Import the MobileMenu component
 const TopBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [showSubmenu, setShowSubmenu] = useState({
-    aboutUs: false,
-    newsAndEvents: false,
-  });
+ 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
@@ -20,12 +17,7 @@ const TopBar = () => {
     setShowMenu(!showMenu);
   };
 
-  const toggleSubmenu = (menu) => {
-    setShowSubmenu((prev) => ({
-      ...prev,
-      [menu]: !prev[menu],
-    }));
-  };
+
 
   return (
     <header className="top-bar">
@@ -39,17 +31,16 @@ const TopBar = () => {
         <div className="dropdown">
           <div
             className="dropdown-toggle"
-            onClick={() => toggleSubmenu("aboutUs")}
-          >
+            onClick={toggleDropdown}>
             Who We Are{" "}
             <i
               className={`fas ${
-                showSubmenu.aboutUs ? "fa-angle-up" : "fa-angle-down"
+                showDropdown ? "fa-angle-up" : "fa-angle-down"
               }`}
             ></i>
           </div>
-          {showSubmenu.aboutUs && (
-            <div className="dropdown-menu">
+          {showDropdown && (
+            <div className="dropdown-content">
               <Link to="/about" className="nav-link">
                 About Us
               </Link>
@@ -69,26 +60,23 @@ const TopBar = () => {
         <Link to="/contact" className="nav-link">
           Contact Us
         </Link>
-        <div className="dropdown">
+        <div className="news-dropdown">
           <div
-            className="dropdown-toggle"
-            onClick={() => toggleSubmenu("newsAndEvents")}
-          >
+            className="news-link"
+            onClick={toggleDropdown}>
             News and Events{" "}
             <i
               className={`fas ${
-                showSubmenu.newsAndEvents ? "fa-angle-up" : "fa-angle-down"
+                showDropdown ? "fa-angle-up" : "fa-angle-down"
               }`}
             ></i>
           </div>
-          {showSubmenu.newsAndEvents && (
-            <div className="dropdown-menu">
+          {showDropdown && (
+            <div className="dropdown-content">
               <Link to="/programs" className="dropdown-item">
-                {" "}
                 Programs
               </Link>
               <Link to="/news&events" className="nav-link">
-                {" "}
                 News & Events
               </Link>
             </div>
