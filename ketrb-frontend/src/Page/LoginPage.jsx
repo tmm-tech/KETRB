@@ -6,7 +6,6 @@ import logo from "../Asset/Logo/ketrbl.jpeg";
 import Loading from "../Component/Loading";
 
 function LoginPage() {
-  const [isSignUpActive, setIsSignUpActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [loading, setLoading] = useState(true);
 
@@ -22,14 +21,6 @@ function LoginPage() {
   if (loading) {
     return <Loading />; 
   }
-
-  const handleSignUpClick = () => {
-    setIsSignUpActive(true);
-  };
-
-  const handleSignInClick = () => {
-    setIsSignUpActive(false);
-  };
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
