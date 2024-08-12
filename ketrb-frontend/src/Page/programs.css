@@ -1,0 +1,51 @@
+
+.programs {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.programs-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
+}
+
+.programs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.program-card {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.program-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.program-title {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin: 1rem;
+}
+
+.program-description {
+    font-size: 1rem;
+    color: #4a5568;
+    margin: 0 1rem 1rem;
+}

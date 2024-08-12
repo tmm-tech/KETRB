@@ -46,9 +46,9 @@ const TopBar = () => {
                 <li>
                   <Link to="/leadership">Leadership</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/department">Department</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           )}

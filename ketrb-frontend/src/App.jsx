@@ -6,6 +6,10 @@ import About from "./Page/About";
 import News from "./Page/News";
 import FAQ from "./Page/FAQ";
 import Contact from "./Page/Contact";
+import OurMandate from "./Page/MandatePage";
+import Leadership from "./Page/Leadership";
+import Gallery from "./Page/Gallery";
+import Programs from "./Page/Programs";
 function App() {
   return (
     <div className="App">
@@ -14,8 +18,12 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about" element={<About/>} />
         <Route path="/news&events" element={<News/>} />
+        <Route path="/programs" element={<Programs/>} />
         <Route path="/faq" element={<FAQ/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/our-mandate" element={<OurMandate/>} />
+        <Route path="/leadership" element={<Leadership/>} />
+        <Route path="/gallery" element={<Gallery/>} />
       </Routes>
     </div>
   );
