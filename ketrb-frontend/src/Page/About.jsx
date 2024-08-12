@@ -55,36 +55,63 @@ const About = () => {
           <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0 flex items-center">
             <div>
               <div className="about-subheading">Specialities</div>
-              <div className="text-gray-800">
+              <div className="about-special text-gray-800">
                 <p>
                   Take disciplinary measures in accordance with the provisions
-                  of The Act, Issue licences to qualified persons under the
-                  provisions of the Act, Enter and Inspect sites where
-                  Construction, Installation, Erection, Alteration, Renovation,
-                  Maintenance, Processing or Manufacturing works, Recommend for
-                  the suspension of any Engineering Technology Professional
-                  Services, Works, Projects, Installation process or any other
-                  Engineering Technology works, which are done without meeting
-                  the standards, Assess, approve or reject engineering
-                  technology qualifications of foreign persons intending to
-                  offer engineering technology professional services or works in
-                  Kenya, Enter and inspect business premises for verification
-                  purposes or for monitoring works, services and goods rendered
-                  by Professional Engineering Technologists, Set Standards for
-                  Engineering Technologists in Management, Marketing,
-                  Professional Ethics, Environmental Issues, Safety, Legal
-                  matters or any other relevant field, Conduct Professional
-                  Examinations for the purposes of registration where
-                  applicable, Plan, Arrange, Co-ordinate and oversee
-                  professional training and facilitate Internship of Engineering
-                  Technologists, Determine the fees to be charged by Engineering
-                  Technologists and firms for Professional services rendered
-                  from time to time, and Collaborate with Engineering Technology
-                  Training Institutions and Organisations, Professional
-                  Associations and other relevant bodies in matters relating to
-                  Training and Professional Development of Engineering
-                  Technologists
+                  of The Act:
                 </p>
+                <ul>
+                  <li>
+                    Issue licences to qualified persons under the provisions of
+                    the Act.
+                  </li>
+                  <li>
+                    Enter and Inspect sites where Construction, Installation,
+                    Erection, Alteration, Renovation, Maintenance, Processing or
+                    Manufacturing works are conducted.
+                  </li>
+                  <li>
+                    Recommend the suspension of any Engineering Technology
+                    Professional Services, Works, Projects, Installation
+                    processes, or any other Engineering Technology works which
+                    do not meet the standards.
+                  </li>
+                  <li>
+                    Assess, approve, or reject engineering technology
+                    qualifications of foreign persons intending to offer
+                    engineering technology professional services or works in
+                    Kenya.
+                  </li>
+                  <li>
+                    Enter and inspect business premises for verification
+                    purposes or for monitoring works, services, and goods
+                    rendered by Professional Engineering Technologists.
+                  </li>
+                  <li>
+                    Set standards for Engineering Technologists in Management,
+                    Marketing, Professional Ethics, Environmental Issues,
+                    Safety, Legal matters, or any other relevant field.
+                  </li>
+                  <li>
+                    Conduct Professional Examinations for the purposes of
+                    registration where applicable.
+                  </li>
+                  <li>
+                    Plan, arrange, coordinate, and oversee professional training
+                    and facilitate internship of Engineering Technologists.
+                  </li>
+                  <li>
+                    Determine the fees to be charged by Engineering
+                    Technologists and firms for Professional services rendered
+                    from time to time.
+                  </li>
+                  <li>
+                    Collaborate with Engineering Technology Training
+                    Institutions and Organisations, Professional Associations,
+                    and other relevant bodies in matters relating to Training
+                    and Professional Development of Engineering Technologists.
+                  </li>
+                </ul>
                 <br />
               </div>
             </div>
