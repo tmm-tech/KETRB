@@ -3,7 +3,7 @@ import {
   FaFacebook,
   FaTwitter,
   FaLinkedin,
-  FaYoutube,    
+  FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -17,30 +17,37 @@ const Footer = () => {
           <div className="col-lg-3">
             <section className="widget widget_finoptissocialiconwi_widget">
               <h3 className="footer-title">Location</h3>
-              <MapComponent/>
+              <MapComponent />
             </section>
             <section className="widget widget_finoptissocialiconwi_widget">
               <br />
               <h3 className="footer-title">Follow Us</h3>
               <ul className="footer_social">
                 <li>
-                  <Link to="#" target="_blank" className="text-2xl">
+                  <Link
+                    to="https://www.facebook.com/KETRBOARD"
+                    target="_blank"
+                    className="text-2xl"
+                  >
                     <FaFacebook />
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" target="_blank" className="text-2xl">
+                  <Link
+                    to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
+                    target="_blank"
+                    className="text-2xl"
+                  >
                     <FaTwitter />
                   </Link>
                 </li>
                 <li>
-                  <Link to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/" target="_blank" className="text-2xl">
+                  <Link
+                    to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
+                    target="_blank"
+                    className="text-2xl"
+                  >
                     <FaLinkedin />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" target="_blank" className="text-2xl">
-                    <FaYoutube />
                   </Link>
                 </li>
               </ul>

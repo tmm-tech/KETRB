@@ -96,7 +96,7 @@ const Contact = () => {
               <ul className="flex space-x-4">
                 <li className="social-icons">
                   <a
-                    href="https://web.facebook.com/"
+                    href="https://www.facebook.com/KETRBOARD"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-3xl text-blue-600 hover:text-blue-800"
@@ -106,7 +106,7 @@ const Contact = () => {
                 </li>
                 <li className="social-icons">
                   <a
-                    href="https://twitter.com/"
+                    href="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-3xl text-blue-400 hover:text-blue-600"
@@ -122,16 +122,6 @@ const Contact = () => {
                     className="text-3xl text-blue-700 hover:text-blue-900"
                   >
                     <FaLinkedin />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://www.youtube.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-3xl text-red-600 hover:text-red-800"
-                  >
-                    <FaYoutube />
                   </a>
                 </li>
               </ul>
