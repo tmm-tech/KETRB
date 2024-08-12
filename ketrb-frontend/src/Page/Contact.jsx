@@ -47,7 +47,7 @@ const Contact = () => {
 
         <div className="flex flex-wrap justify-between mt-8">
           {/* Contact Information */}
-          <div className="bg-white p-8 rounded shadow w-full md:w-1/2">
+          <div className="contact-info bg-white p-8 rounded shadow w-full md:w-1/2">
             <div
               className="text-xl font-bold mb-4"
               style={{ color: "#f39c12" }}
@@ -71,7 +71,7 @@ const Contact = () => {
           </div>
 
           {/* Operating Hours and Social Media */}
-          <div className="bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0">
+          <div className="operating-hours bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0">
             <div
               className="text-xl font-bold mb-4"
               style={{ color: "#f39c12" }}
