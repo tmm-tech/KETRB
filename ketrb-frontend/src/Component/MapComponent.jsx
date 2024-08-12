@@ -1,15 +1,16 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import iconUrl from "../Asset/icons/marker-icon.png";
 import "./MapComponent.css";
-import icon from "../Asset/icons/marker-icon.png";
-import L from 'leaflet';
+
 // Define the icon for the marker
 const markerIcon = new L.Icon({
-  iconUrl: {icon}, 
-  iconSize: [25, 41], 
-  iconAnchor: [12, 41], 
-  popupAnchor: [1, -34], 
+  iconUrl: iconUrl, // Reference the imported icon directly
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
 });
 
 const MapComponent = () => {
