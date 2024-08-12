@@ -92,7 +92,6 @@ const Contact = () => {
             >
               FOLLOW US
             </div>
-
             <div className="text-gray-800">
               <ul className="flex space-x-4">
                 <li className="social-icons">
