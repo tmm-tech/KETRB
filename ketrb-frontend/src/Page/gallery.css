@@ -67,10 +67,10 @@ body {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #f39c12;
+    background: #f5f4f200;
     border: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 5rem;
     padding: 0.5rem;
     border-radius: 50%;
     cursor: pointer;
