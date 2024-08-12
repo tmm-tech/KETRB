@@ -8,7 +8,8 @@
   padding: 10px;
   border-bottom: 6px #f39c12 solid;
   position: relative;
-  z-index: 1000; /* Ensure top-bar stays on top */
+  z-index: 1000;
+  /* Ensure top-bar stays on top */
 }
 
 .logo-container {
@@ -24,11 +25,13 @@
   display: flex;
   align-items: center;
   margin-right: 20px;
-  transition: opacity 0.3s ease; /* Smooth transition for hiding/showing */
+  transition: opacity 0.3s ease;
+  /* Smooth transition for hiding/showing */
 }
 
 .nav-links.hidden {
-  display: none; /* Hide the navigation links on mobile */
+  display: none;
+  /* Hide the navigation links on mobile */
 }
 
 .nav-link {
@@ -66,13 +69,14 @@
   color: #f39c12;
 }
 
+/* Styles for the dropdown content */
 .dropdown-content {
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  width: 150px;
+  width: 200px;
   padding: 8px 0;
   z-index: 10;
   opacity: 0;
@@ -81,15 +85,37 @@
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.dropdown-content a {
-  color: #5b92e5;
-  text-decoration: none;
-  padding: 20px;
+.dropdown-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.dropdown-content a:hover {
+.dropdown-content li {
+  padding: 10px 20px;
+  position: relative;
+}
+
+.dropdown-content li:not(:last-child) {
+  border-bottom: 2px solid transparent;
+}
+
+.dropdown-content li:hover {
+  background-color: #f3f3f3;
+  border-bottom: 2px solid #f39c12;
+}
+
+.dropdown-content li a {
+  color: #5b92e5;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.dropdown-content li a:hover {
   color: #f39c12;
 }
+
 
 .dropdown:hover .dropdown-content {
   opacity: 1;
@@ -119,11 +145,12 @@
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Hide the default nav links on small screens */
+    display: none;
+    /* Hide the default nav links on small screens */
   }
 
   .hamburger {
-    display: block; /* Show the hamburger icon on small screens */
+    display: block;
+    /* Show the hamburger icon on small screens */
   }
 }
-
