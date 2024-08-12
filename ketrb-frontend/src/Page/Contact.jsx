@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 import MapComponent from "../Component/MapComponent";
 import "./contact.css";
+
 const Contact = () => {
   const [loading, setLoading] = useState(true);
 
@@ -24,19 +25,14 @@ const Contact = () => {
   return (
     <>
       <TopBar />
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center">
+      <div className="contact-container">
+        <div className="contact-inner-container">
           {/* Map and Location Details */}
-          <div className="bg-white py-8 rounded shadow w-full">
-            <div className="text-center">
+          <div className="contact-map-section">
+            <div className="contact-map-wrapper">
               <MapComponent />
-              <div className="mt-4">
-                <div
-                  className="text-xl font-bold mb-4"
-                  style={{ color: "#f39c12" }}
-                >
-                  Location
-                </div>
+              <div className="contact-location-details">
+                <div className="contact-location-header">Location</div>
                 <h3>
                   National Bank Building, 11th floor, Harambee Avenue, Nairobi
                 </h3>
@@ -45,16 +41,11 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-between mt-8">
+        <div className="contact-info-wrapper">
           {/* Contact Information */}
-          <div className="contact-info bg-white p-8 rounded shadow w-full md:w-1/2">
-            <div
-              className="text-xl font-bold mb-4"
-              style={{ color: "#f39c12" }}
-            >
-              CONTACT US
-            </div>
-            <div className="text-gray-800">
+          <div className="contact-details-section">
+            <div className="contact-section-header">CONTACT US</div>
+            <div className="contact-details">
               <p>
                 <b>Call/Text/WhatsApp Us:</b>{" "}
                 <a href="tel:+254724027435">+254 724027435</a>
@@ -71,14 +62,9 @@ const Contact = () => {
           </div>
 
           {/* Operating Hours and Social Media */}
-          <div className="operating-hours bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0">
-            <div
-              className="text-xl font-bold mb-4"
-              style={{ color: "#f39c12" }}
-            >
-              OUR HOURS
-            </div>
-            <div className="text-gray-800 mb-6">
+          <div className="contact-hours-social-section">
+            <div className="contact-section-header">OUR HOURS</div>
+            <div className="contact-hours-details">
               <p>
                 <b>MON-FRI 09:00 am – 5:00 pm</b>
               </p>
@@ -86,40 +72,35 @@ const Contact = () => {
                 <b>SAT-SUN 9:00 am – noon</b>
               </p>
             </div>
-            <div
-              className="text-xl font-bold mb-4"
-              style={{ color: "#f39c12" }}
-            >
-              FOLLOW US
-            </div>
-            <div className="text-gray-800">
-              <ul className="flex space-x-4">
-                <li className="social-icons">
+            <div className="contact-section-header">FOLLOW US</div>
+            <div className="contact-social-media">
+              <ul className="contact-social-icons">
+                <li>
                   <a
                     href="https://www.facebook.com/KETRBOARD"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl text-blue-600 hover:text-blue-800"
+                    className="facebook-icon"
                   >
                     <FaFacebook />
                   </a>
                 </li>
-                <li className="social-icons">
+                <li>
                   <a
                     href="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl text-blue-400 hover:text-blue-600"
+                    className="twitter-icon"
                   >
                     <FaTwitter />
                   </a>
                 </li>
-                <li className="social-icons">
+                <li>
                   <a
                     href="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl text-blue-700 hover:text-blue-900"
+                    className="linkedin-icon"
                   >
                     <FaLinkedin />
                   </a>
