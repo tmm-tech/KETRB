@@ -102,9 +102,13 @@ const TopBar = () => {
           </div>
           {showDropdown && (
             <div className="dropdown-content">
-              <Link to="/login">
-                <i className="fas fa-user-circle"></i> Login
-              </Link>
+              <ul>
+                <li>
+                  <Link to="/login">
+                    <i className="fas fa-user-circle"></i> Login
+                  </Link>
+                </li>
+              </ul>
             </div>
           )}
         </div>
