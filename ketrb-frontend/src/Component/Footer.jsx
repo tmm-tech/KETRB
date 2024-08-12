@@ -3,7 +3,6 @@ import {
   FaFacebook,
   FaTwitter,
   FaLinkedin,
-  FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
