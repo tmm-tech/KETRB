@@ -47,7 +47,7 @@ const Gallery = () => {
               className="gallery-item"
               onClick={() => openLightbox(src)}
             >
-              <img src={src} alt={`Gallery Image ${index + 1}`} className="gallery-image" />
+              <img src={src} alt={`Gallery ${index + 1}`} className="gallery-image" />
             </div>
           ))}
         </div>
