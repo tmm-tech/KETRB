@@ -144,26 +144,27 @@
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
+  .top-bar {
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    margin-bottom: 0;
+    margin-right: auto; /* Push logo to the left */
+  }
+
   .nav-links {
-    display: none;
+    display: none; /* Hide nav-links on mobile */
   }
 
   .hamburger {
-    display: block;
+    display: block; /* Show hamburger icon on mobile */
   }
-  .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    color: #5b92e5;
-    font-weight: 600;
-    padding: 10px;
-    position: relative;
-  }
-  
-  .logo {
+
+  .logo-img {
     width: 100px;
-    height: 70px;
+    height: auto;
   }
+
 }
