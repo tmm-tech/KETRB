@@ -145,21 +145,21 @@
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
   .top-bar {
-    flex-direction: row; /* Align items horizontally */
+    flex-direction: row; 
     justify-content: space-between;
   }
 
   .logo-container {
     margin-bottom: 0;
-    margin-right: auto; /* Push logo to the left */
+    margin-right: auto; 
   }
 
   .nav-links {
-    display: none; /* Hide nav-links on mobile */
+    display: none; 
   }
 
   .hamburger {
-    display: block; /* Show hamburger icon on mobile */
+    display: block; 
   }
 
   .logo-img {
