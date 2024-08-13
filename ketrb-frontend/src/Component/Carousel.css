@@ -14,10 +14,11 @@
 }
 
 .u-image {
-  background-size: contain; 
+  background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
   height: 90vh; 
+  width: 100%; 
 }
 
 .u-image.image0 {
