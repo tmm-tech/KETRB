@@ -8,7 +8,7 @@ import Loading from "../Component/Loading";
 const importAll = (requireContext) => 
   requireContext.keys().map(requireContext);
 
-const images = importAll(require.context('../../assets/Gallery', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../Asset/Gallery', false, /\.(png|jpe?g|svg)$/));
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
