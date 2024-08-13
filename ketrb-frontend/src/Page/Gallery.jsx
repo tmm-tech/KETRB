@@ -4,12 +4,11 @@ import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 
-const galleryImages = [
-  { src: "https://via.placeholder.com/150", alt: "Description of image 1" },
-  { src: "https://via.placeholder.com/150", alt: "Description of image 2" },
-  { src: "https://via.placeholder.com/150", alt: "Description of image 3" },
-  // Add more images as needed
-];
+// Dynamically import all images from the Gallery folder
+const importAll = (requireContext) => 
+  requireContext.keys().map(requireContext);
+
+const images = importAll(require.context('../../assets/Gallery', false, /\.(png|jpe?g|svg)$/));
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -27,6 +26,7 @@ const Gallery = () => {
   if (loading) {
     return <Loading />;
   }
+
   const openLightbox = (image) => {
     setSelectedImage(image);
   };
@@ -41,13 +41,13 @@ const Gallery = () => {
       <div className="gallery">
         <h1 className="gallery-title">Gallery</h1>
         <div className="gallery-grid">
-          {galleryImages.map((image, index) => (
+          {images.map((src, index) => (
             <div
               key={index}
               className="gallery-item"
-              onClick={() => openLightbox(image)}
+              onClick={() => openLightbox(src)}
             >
-              <img src={image.src} alt={image.alt} className="gallery-image" />
+              <img src={src} alt={`Gallery Image ${index + 1}`} className="gallery-image" />
             </div>
           ))}
         </div>
@@ -55,8 +55,8 @@ const Gallery = () => {
         {selectedImage && (
           <div className="lightbox" onClick={closeLightbox}>
             <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
+              src={selectedImage}
+              alt="Selected"
               className="lightbox-image"
             />
             <button className="lightbox-close" onClick={closeLightbox}>

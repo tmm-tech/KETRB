@@ -10,6 +10,7 @@ import OurMandate from "./Page/MandatePage";
 import Leadership from "./Page/Leadership";
 import Gallery from "./Page/Gallery";
 import Programs from "./Page/Programs";
+import Application from "./Page/Application";
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
         <Route path="/our-mandate" element={<OurMandate/>} />
         <Route path="/leadership" element={<Leadership/>} />
         <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/aplication" element={<Application/>} />
       </Routes>
     </div>
   );

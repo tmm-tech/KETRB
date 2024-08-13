@@ -146,11 +146,24 @@
 @media (max-width: 768px) {
   .nav-links {
     display: none;
-    /* Hide the default nav links on small screens */
   }
 
   .hamburger {
     display: block;
-    /* Show the hamburger icon on small screens */
+  }
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #5b92e5;
+    font-weight: 600;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 70px;
   }
 }

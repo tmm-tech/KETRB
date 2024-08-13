@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
-import TopBar from '../Component/Topbar';
-import Carousel from '../Component/Carousel';
-import Footer from '../Component/Footer';
-import Facts from '../Component/Facts';
+import TopBar from "../Component/Topbar";
+import Carousel from "../Component/Carousel";
+import Footer from "../Component/Footer";
+import Facts from "../Component/Facts";
 import HomeAbout from "../Component/HomeAbout";
+import ApplySection from "../Component/ApplySection";
 import Loading from "../Component/Loading";
 
 function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    
     const loadData = async () => {
-     
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setLoading(false);
     };
@@ -29,12 +28,11 @@ function HomePage() {
       <TopBar />
       <Carousel />
       <Facts />
-      <HomeAbout/>
+      <ApplySection />
+      <HomeAbout />
       <Footer />
     </div>
   );
 }
 
 export default HomePage;
-
-

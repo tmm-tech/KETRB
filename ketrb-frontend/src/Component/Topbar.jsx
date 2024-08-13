@@ -46,6 +46,9 @@ const TopBar = () => {
                 <li>
                   <Link to="/leadership">Leadership</Link>
                 </li>
+                <Link to="/charter" className="nav-link">
+          Charter
+        </Link>
                 {/* <li>
                   <Link to="/department">Department</Link>
                 </li> */}
@@ -80,9 +83,7 @@ const TopBar = () => {
             </div>
           )}
         </div>
-        <Link to="/charter" className="nav-link">
-          Charter
-        </Link>
+       
         <Link to="/act" className="nav-link">
           Act
         </Link>

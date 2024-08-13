@@ -3,26 +3,63 @@ import "./leadership.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-
+import leader1 from "../Asset/Leaders/ALICE.png";
+import leader2 from "../Asset/Leaders/chore.jpeg";
+import leader3 from "../Asset/Leaders/linda.jpeg";
+import leader4 from "../Asset/Leaders/ohande.jpeg";
+import leader5 from "../Asset/Leaders/peter_nganga_kariuki.jpeg";
+import leader6 from "../Asset/Leaders/samuel_muthondu.jpeg";
+import leader7 from "../Asset/Leaders/temoet.jpeg";
+import leader8 from "../Asset/Leaders/THUMBI.png";
 const leadershipData = [
   {
-    name: "John Doe",
-    image: "https://via.placeholder.com/150",
+    image: leader7,
+    name: "MR NICHOLAS KIPRUTO TEMOET",
     description:
-      "John Doe is the CEO of the company with over 20 years of experience in the industry.",
+      "BOARD CHAIRMAN",
   },
   {
-    name: "Jane Smith",
-    image: "https://via.placeholder.com/150",
+    image: leader1,
+    name: "MS ALICE MUTAI",
     description:
-      "Jane Smith is the CFO who has been instrumental in driving the company’s financial strategy.",
+      "CEO",
   },
   {
-    name: "Emily Johnson",
-    image: "https://via.placeholder.com/150",
+    image: leader4,
+    name: "MR FRED NYAMBENE OANDA",
     description:
-      "Emily Johnson is the CTO responsible for overseeing technological advancements.",
+      "BOARD MEMBER",
   },
+  {
+    image: leader5,
+    name: "MR PETER NG'ANG'A KARIUKI",
+    description:
+      "BOARD MEMBER",
+  },
+  {
+    image: leader3,
+    name: "MRS LINDA AYUKU WEKHOBA",
+    description:
+      "BOARD MEMBER",
+  },
+  {
+    image: leader8,
+    name: "PROF GEORGE MITHURI GITHAMBI",
+    description:
+      "BOARD MEMBER",
+  },
+  {
+    image: leader2,
+    name: "MR CHARLES CHORE MAJANI",
+    description:
+      "BOARD MEMBER",
+  },
+  {
+    image: leader6,
+    name: "Samuel Muthondu",
+    description:
+      "BOARD MEMBER",
+  }
 ];
 
 const Leadership = () => {

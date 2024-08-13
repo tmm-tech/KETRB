@@ -7,8 +7,9 @@ import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 import partner1 from "../Asset/Partners/cdacc.jpeg";
 import partner2 from "../Asset/Partners/cue.png";
-import partner3 from "../Asset/Partners/tvet.png";
-import partner4 from "../Asset/Partners/tveta.png";
+import partner3 from "../Asset/Partners/tveta.png";
+import partner4 from "../Asset/Partners/transport.jpeg";
+
 
 const About = () => {
   const [loading, setLoading] = useState(true);
