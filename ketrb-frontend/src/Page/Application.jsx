@@ -3,7 +3,7 @@ import "./application.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-import { Link } from "react-router-dom";
+
 const Application = () => {
   const [loading, setLoading] = useState(true);
 
@@ -19,6 +19,11 @@ const Application = () => {
   if (loading) {
     return <Loading />;
   }
+
+  const handleApplyNow = () => {
+    window.open("https://portal.ketrb.go.ke:81", "_blank");
+  };
+
   return (
     <>
       <TopBar />
@@ -112,9 +117,9 @@ const Application = () => {
         </section>
 
         <div className="apply-now-container">
-          <Link to="https://portal.ketrb.go.ke:81">
-            <button className="apply-now-button">Apply Now</button>
-          </Link>
+          <button className="apply-now-button" onClick={handleApplyNow}>
+            Apply Now
+          </button>
         </div>
       </div>
       <Footer />
