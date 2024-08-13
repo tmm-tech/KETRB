@@ -4,17 +4,14 @@ import './applysection.css'; // Import the CSS file for styling
 
 const ApplySection = () => {
   return (
-    <div className="homepage-container">
-      <section className="welcome-section">
-        <h1>Welcome to KETRB</h1>
+    <div className="apply-section-container">
+      <section className="apply-section">
+        <h1>Join KETRB</h1>
         <p>
-          The Kenya Engineering Technology Registration Board (KETRB) is the regulatory body for engineering technologists in Kenya. We are committed to promoting and regulating the engineering technology profession in the country.
+          At the Kenya Engineering Technology Registration Board (KETRB), we're committed to advancing engineering technology in Kenya. We’re always on the lookout for talented individuals who are passionate about our mission. If you're eager to contribute and grow with us, we'd love to hear from you.
         </p>
-      </section>
-      <section className="join-us-section">
-        <h2>Join Us at KETRB</h2>
         <p>
-          Are you an engineering technologist looking to advance your career? KETRB offers a comprehensive application process to help you become a registered member. Follow the steps to meet the application requirements and join our growing community.
+          Ready to take the next step in your career and join a dynamic team? Follow our streamlined application process to become a registered member and start making an impact.
         </p>
         <Link to="/application" className="apply-button">
           Apply Now
