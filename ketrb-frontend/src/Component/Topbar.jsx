@@ -54,12 +54,10 @@ const TopBar = () => {
           )}
         </div>
 
-        <Link to="/contact" className="nav-link">
-          Contact Us
-        </Link>
+       
         <div className="dropdown">
           <div className="dropdown-link" onClick={toggleDropdown}>
-            News and Events{" "}
+            Discover & Explore{" "}
             <i
               className={`fas ${
                 showDropdown ? "fa-angle-up" : "fa-angle-down"
@@ -75,6 +73,9 @@ const TopBar = () => {
                 <li>
                   <Link to="/news&events">News & Events</Link>
                 </li>
+                <li>
+                <Link to="/gallery" className="nav-link">Gallery</Link>
+                </li>
               </ul>
             </div>
           )}
@@ -85,11 +86,11 @@ const TopBar = () => {
         <Link to="/act" className="nav-link">
           Act
         </Link>
-        <Link to="/gallery" className="nav-link">
-          Gallery
-        </Link>
         <Link to="/faq" className="nav-link">
           FAQ
+        </Link>
+        <Link to="/contact" className="nav-link">
+          Contact Us
         </Link>
         <div className="dropdown">
           <div className="dropdown-link" onClick={toggleDropdown}>
