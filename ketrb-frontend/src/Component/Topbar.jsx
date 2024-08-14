@@ -17,7 +17,7 @@ const TopBar = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <header className="top-bar">
+    <header className="top-bar fixed w-full">
       <div className=".logo-container">
         <Link to="/"><img src={logo} alt="logo" className="logo-img" /></Link>
       </div>
@@ -35,7 +35,7 @@ const TopBar = () => {
             ></i>
           </div>
           {showDropdown && (
-            <div className="dropdown-content">
+            <div className="dropdown-content group-hover:block" id="dropdown-items">
               <ul>
                 <li>
                   <Link to="/about">About Us</Link>
