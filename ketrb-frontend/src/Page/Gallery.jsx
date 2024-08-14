@@ -5,8 +5,7 @@ import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 
 // Dynamically import all images from the Gallery folder
-const importAll = (requireContext) =>
-  requireContext.keys().map(requireContext);
+const importAll = (requireContext) => requireContext.keys().map(requireContext);
 
 const images = importAll(
   require.context("../Asset/Gallery", false, /\.(png|jpe?g|svg|JPG)$/)
@@ -89,7 +88,9 @@ const Gallery = () => {
                   showPreviousImage();
                 }}
               >
-                Previous
+                <svg viewBox="0 0 8 8">
+                  <path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path>
+                </svg>
               </button>
             )}
 
@@ -101,7 +102,9 @@ const Gallery = () => {
                   showNextImage();
                 }}
               >
-                Next
+                <svg viewBox="0 0 8 8">
+                  <path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path>
+                </svg>
               </button>
             )}
           </div>
