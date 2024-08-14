@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./charter.css";
-import "./i18n.js";
+import './i18n';
 import logo from "../Asset/Logo/kenya.png";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
