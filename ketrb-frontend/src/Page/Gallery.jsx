@@ -4,7 +4,6 @@ import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 import {
-  Fa500Px,
   FaArrowLeft,
   FaArrowRight
 } from "react-icons/fa";
