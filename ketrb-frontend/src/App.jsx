@@ -11,6 +11,7 @@ import Leadership from "./Page/Leadership";
 import Gallery from "./Page/Gallery";
 import Programs from "./Page/Programs";
 import Application from "./Page/Application";
+import Charter from "./Page/Charter";
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
         <Route path="/leadership" element={<Leadership/>} />
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/application" element={<Application/>} />
+        <Route path="/charter" element={<Charter/>} />
       </Routes>
     </div>
   );
