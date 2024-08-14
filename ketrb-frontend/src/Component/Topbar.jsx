@@ -19,7 +19,9 @@ const TopBar = () => {
   return (
     <header className="top-bar">
       <div className=".logo-container">
-        <Link to="/"><img src={logo} alt="logo" className="logo-img" /></Link>
+        <Link to="/">
+          <img src={logo} alt="logo" className="logo-img" />
+        </Link>
       </div>
       <nav className={`nav-links ${showMenu ? "hidden" : ""}`}>
         <Link to="/" className="nav-link">
@@ -35,7 +37,10 @@ const TopBar = () => {
             ></i>
           </div>
           {showDropdown && (
-            <div className="dropdown-content group-hover:block" id="dropdown-items">
+            <div
+              className="dropdown-content group-hover:block"
+              id="dropdown-items"
+            >
               <ul>
                 <li>
                   <Link to="/about">About Us</Link>
@@ -46,7 +51,7 @@ const TopBar = () => {
                 <li>
                   <Link to="/leadership">Leadership</Link>
                 </li>
-                
+
                 {/* <li>
                   <Link to="/department">Department</Link>
                 </li> */}
@@ -55,7 +60,6 @@ const TopBar = () => {
           )}
         </div>
 
-       
         <div className="dropdown">
           <div className="dropdown-link" onClick={toggleDropdown}>
             Discover & Explore{" "}
@@ -75,21 +79,59 @@ const TopBar = () => {
                   <Link to="/news&events">News & Events</Link>
                 </li>
                 <li>
-                <Link to="/gallery">Gallery</Link>
+                  <Link to="/gallery">Gallery</Link>
                 </li>
               </ul>
             </div>
           )}
         </div>
-        <Link to="/charter" className="nav-link">
-          Charter
-        </Link>
-        <Link to="/act" className="nav-link">
-          Act
-        </Link>
-        <Link to="/faq" className="nav-link">
-          FAQ
-        </Link>
+        <div className="dropdown">
+          <div className="dropdown-link" onClick={toggleDropdown}>
+            Download{" "}
+            <i
+              className={`fas ${
+                showDropdown ? "fa-angle-up" : "fa-angle-down"
+              }`}
+            ></i>
+          </div>
+          {showDropdown && (
+            <div className="dropdown-content">
+              <ul>
+                <li>
+                  <Link to="/act">Act</Link>
+                </li>
+                <li>
+                  <Link to="/application">Application Requirements</Link>
+                </li>
+                <li>
+                  <Link to="/charter">Charter</Link>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
+        <div className="dropdown">
+          <div className="dropdown-link" onClick={toggleDropdown}>
+            Resources{" "}
+            <i
+              className={`fas ${
+                showDropdown ? "fa-angle-up" : "fa-angle-down"
+              }`}
+            ></i>
+          </div>
+          {showDropdown && (
+            <div className="dropdown-content">
+              <ul>
+                <li>
+                  <Link to="/tender">Tender</Link>
+                </li>
+                <li>
+                  <Link to="/faq">FAQ</Link>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
         <Link to="/contact" className="nav-link">
           Contact Us
         </Link>

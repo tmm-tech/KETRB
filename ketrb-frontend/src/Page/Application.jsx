@@ -20,9 +20,7 @@ const Application = () => {
     return <Loading />;
   }
 
-  const handleApplyNow = () => {
-    window.open("https://portal.ketrb.go.ke:81", "_blank");
-  };
+
 
   return (
     <>
@@ -115,12 +113,6 @@ const Application = () => {
             <li>Less than two (2) Years’ experience.</li>
           </ul>
         </section>
-
-        <div className="apply-now-container">
-          <button className="apply-now-button" onClick={handleApplyNow}>
-            Apply Now
-          </button>
-        </div>
       </div>
       <Footer />
     </>
