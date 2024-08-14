@@ -8,7 +8,7 @@ import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 
 const Charter = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
