@@ -17,7 +17,7 @@ const TopBar = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <header className="top-bar fixed w-full">
+    <header className="top-bar">
       <div className=".logo-container">
         <Link to="/"><img src={logo} alt="logo" className="logo-img" /></Link>
       </div>
