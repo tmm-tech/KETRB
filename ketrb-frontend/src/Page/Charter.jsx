@@ -1,5 +1,4 @@
-// src/Charter.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./charter.css";
 import logo from "../Asset/Logo/kenya.png";
