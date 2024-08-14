@@ -66,10 +66,7 @@ const Contact = () => {
             <div className="contact-section-header">OUR HOURS</div>
             <div className="contact-hours-details">
               <p>
-                <b>MON-FRI 09:00 am – 5:00 pm</b>
-              </p>
-              <p>
-                <b>SAT-SUN 9:00 am – noon</b>
+                <b>MON-FRI 08:00 am – 5:00 pm</b>
               </p>
             </div>
             <div className="contact-section-header">FOLLOW US</div>

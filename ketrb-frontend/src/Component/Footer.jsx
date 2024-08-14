@@ -125,7 +125,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-center">
                   <i className="fa fa-clock mr-2 text-m"></i>
-                  Mon-Fri 09:00 AM – 5:00 PM
+                  Mon-Fri 08:00 AM – 5:00 PM
                 </li>
               </ul>
             </section>
