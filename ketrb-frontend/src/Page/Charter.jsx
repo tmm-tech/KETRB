@@ -53,6 +53,27 @@ const Charter = () => {
                   ))}
                 </tr>
               ))}
+               <tr>
+          <td colSpan="4">
+            <h3>{t('title')}</h3>
+            <p>{t('response')}</p>
+          </td>
+        </tr>
+        <tr>
+          <td colSpan="2">
+            <h4>{t('contactUs')}</h4>
+            <p>{t('registrarContact')}</p>
+          </td>
+          <td colSpan="2">
+            <h4>{t('contactUs')}</h4>
+            <p>{t('ombudsmanContact')}</p>
+          </td>
+        </tr>
+        <tr>
+          <td colSpan="4" style={{ textAlign: 'center', fontWeight: 'bold' }}>
+            {t('hudumaBora')}
+          </td>
+        </tr>
             </tbody>
           </table>
         </section>
