@@ -3,7 +3,11 @@ import "./gallery.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-
+import {
+  Fa500Px,
+  FaArrowLeft,
+  FaArrowRight
+} from "react-icons/fa";
 // Dynamically import all images from the Gallery folder
 const importAll = (requireContext) => requireContext.keys().map(requireContext);
 
@@ -88,9 +92,7 @@ const Gallery = () => {
                   showPreviousImage();
                 }}
               >
-                <svg viewBox="0 0 8 8">
-                  <path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path>
-                </svg>
+                <FaArrowLeft/>
               </button>
             )}
 
@@ -102,9 +104,7 @@ const Gallery = () => {
                   showNextImage();
                 }}
               >
-                <svg viewBox="0 0 8 8">
-                  <path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path>
-                </svg>
+                <FaArrowRight/>
               </button>
             )}
           </div>

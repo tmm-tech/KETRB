@@ -1,7 +1,6 @@
 import React from "react";
 import {
   FaFacebook,
-  FaTwitter,
   FaLinkedin,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -37,7 +36,7 @@ const Footer = () => {
                     target="_blank"
                     className="text-2xl"
                   >
-                    <FaTwitter />
+                    X
                   </Link>
                 </li>
                 <li>
