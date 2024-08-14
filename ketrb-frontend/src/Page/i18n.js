@@ -21,7 +21,6 @@ const resources = {
       "registrarContact": "The Registrar, Kenya Engineering Registration Board (KETRB), National Bank Building, 11th floor, Harambee Avenue, P. O. Box 37046-00200, Nairobi. TEL: 0740137877,0113250187. Email: info@ketrb.go.ke; registration@ketrb.go.ke",
       "ombudsmanContact": "The Commission Secretary/Chief Executive Officer, Commission on Administrative Justice, 2nd Floor, West End Towers, Waiyaki Way, Nairobi. P.O. Box 20414-00200 Nairobi. Tel: +254 (0)20 2270000/2303000. Email: feedback@ombudsman.go.ke",
       "hudumaBora": "Huduma Bora ni Haki Yako",
-      // Table data in English
       "servicesTable": [
         ["Attending to customers at the office", "None", "Nil", "Within 10 minutes"],
         ["Feedback to information inquiries and complaints", "Correct contact address\nChannels:\n- visit to offices\n- call office lines\n- letter to registrar\n- emails info@ketrb.go.ke; registration@ketrb.go.ke", "Nil", "Phone calls: 3 rings\nEmails: 24hrs\nLetters: 7 days"],
