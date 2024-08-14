@@ -2,7 +2,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "./charter.css";
-import logo from "../Asset/Logo/Coat_of_arms.svg";
+import logo from "../Asset/Logo/kenya.png";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
