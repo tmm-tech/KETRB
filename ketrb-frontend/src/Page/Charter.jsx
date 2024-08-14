@@ -3,16 +3,34 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "./charter.css";
 import logo from "../Asset/Logo/Coat_of_arms.svg";
+import TopBar from "../Component/Topbar";
+import Footer from "../Component/Footer";
+import Loading from "../Component/Loading";
 
 const Charter = () => {
   const { t, i18n } = useTranslation();
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const loadData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setLoading(false);
+    };
+
+    loadData();
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
   };
   const services = t('servicesTable', { returnObjects: true });
 
   return (
+    <>
+    <TopBar/>
     <div className="charter-page">
       <header className="charter-header">
         <img src={logo} alt="KETRB Logo" className="charter-logo" />
@@ -89,6 +107,8 @@ const Charter = () => {
         </footer>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
