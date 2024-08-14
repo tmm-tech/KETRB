@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./charter.css";
-import './i18n';
+import "./i18n";
 import logo from "../Asset/Logo/kenya.png";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
@@ -26,88 +26,83 @@ const Charter = () => {
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
   };
-  const services = t('servicesTable', { returnObjects: true });
+  const services = t("servicesTable", { returnObjects: true });
 
   return (
     <>
-    <TopBar/>
-    <div className="charter-page">
-      <header className="charter-header">
-        <img src={logo} alt="KETRB Logo" className="charter-logo" />
-        <h1 className="charter-title">{t("charter")}</h1>
-        <div className="language-switcher">
-          <button onClick={() => handleLanguageChange("en")}>English</button>
-          <button onClick={() => handleLanguageChange("sw")}>Kiswahili</button>
-        </div>
-      </header>
+      <TopBar />
+      <div className="charter-page">
+        <header className="charter-header">
+          <img src={logo} alt="KETRB Logo" className="charter-logo" />
+          <h1 className="charter-title">{t("charter")}</h1>
+          <div className="language-switcher">
+            <button onClick={() => handleLanguageChange("en")}>English</button>
+            <button onClick={() => handleLanguageChange("sw")}>
+              Kiswahili
+            </button>
+          </div>
+        </header>
 
-      <div className="charter-content">
-        <section className="mission-section">
-          <h2>{t("mission")}</h2>
-          <p>{t("missionText")}</p>
-        </section>
+        <div className="charter-content">
+          <section className="mission-section">
+            <h2>{t("mission")}</h2>
+            <p>{t("missionText")}</p>
+          </section>
 
-        <section className="vision-section">
-          <h2>{t("vision")}</h2>
-          <p>{t("visionText")}</p>
-        </section>
+          <section className="vision-section">
+            <h2>{t("vision")}</h2>
+            <p>{t("visionText")}</p>
+          </section>
 
-        <section className="commitment-section">
-          <h2>{t("commitment")}</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>{t("serviceOffered")}</th>
-                <th>{t("processRequirement")}</th>
-                <th>{t("cost")}</th>
-                <th>{t("timelines")}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {services.map((row, rowIndex) => (
-                <tr key={rowIndex}>
-                  {row.map((cell, cellIndex) => (
-                    <td key={cellIndex}>{cell}</td>
-                  ))}
+          <section className="commitment-section">
+            <h2>{t("commitment")}</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>{t("serviceOffered")}</th>
+                  <th>{t("processRequirement")}</th>
+                  <th>{t("cost")}</th>
+                  <th>{t("timelines")}</th>
                 </tr>
-              ))}
-               <tr>
-          <td colSpan="4">
-            <h3>{t('title')}</h3>
-            <p>{t('response')}</p>
-          </td>
-        </tr>
-        <tr>
-          <td colSpan="2">
-            <h4>{t('contactUs')}</h4>
-            <p>{t('registrarContact')}</p>
-          </td>
-          <td colSpan="2">
-            <h4>{t('contactUs')}</h4>
-            <p>{t('ombudsmanContact')}</p>
-          </td>
-        </tr>
-        <tr>
-          <td colSpan="4" style={{ textAlign: 'center', fontWeight: 'bold' }}>
-            {t('hudumaBora')}
-          </td>
-        </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section className="contact-section">
-          <h2>{t("contactUs")}</h2>
-          <p>{t("registrarContact")}</p>
-          <p>{t("ombudsmanContact")}</p>
-        </section>
-
-        <footer>
-          <p>{t("hudumaBora")}</p>
-        </footer>
+              </thead>
+              <tbody>
+                {services.map((row, rowIndex) => (
+                  <tr key={rowIndex}>
+                    {row.map((cell, cellIndex) => (
+                      <td key={cellIndex}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+                <tr>
+                  <td colSpan="4">
+                    <h3>{t("title")}</h3>
+                    <p>{t("response")}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colSpan="2">
+                    <h4>{t("contactUs")}</h4>
+                    <p>{t("registrarContact")}</p>
+                  </td>
+                  <td colSpan="2">
+                    <h4>{t("contactUs")}</h4>
+                    <p>{t("ombudsmanContact")}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    colSpan="4"
+                    style={{ textAlign: "center", fontWeight: "bold" }}
+                  >
+                    {t("hudumaBora")}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
       </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };
