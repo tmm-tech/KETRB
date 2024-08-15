@@ -3,94 +3,54 @@ import "./news.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-
+import news1 from "../Asset/News/IMG_3467.jpeg";
+import news2 from "../Asset/News/IMG_3468.jpeg";
 const newsArticles = [
   {
     image: "https://via.placeholder.com/150",
     title: "Latest Technology Trends in 2024",
-    description:
-      "Explore the newest advancements in technology, including AI, blockchain, and more.",
+    description: "Explore the newest advancements in technology, including AI, blockchain, and more.",
     link: "#",
+    date: "2024-08-15",
   },
   {
     image: "https://via.placeholder.com/150",
     title: "How ketrb is Transforming Digital Assistance",
-    description:
-      "ketrb is making waves in the digital assistant space with its innovative features and user-friendly design.",
+    description: "ketrb is making waves in the digital assistant space with its innovative features and user-friendly design.",
     link: "#",
+    date: "2024-08-10",
   },
   {
     image: "https://via.placeholder.com/150",
     title: "The Future of Remote Work",
-    description:
-      "As remote work becomes the norm, discover how businesses are adapting and what it means for employees.",
+    description: "As remote work becomes the norm, discover how businesses are adapting and what it means for employees.",
     link: "#",
+    date: "2024-08-09",
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "The Rise of Smart Homes in 2024",
-    description:
-      "Smart homes are becoming increasingly popular. Learn how they are changing the way we live.",
+    image: news1,
+    title: "Forging the Future: KETRB Partners with KIPPRA to Develop a Strategic Plan for Kenya's Engineering Technology Industry",
+    description: "We are thrilled to announce our new partnership with the Kenya Institute for Public Policy Research and Analysis (KIPPRA). This collaboration marks a significant milestone as we work together to craft a comprehensive strategic plan that will propel innovation and growth in Kenya's engineering technology sector. Our joint efforts aim to drive advancements, foster development, and shape the future of the industry in Kenya.",
     link: "#",
+    date: "2024-08-13",
   },
   {
-    image: "https://via.placeholder.com/150",
-    title: "Understanding Cybersecurity in the Modern Age",
-    description:
-      "Cybersecurity is more crucial than ever. Get insights into how to protect your data in 2024.",
+    image: news2,
+    title: "KETRB Board Visits Strathmore: Strengthening Ties and Exploring New Horizons in Education and Innovation",
+    description: "Our board recently had the honor of visiting Strathmore University, where we engaged in insightful discussions and explored new opportunities for collaboration. The visit underscored our commitment to enhancing educational partnerships and fostering innovation. By strengthening our ties with leading educational institutions, we aim to advance our shared goals and contribute to the growth and development of the technology sector.",
     link: "#",
+    date: "2024-08-12",
   },
-  {
-    image: "https://via.placeholder.com/150",
-    title: "Top 10 Gadgets to Watch in 2024",
-    description:
-      "From wearables to smart appliances, these gadgets are set to make waves in 2024.",
-    link: "#",
-  },
-  {
-    image: "https://via.placeholder.com/150",
-    title: "How AI is Shaping the Future of Healthcare",
-    description:
-      "AI is revolutionizing healthcare, offering new ways to diagnose and treat diseases.",
-    link: "#",
-  },
-  {
-    image: "https://via.placeholder.com/150",
-    title: "Sustainability and Technology: A New Era",
-    description:
-      "Technology is playing a key role in driving sustainability initiatives across the globe.",
-    link: "#",
-  },
-  {
-    image: "https://via.placeholder.com/150",
-    title: "Digital Transformation in 2024: What to Expect",
-    description:
-      "Businesses are undergoing rapid digital transformation. Here’s what to expect in the coming year.",
-    link: "#",
-  },
-  {
-    image: "https://via.placeholder.com/150",
-    title: "The Impact of 5G on Communication and Connectivity",
-    description:
-      "5G is here, and it’s changing the way we communicate and connect with the world.",
-    link: "#",
-  },
-  {
-    image: "https://via.placeholder.com/150",
-    title: "Advances in Augmented Reality",
-    description:
-      "AR is no longer just for games. Discover its new applications in various industries.",
-    link: "#",
-  },
+  
 ];
 
 const News = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a delay for loading, in real scenario you may wait for API data or image loading
+    
     const loadData = async () => {
-      // Simulate network request or heavy loading task
+
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setLoading(false);
     };
@@ -99,27 +59,26 @@ const News = () => {
   }, []);
 
   if (loading) {
-    return <Loading />; // Show the loading spinner until the content is loaded
+    return <Loading />; 
   }
+
+
+  const sortedArticles = newsArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <>
       <TopBar />
       <div style={{ paddingTop: '170px' }} className="news-container">
         <h2 className="news-title">Latest News</h2>
         <div className="news-list">
-          {newsArticles.map((article, index) => (
+          {sortedArticles.map((article, index) => (
             <div key={index} className="news-item">
-              <img
-                src={article.image}
-                alt={article.title}
-                className="news-image"
-              />
+              <img src={article.image} alt={article.title} className="news-image" />
               <div className="news-content">
                 <h3 className="news-item-title">{article.title}</h3>
+                <p className="news-date">Published on: {new Date(article.date).toLocaleDateString()}</p>
                 <p className="news-description">{article.description}</p>
-                <a href={article.link} className="news-link">
-                  Read more
-                </a>
+                <a href={article.link} className="news-link">Read more</a>
               </div>
             </div>
           ))}
