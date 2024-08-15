@@ -30,7 +30,7 @@ const programsData = [
   {
     title: "Program Four",
     description:
-      "This is the description for Program Three. Learn more about this program and its features.",
+      "This is the description for Program Four. Learn more about this program and its features.",
     image: program4,
   },
 ];
