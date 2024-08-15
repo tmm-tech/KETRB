@@ -33,8 +33,10 @@ const Charter = () => {
     <TopBar/>
     <div className="charter-page">
       <header className="charter-header">
+        <div className="charter-header-content">
         <img src={logo} alt="KETRB Logo" className="charter-logo" />
         <h1 className="charter-title">{t("charter")}</h1>
+        </div>
         <div className="language-switcher">
           <button onClick={() => handleLanguageChange("en")}>English</button>
           <button onClick={() => handleLanguageChange("sw")}>Kiswahili</button>
