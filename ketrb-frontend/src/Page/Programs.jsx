@@ -28,7 +28,7 @@ const programsData = [
     image: program3,
   },
   {
-    title: "Program Three",
+    title: "Program Four",
     description:
       "This is the description for Program Three. Learn more about this program and its features.",
     image: program4,
