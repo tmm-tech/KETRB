@@ -2,6 +2,7 @@ import React from "react";
 import {
   FaFacebook,
   FaLinkedin,
+  FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -36,7 +37,7 @@ const Footer = () => {
                     target="_blank"
                     className="text-2xl"
                   >
-                    X
+                    <FaTwitter/>
                   </Link>
                 </li>
                 <li>
