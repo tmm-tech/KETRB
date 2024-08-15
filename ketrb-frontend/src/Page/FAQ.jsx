@@ -87,7 +87,7 @@ const FAQ = () => {
   return (
     <>
       <TopBar />
-      <div className="faq-container">
+      <div style={{ paddingTop: '60px' }} className="faq-container">
         <h2>Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
           <div
