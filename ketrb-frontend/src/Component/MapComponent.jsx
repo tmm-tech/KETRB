@@ -1,5 +1,5 @@
 import React from "react";
-import { MapContainer,Marker, Popup } from "react-leaflet";
+import { MapContainer,TileLayer,vMarker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import iconUrl from "../Asset/icons/marker-icon.png";
@@ -23,6 +23,10 @@ const MapComponent = () => {
         zoom={13}
         style={{ height: "100%", width: "100%" }}
       >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution="© OpenStreetMap contributors"
+        />
         <Marker position={position} icon={markerIcon}>
           <Popup>National Bank Building, Nairobi</Popup>
         </Marker>
