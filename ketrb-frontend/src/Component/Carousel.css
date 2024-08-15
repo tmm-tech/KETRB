@@ -1,8 +1,3 @@
-.u-carousel {
-  position: relative;
-  overflow: hidden;
-}
-
 .u-carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
