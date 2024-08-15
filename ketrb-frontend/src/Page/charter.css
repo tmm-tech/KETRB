@@ -11,17 +11,18 @@
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
-  background-color: #fff; /* Dark blue color */
+  background-color: #fff;
   color: black;
   padding: 20px 0;
 }
-.charter-header-content{
+
+.charter-header-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-
 }
+
 .charter-logo {
   width: 250px;
   height: auto;
@@ -135,6 +136,7 @@
   font-weight: bold;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .charter-header {
     padding: 15px 0;
@@ -161,5 +163,18 @@
   .commitment-section th,
   .commitment-section td {
     font-size: 0.9rem;
+  }
+
+  /* Table responsiveness */
+  .commitment-section table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .commitment-section th,
+  .commitment-section td {
+    min-width: 120px; /* Adjust as necessary to fit content */
   }
 }
