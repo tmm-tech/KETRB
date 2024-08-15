@@ -13,6 +13,7 @@ import Programs from "./Page/Programs";
 import Application from "./Page/Application";
 import Charter from "./Page/Charter";
 import ActPage from "./Page/Act";
+import TenderPage from "./Page/Tender";
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,7 @@ function App() {
         <Route path="/application" element={<Application/>} />
         <Route path="/charter" element={<Charter/>} />
         <Route path="/act" element={<ActPage/>} />
+        <Route path="/tender" element={<TenderPage/>} />
       </Routes>
     </div>
   );
