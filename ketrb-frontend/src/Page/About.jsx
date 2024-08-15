@@ -29,7 +29,7 @@ const About = () => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: '60px' }} className="about-container mx-auto px-4 py-12">
+      <div style={{ paddingTop: '170px' }} className="about-container mx-auto px-4 py-12">
         {/* About Section */}
         <div className="about-content max-w-6xl mx-auto flex flex-wrap items-stretch">
           <div className="about-image-item w-full md:w-1/2">

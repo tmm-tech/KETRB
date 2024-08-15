@@ -31,7 +31,7 @@ const Charter = () => {
   return (
     <>
     <TopBar/>
-    <div style={{ paddingTop: '60px' }} className="charter-page">
+    <div style={{ paddingTop: '170px' }} className="charter-page">
       <header className="charter-header">
         <div className="charter-header-content">
         <img src={logo} alt="KETRB Logo" className="charter-logo" />
