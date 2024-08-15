@@ -1,58 +1,158 @@
 .charter-page {
-    font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.charter-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #00274d; /* Dark blue color */
+  color: white;
+  padding: 20px 0;
+}
+
+.charter-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.charter-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.language-switcher {
+  margin-top: 10px;
+}
+
+.language-switcher button {
+  background-color: #fff;
+  color: #00274d;
+  border: 1px solid #00274d;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background-color: #00274d;
+  color: white;
+}
+
+.charter-content {
+  width: 90%;
+  max-width: 1200px;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.mission-section,
+.vision-section,
+.commitment-section {
+  margin-bottom: 30px;
+}
+
+.mission-section h2,
+.vision-section h2,
+.commitment-section h2 {
+  font-size: 1.75rem;
+  color: #00274d;
+  margin-bottom: 15px;
+}
+
+.mission-section p,
+.vision-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.commitment-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.commitment-section th,
+.commitment-section td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.commitment-section th {
+  background-color: #00274d;
+  color: white;
+}
+
+.commitment-section td {
+  background-color: #f9f9f9;
+}
+
+.commitment-section tr:nth-child(even) td {
+  background-color: #fff;
+}
+
+.commitment-section tr:hover td {
+  background-color: #f1f1f1;
+}
+
+.commitment-section h3,
+.commitment-section h4 {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  color: #00274d;
+}
+
+.commitment-section p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.commitment-section td[colspan="4"],
+.commitment-section td[colspan="2"] {
+  text-align: center;
+}
+
+.commitment-section td[colspan="4"] {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .charter-header {
+    padding: 15px 0;
+  }
+
+  .charter-logo {
+    width: 120px;
+  }
+
+  .charter-title {
+    font-size: 2rem;
+  }
+
+  .charter-content {
     padding: 20px;
   }
-  
-  .charter-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+
+  .mission-section h2,
+  .vision-section h2,
+  .commitment-section h2 {
+    font-size: 1.5rem;
   }
-  
-  .charter-logo {
-    width: 100px;
-    height: auto;
+
+  .commitment-section th,
+  .commitment-section td {
+    font-size: 0.9rem;
   }
-  
-  .charter-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .language-switcher {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .language-switcher button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .language-switcher button:hover {
-    background-color: #0056b3;
-  }
-  
-  .charter-content {
-    margin-top: 20px;
-  }
-  
-  .mission-section, .vision-section {
-    margin-bottom: 20px;
-  }
-  
-  .mission-section h2, .vision-section h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .mission-section p, .vision-section p {
-    font-size: 16px;
-  }
-  
+}
