@@ -33,7 +33,7 @@ const OurMandate = () => {
   return (
     <>
       <TopBar />
-      <div className="our-mandate">
+      <div style={{ paddingTop: '60px' }} className="our-mandate">
         <h1 id="page-title">Our Mandate</h1>
         <main>
           <div className="mandate-container">

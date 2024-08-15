@@ -43,7 +43,7 @@ const Programs = () => {
   return (
     <>
       <TopBar />
-      <div className="programs">
+      <div  style={{ paddingTop: '60px' }} className="programs">
         <h1 className="programs-title">Our Programs</h1>
         <div className="programs-container">
           {programsData.map((program, index) => (

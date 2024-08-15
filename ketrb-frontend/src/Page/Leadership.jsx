@@ -80,7 +80,7 @@ const Leadership = () => {
   return (
     <>
       <TopBar />
-      <div className="leadership">
+      <div style={{ paddingTop: '60px' }}  className="leadership">
         <h1 className="leadership-title">Our Leadership Team</h1>
         <div className="leadership-container">
           {leadershipData.map((leader, index) => (

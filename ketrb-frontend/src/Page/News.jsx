@@ -104,7 +104,7 @@ const News = () => {
   return (
     <>
       <TopBar />
-      <div className="news-container">
+      <div style={{ paddingTop: '60px' }} className="news-container">
         <h2 className="news-title">Latest News</h2>
         <div className="news-list">
           {newsArticles.map((article, index) => (
