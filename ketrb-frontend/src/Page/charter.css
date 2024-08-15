@@ -43,7 +43,7 @@
 }
 
 .language-switcher button:hover {
-  background-color: #00274d;
+  background-color: #f39c12;
   color: white;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .commitment-section th {
-  background-color: #00274d;
+  background-color: #5b92e5;
   color: white;
 }
 
