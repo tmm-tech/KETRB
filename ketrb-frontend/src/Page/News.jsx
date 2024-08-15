@@ -5,23 +5,35 @@ import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 import news1 from "../Asset/News/IMG_3467.jpeg";
 import news2 from "../Asset/News/IMG_3468.jpeg";
+import news3 from "../Asset/Carousel/img_001.jpeg";
+import news4 from "../Asset/Carousel/lady2.jpeg";
+import news5 from "../Asset/Carousel/man.jpeg";
+import news6 from "../Asset/Carousel/lady&man.jpg";
+
 const newsArticles = [
   {
-    image: "https://via.placeholder.com/150",
+    image: news6,
     title: "Latest Technology Trends in 2024",
     description: "Explore the newest advancements in technology, including AI, blockchain, and more.",
     link: "#",
     date: "2024-08-08",
   },
   {
-    image: "https://via.placeholder.com/150",
+    image: news3,
     title: "How ketrb is Transforming Digital Assistance",
     description: "ketrb is making waves in the digital assistant space with its innovative features and user-friendly design.",
     link: "#",
     date: "2024-08-10",
   },
   {
-    image: "https://via.placeholder.com/150",
+    image: news4,
+    title: "The Future of Remote Work",
+    description: "As remote work becomes the norm, discover how businesses are adapting and what it means for employees.",
+    link: "#",
+    date: "2024-08-09",
+  },
+  {
+    image: news5,
     title: "The Future of Remote Work",
     description: "As remote work becomes the norm, discover how businesses are adapting and what it means for employees.",
     link: "#",
