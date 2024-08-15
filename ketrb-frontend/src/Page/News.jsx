@@ -11,7 +11,7 @@ const newsArticles = [
     title: "Latest Technology Trends in 2024",
     description: "Explore the newest advancements in technology, including AI, blockchain, and more.",
     link: "#",
-    date: "2024-08-15",
+    date: "2024-08-08",
   },
   {
     image: "https://via.placeholder.com/150",
