@@ -25,9 +25,9 @@ const TenderPage = () => {
       <TopBar />
       <div className="tender-page-container flex flex-col items-center justify-center min-h-screen bg-gray-100">
         <div className="animation-wrapper flex justify-center items-center my-8">
-          <div className="circle circle1"></div>
-          <div className="circle circle2"></div>
-          <div className="circle circle3"></div>
+          <div className="circles circle6"></div>
+          <div className="circles circle7"></div>
+          <div className="circles circle8"></div>
         </div>
         <h1 className="coming-soon-title text-3xl md:text-5xl font-bold text-gray-800 mb-4">
           Something Exciting is Coming Soon!
