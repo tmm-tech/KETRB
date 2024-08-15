@@ -283,7 +283,8 @@ const About = () => {
                 <img
                   src={partner4}
                   alt="Partner Name"
-                  className="partner-logo part4"
+                  className="partner-logo"
+                  width="100"
                 />
               </div>
               {/* Add more partner images here */}
