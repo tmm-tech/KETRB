@@ -13,7 +13,7 @@ const ApplySection = () => {
         <p>
           Ready to take the next step in your career and join a dynamic team? Follow our streamlined application process to become a registered member and start making an impact.
         </p>
-        <Link to="https://portal.ketrb.go.ke:81" className="apply-button">
+        <Link to="https://portal.ketrb.go.ke:81" className="apply-button" target='_blank'>
           Apply Now
         </Link>
       </section>
