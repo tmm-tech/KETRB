@@ -95,9 +95,8 @@
   }
   
   .partner-item-large {
-    width: 100%;
-    max-width: 400px; 
-    height: auto; 
+    width: 400px; 
+    height: 200px; 
     padding: 10px; 
   }
   .partners-content {
