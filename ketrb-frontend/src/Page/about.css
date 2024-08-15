@@ -93,12 +93,6 @@
     font-weight: bold;
     color: #333;
   }
-  
-  .partner-item-large {
-    width: 400px; 
-    height: 200px; 
-    padding: 10px; 
-  }
   .partners-content {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px; 
