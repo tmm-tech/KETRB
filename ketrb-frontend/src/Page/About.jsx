@@ -10,7 +10,6 @@ import partner2 from "../Asset/Partners/cue.png";
 import partner3 from "../Asset/Partners/tveta.png";
 import partner4 from "../Asset/Partners/transport.jpeg";
 
-
 const About = () => {
   const [loading, setLoading] = useState(true);
 
@@ -29,7 +28,10 @@ const About = () => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: '170px' }} className="about-container mx-auto px-4 py-12">
+      <div
+        style={{ paddingTop: "170px" }}
+        className="about-container mx-auto px-4 py-12"
+      >
         {/* About Section */}
         <div className="about-content max-w-6xl mx-auto flex flex-wrap items-stretch">
           <div className="about-image-item w-full md:w-1/2">
@@ -283,10 +285,9 @@ const About = () => {
                 <img
                   src={partner4}
                   alt="Partner Name"
-                  className="part4 partner-logo"
+                  className="partner-logo partner-item-large"
                 />
               </div>
-              {/* Add more partner images here */}
             </div>
           </div>
         </div>

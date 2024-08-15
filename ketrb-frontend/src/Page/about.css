@@ -94,7 +94,14 @@
     color: #333;
   }
   
-  .part4{
-    width: 600px;
-    height: 200px;
+  .partner-item-large {
+    width: 100%;
+    max-width: 200px; 
+    height: auto; 
+    padding: 10px; 
   }
+  .partners-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+  }
+  
