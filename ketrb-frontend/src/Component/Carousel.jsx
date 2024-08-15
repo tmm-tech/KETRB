@@ -62,7 +62,7 @@ function Carousel() {
   };
 
   return (
-    <section style={{ paddingTop: '180px' }} className="u-section-1" id="sec-63bc">
+    <section style={{ paddingTop: '170px' }} className="u-section-1" id="sec-63bc">
       <div className="u-carousel u-expanded-width u-slider-1">
         <div
           className="u-carousel-inner"
