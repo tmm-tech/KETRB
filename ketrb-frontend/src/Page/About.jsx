@@ -284,7 +284,7 @@ const About = () => {
                   src={partner4}
                   alt="Partner Name"
                   className="partner-logo"
-                  width="500"
+                  width="1000"
                 />
               </div>
               {/* Add more partner images here */}
