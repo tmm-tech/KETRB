@@ -9,17 +9,19 @@
 
 .charter-header {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
   text-align: center;
   margin-bottom: 40px;
   background-color: #fff; /* Dark blue color */
   color: black;
   padding: 20px 0;
 }
+.charter-header-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 
+}
 .charter-logo {
   width: 150px;
   height: auto;
