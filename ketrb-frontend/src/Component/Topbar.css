@@ -7,9 +7,8 @@
   font-weight: 600;
   padding: 10px;
   border-bottom: 6px #f39c12 solid;
-  position: relative;
+  position: fixed;
   z-index: 1000;
-  /* Ensure top-bar stays on top */
 }
 
 .logo-container {
