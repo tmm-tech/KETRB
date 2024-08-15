@@ -101,7 +101,7 @@ const TopBar = () => {
                   <Link to="/act">Act</Link>
                 </li>
                 <li>
-                  <Link to="/application">Application Requirements</Link>
+                  <Link to="/application">Requirements</Link>
                 </li>
                 <li>
                   <Link to="/charter">Charter</Link>

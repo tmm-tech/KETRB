@@ -1,0 +1,46 @@
+/* Style for the container of the Act page */
+.act-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  /* Title styling */
+  .act-page-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Container for the PDF viewer */
+  .pdf-container {
+    width: 80%;
+    height: 80vh;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Style for the iframe PDF viewer */
+  .pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .pdf-container {
+      width: 95%;
+      height: 60vh;
+    }
+  
+    .act-page-title {
+      font-size: 2rem;
+    }
+  }
+  
