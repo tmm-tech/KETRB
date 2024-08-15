@@ -22,7 +22,7 @@ const ActPage = () => {
   return (
     <>
       <TopBar />
-      <div className="act-page-container">
+      <div style={{ paddingTop: '170px' }} className="act-page-container">
         <h1 className="act-page-title">KETRB ACT</h1>
         <div className="pdf-container">
           <iframe
