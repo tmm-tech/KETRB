@@ -12,6 +12,7 @@ import Gallery from "./Page/Gallery";
 import Programs from "./Page/Programs";
 import Application from "./Page/Application";
 import Charter from "./Page/Charter";
+import ActPage from "./Page/Act";
 function App() {
   return (
     <div className="App">
@@ -28,6 +29,7 @@ function App() {
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/application" element={<Application/>} />
         <Route path="/charter" element={<Charter/>} />
+        <Route path="/act" element={<ActPage/>} />
       </Routes>
     </div>
   );
