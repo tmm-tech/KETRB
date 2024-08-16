@@ -54,6 +54,7 @@
 .dropdown {
   display: flex;
   flex-direction: column;
+  width:100%;
 }
 
 .dropdown-toggle {
@@ -79,19 +80,3 @@
 .dropdown-menu .mobile-nav-link {
   padding-left: 20px; /* Indent dropdown items */
 }
-
-.mobile-nav-link:hover {
-  background-color: #f39c12;
-  color: white;
-}
-
-/* Optional: Add some icons to indicate dropdown status */
-.fas {
-  margin-left: 10px;
-}
-
-/* Toggle icon rotation */
-.fa-chevron-up {
-  transform: rotate(180deg);
-}
-
