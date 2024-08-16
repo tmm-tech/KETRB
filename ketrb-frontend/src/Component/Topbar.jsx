@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
-import logo from "../Asset/Logo/ketrbl.jpeg";
+import logo from "../Asset/Logo/logo_1.png";
 import MobileMenu from "./MobileMenu"; // Import the MobileMenu component
 
 const TopBar = () => {
