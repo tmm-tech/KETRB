@@ -55,19 +55,18 @@ function LoginPage() {
           </form>
         </div>
         <div className="overlay-container">
-          <div className="overlay">
-            <div className="overlay-panel overlay-left">
-              <div className="logo-container">
-                <img className="company-logo" src={logo} alt="Company Logo" />
-              </div>
-
-              <h1>Welcome Back!</h1>
-              <p>
-                To keep connected with us please login with your personal info
-              </p>
-            </div>
-          </div>
+      <div className="overlay">
+        <div className="overlay-panel overlay-left">
+        <img className="company-logo" src={logo} alt="Company Logo" />
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+        <div className="overlay-panel overlay-right">
+        <img className="company-logo" src={logo} alt="Company Logo" />
+          <h1>Hello, Friend!</h1>
+          <p>Enter your details and start the journey with us</p>
         </div>
+      </div>
+    </div>
       </div>
     </div>
   );
