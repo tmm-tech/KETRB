@@ -1,46 +1,58 @@
-/* Style for the container of the Act page */
-.act-page-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    min-height: 100vh;
+.pdf-viewer-container {
+  padding-top: 170px;
+  text-align: center;
+}
+
+
+.pdf-viewer-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.pdf-navigation {
+  margin-top: 20px;
+}
+
+.pdf-navigation button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-navigation button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pdf-navigation button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+
+.pdf-page-info {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+
+@media (max-width: 600px) {
+  .pdf-viewer-title {
+    font-size: 1.5em;
   }
-  
-  /* Title styling */
-  .act-page-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+
+  .pdf-navigation button {
+    padding: 8px 15px;
+    margin: 0 5px;
   }
-  
-  /* Container for the PDF viewer */
-  .pdf-container {
-    width: 80%;
-    height: 80vh;
-    border: 2px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  /* Style for the iframe PDF viewer */
-  .pdf-viewer {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-  
-  /* Responsive styling for smaller screens */
-  @media (max-width: 768px) {
-    .pdf-container {
-      width: 95%;
-      height: 60vh;
-    }
-  
-    .act-page-title {
-      font-size: 2rem;
-    }
-  }
+}
+
   
