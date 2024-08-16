@@ -1,65 +1,63 @@
-import React, { useState, useEffect } from "react";
-import "./act.css";
+import React, { useState } from "react";
+import { Document, Page } from "react-pdf";
+import { pdfjs } from "react-pdf";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
-import Loading from "../Component/Loading";
-import { Document, Page } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import "./act.css";
 
-const MyPdfViewer = () => {
+// Setting the workerSrc for pdfjs
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+const ActPage = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // State to track loading
 
-  useEffect(() => {
-    const loadData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setLoading(false);
-    };
-
-    loadData();
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
-
-  function onDocumentLoadSuccess({ numPages }) {
+  const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
-  }
+    setPageNumber(1);
+    setLoading(false); // PDF loaded successfully
+  };
 
   return (
     <>
       <TopBar />
-      <div className="pdf-viewer-container">
-        <h1 className="pdf-viewer-title">KETRB Act</h1>
+      <div className="pdf-container">
+        <h1 className="pdf-title">KETRB Act</h1> {/* Title added here */}
+        {loading && <p className="loading-message">Loading PDF...</p>} {/* Loading message */}
         <Document
           file="/Engineering_Act.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
+          onLoadError={(error) => {
+            console.error("Error loading PDF:", error);
+            setLoading(false);
+          }}
         >
           <Page pageNumber={pageNumber} />
         </Document>
-        <p className="pdf-page-info">
-          Page {pageNumber} of {numPages}
-        </p>
-        <div className="pdf-navigation">
-          <button
-            disabled={pageNumber <= 1}
-            onClick={() => setPageNumber(pageNumber - 1)}
-          >
-            Previous
-          </button>
-          <button
-            disabled={pageNumber >= numPages}
-            onClick={() => setPageNumber(pageNumber + 1)}
-          >
-            Next
-          </button>
-        </div>
+        {numPages && (
+          <div className="pagination">
+            <button
+              onClick={() => setPageNumber(pageNumber - 1)}
+              disabled={pageNumber <= 1}
+            >
+              Previous
+            </button>
+            <span>
+              Page {pageNumber} of {numPages}
+            </span>
+            <button
+              onClick={() => setPageNumber(pageNumber + 1)}
+              disabled={pageNumber >= numPages}
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
       <Footer />
     </>
   );
 };
 
-export default MyPdfViewer;
+export default ActPage;

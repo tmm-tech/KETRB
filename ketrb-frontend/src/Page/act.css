@@ -1,58 +1,88 @@
-.pdf-viewer-container {
+
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
   padding-top: 170px;
-  text-align: center;
+  padding: 0 20px; 
 }
 
 
-.pdf-viewer-title {
-  font-size: 2em;
+.pdf-title {
+  font-size: 24px;
   font-weight: bold;
   color: #333;
+  margin-bottom: 20px; 
+  text-align: center; 
+}
+
+
+.loading-message {
+  font-size: 18px;
+  color: #555;
   margin-bottom: 20px;
+  text-align: center; 
 }
 
-
-.pdf-navigation {
+.pagination {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-wrap: wrap; 
 }
 
-.pdf-navigation button {
+.pagination button {
   background-color: #007bff;
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
+  margin: 0 5px; 
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.pdf-navigation button:disabled {
-  background-color: #cccccc;
+.pagination button:disabled {
+  background-color: #ccc;
   cursor: not-allowed;
 }
 
-.pdf-navigation button:hover:not(:disabled) {
-  background-color: #0056b3;
+.pagination span {
+  font-size: 16px;
+  color: #333;
 }
 
-
-.pdf-page-info {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #555;
-}
-
-
-@media (max-width: 600px) {
-  .pdf-viewer-title {
-    font-size: 1.5em;
+@media (max-width: 768px) {
+  .pdf-title {
+    font-size: 20px; 
   }
 
-  .pdf-navigation button {
-    padding: 8px 15px;
-    margin: 0 5px;
+  .loading-message,
+  .pagination span {
+    font-size: 16px; 
+  }
+
+  .pagination button {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
 
-  
+@media (max-width: 480px) {
+  .pdf-title {
+    font-size: 18px; 
+  }
+
+  .loading-message,
+  .pagination span {
+    font-size: 14px;
+  }
+
+  .pagination button {
+    padding: 6px 12px; 
+    font-size: 12px; 
+  }
+}
