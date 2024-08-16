@@ -285,7 +285,7 @@ const About = () => {
                 <img
                   src={partner4}
                   alt="Partner Name"
-                  className="partner-logo partner-item-large"
+                  className="partner-item-large"
                 />
               </div>
             </div>
