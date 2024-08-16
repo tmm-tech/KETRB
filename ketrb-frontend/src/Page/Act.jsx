@@ -5,8 +5,9 @@ import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import "./act.css";
 
-// Setting the workerSrc for pdfjs
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/{pdfjs.version}/pdf.worker.min.js';
+
 
 const ActPage = () => {
   const [numPages, setNumPages] = useState(null);
