@@ -18,7 +18,7 @@ const MobileMenu = ({ showMenu, toggleMenu }) => {
         <Link to="/gallery" className="mobile-nav-link" onClick={toggleMenu}>Gallery</Link>
         <Link to="/charter" className="mobile-nav-link" onClick={toggleMenu}>Charter</Link>
         <Link to="/act" className="mobile-nav-link" onClick={toggleMenu}>Act</Link>
-        <Link to="/application" className="mobile-nav-link" onClick={toggleMenu}>Requirements</Link>
+        <Link to="/application" className="mobile-nav-link" onClick={toggleMenu}>Application Requirement</Link>
         <Link to="/tender" className="mobile-nav-link" onClick={toggleMenu}>Tender</Link>
         <Link to="/faq" className="mobile-nav-link" onClick={toggleMenu}>FAQ</Link>
         <Link to="/contact" className="mobile-nav-link" onClick={toggleMenu}>Contact Us</Link>
