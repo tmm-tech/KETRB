@@ -98,3 +98,21 @@
     gap: 20px; 
   }
   
+  .partner-item-large {
+    height: 150px; 
+    width:200px;
+    object-fit: contain;
+  }
+
+  .partner-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .partners-content {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }

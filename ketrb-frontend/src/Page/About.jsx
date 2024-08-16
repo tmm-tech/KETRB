@@ -259,7 +259,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="about-heading">Our Partners</h2>
             <div className="partners-content grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-              {/* Repeat this block for each partner */}
+             
               <div className="partner-item">
                 <img
                   src={partner1}
