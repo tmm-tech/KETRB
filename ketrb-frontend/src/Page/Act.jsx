@@ -12,20 +12,19 @@ pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pd
 const ActPage = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [loading, setLoading] = useState(true); // State to track loading
+  const [loading, setLoading] = useState(true); 
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
     setPageNumber(1);
-    setLoading(false); // PDF loaded successfully
-  };
+    setLoading(false); 
 
   return (
     <>
       <TopBar />
       <div className="pdf-container">
         <h1 className="pdf-title">KETRB ACT</h1> 
-        {loading && <p className="loading-message">Loading PDF...</p>} 
+        {loading && <p className="loading-message"></p>} 
         <Document
           file="/Engineering_Act.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
