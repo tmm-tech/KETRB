@@ -135,27 +135,6 @@ const TopBar = () => {
         <Link to="/contact" className="nav-link">
           Contact Us
         </Link>
-        <div className="dropdown">
-          <div className="dropdown-link" onClick={toggleDropdown}>
-            Account{" "}
-            <i
-              className={`fas ${
-                showDropdown ? "fa-angle-up" : "fa-angle-down"
-              }`}
-            ></i>
-          </div>
-          {showDropdown && (
-            <div className="dropdown-content">
-              <ul>
-                <li>
-                  <Link to="/login">
-                    <i className="fas fa-user-circle"></i> Login
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
       </nav>
       <div className="hamburger" onClick={toggleMenu}>
         <i className={`fas ${showMenu ? "fa-times" : "fa-bars"}`}></i>
