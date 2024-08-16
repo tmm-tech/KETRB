@@ -50,4 +50,48 @@
     color: #f39c12;
     background-color: #f9f9f9;
   }
-  
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  padding-left: 20px;
+}
+
+.mobile-nav-link {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu .mobile-nav-link {
+  padding-left: 20px; /* Indent dropdown items */
+}
+
+.mobile-nav-link:hover {
+  background-color: #f39c12;
+  color: white;
+}
+
+/* Optional: Add some icons to indicate dropdown status */
+.fas {
+  margin-left: 10px;
+}
+
+/* Toggle icon rotation */
+.fa-chevron-up {
+  transform: rotate(180deg);
+}
+
