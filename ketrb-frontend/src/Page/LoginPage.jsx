@@ -29,7 +29,7 @@ function LoginPage() {
   return (
     <div className="body_login">
       <div className="background"></div>
-      <div className="container">
+      <div className="lcontainer">
         <div className="form-container sign-in-container">
           <div className="back-icon">
             <Link to="/">
@@ -55,7 +55,7 @@ function LoginPage() {
         </div>
         <div className="overlay-container">
           <div className="overlay">
-            <div className="overlay-panel overlay-left">
+            <div className="overlay-panel">
               <img className="company-logo" src={logo} alt="Company Logo" />
               <h1>Welcome Back!</h1>
               <p>To keep connected with us please login with your personal info</p>
