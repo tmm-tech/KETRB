@@ -6,7 +6,7 @@ import Footer from "../Component/Footer";
 import "./act.css";
 
 
-pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/{pdfjs.version}/pdf.worker.min.js';
+pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js';
 
 
 const ActPage = () => {
@@ -24,8 +24,8 @@ const ActPage = () => {
     <>
       <TopBar />
       <div className="pdf-container">
-        <h1 className="pdf-title">KETRB Act</h1> {/* Title added here */}
-        {loading && <p className="loading-message">Loading PDF...</p>} {/* Loading message */}
+        <h1 className="pdf-title">KETRB ACT</h1> 
+        {loading && <p className="loading-message">Loading PDF...</p>} 
         <Document
           file="/Engineering_Act.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
