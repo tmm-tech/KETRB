@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
 import { FaArrowLeft } from "react-icons/fa";
-import logo from "../Asset/Logo/ketrbl.jpeg";
+import logo from "../Asset/Logo/ketrbl.jpeg"; // Ensure the path is correct
 import Loading from "../Component/Loading";
 
 function LoginPage() {
@@ -19,18 +19,17 @@ function LoginPage() {
   }, []);
 
   if (loading) {
-    return <Loading />; 
+    return <Loading />;
   }
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
   };
+
   return (
     <div className="body_login">
       <div className="background"></div>
-      <div
-        className="container"
-      >
+      <div className="container">
         <div className="form-container sign-in-container">
           <div className="back-icon">
             <Link to="/">
@@ -55,13 +54,14 @@ function LoginPage() {
           </form>
         </div>
         <div className="overlay-container">
-      <div className="overlay">
-        <div className="overlay-panel overlay-left">
-        <img className="company-logo" src={logo} alt="Company Logo" />
-          <h1>Welcome Back!</h1>
-          <p>To keep connected with us please login with your personal info</p>
-      </div>
-    </div>
+          <div className="overlay">
+            <div className="overlay-panel overlay-left">
+              <img className="company-logo" src={logo} alt="Company Logo" />
+              <h1>Welcome Back!</h1>
+              <p>To keep connected with us please login with your personal info</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
