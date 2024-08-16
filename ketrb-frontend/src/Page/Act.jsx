@@ -1,59 +1,22 @@
-import React, { useState } from "react";
-import { Document, Page } from "react-pdf";
-import { pdfjs } from "react-pdf";
+import React from "react";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import "./act.css";
 
-
-pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js';
-
-
 const ActPage = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const [loading, setLoading] = useState(true); 
-
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-    setPageNumber(1);
-    setLoading(false); 
-
   return (
     <>
       <TopBar />
       <div className="pdf-container">
-        <h1 className="pdf-title">KETRB ACT</h1> 
-        {loading && <p className="loading-message"></p>} 
-        <Document
-          file="/Engineering_Act.pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-          onLoadError={(error) => {
-            console.error("Error loading PDF:", error);
-            setLoading(false);
-          }}
-        >
-          <Page pageNumber={pageNumber} />
-        </Document>
-        {numPages && (
-          <div className="pagination">
-            <button
-              onClick={() => setPageNumber(pageNumber - 1)}
-              disabled={pageNumber <= 1}
-            >
-              Previous
-            </button>
-            <span>
-              Page {pageNumber} of {numPages}
-            </span>
-            <button
-              onClick={() => setPageNumber(pageNumber + 1)}
-              disabled={pageNumber >= numPages}
-            >
-              Next
-            </button>
-          </div>
-        )}
+        <h1 className="pdf-title">KETRB Act</h1>
+        <div className="iframe-container">
+          <iframe
+            src="/Engineering_Act.pdf"
+            title="PDF Viewer"
+            frameBorder="0"
+            className="responsive-iframe"
+          />
+        </div>
       </div>
       <Footer />
     </>
