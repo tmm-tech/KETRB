@@ -29,7 +29,7 @@ function LoginPage() {
   return (
     <div className="body_login">
       <div className="background"></div>
-      <div className="lcontainer">
+      <div className="container">
         <div className="form-container sign-in-container">
           <div className="back-icon">
             <Link to="/">
