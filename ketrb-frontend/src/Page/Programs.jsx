@@ -1,39 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./programs.css";
-import TopBar from "../Component/Topbar";
+import './programs.css';
+import TopBar from '../Component/Topbar';
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-import program1 from "../Asset/Carousel/engineer_group.webp";
-import program2 from "../Asset/Carousel/lady2.jpeg";
-import program3 from "../Asset/Carousel/man.jpeg";
-import program4 from "../Asset/Carousel/lady&man.jpg";
-
-const programsData = [
-  {
-    title: "Program One",
-    description:
-      "This is the description for Program One. It provides comprehensive details on the topic.",
-    image: program1,
-  },
-  {
-    title: "Program Two",
-    description:
-      "This is the description for Program Two. It includes various aspects of the subject matter.",
-    image: program2,
-  },
-  {
-    title: "Program Three",
-    description:
-      "This is the description for Program Three. Learn more about this program and its features.",
-    image: program3,
-  },
-  {
-    title: "Program Four",
-    description:
-      "This is the description for Program Four. Learn more about this program and its features.",
-    image: program4,
-  },
-];
 
 const Programs = () => {
   const [loading, setLoading] = useState(true);
@@ -50,24 +19,25 @@ const Programs = () => {
   if (loading) {
     return <Loading />;
   }
+
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: "170px" }} className="programs">
-        <h1 className="programs-title">Our Programs</h1>
-        <div className="programs-container">
-          {programsData.map((program, index) => (
-            <div key={index} className="program-card">
-              <img
-                src={program.image}
-                alt={program.title}
-                className="program-image"
-              />
-              <h2 className="program-title">{program.title}</h2>
-              <p className="program-description">{program.description}</p>
-            </div>
-          ))}
+      <div className="program-page-container flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="animation-wrapper flex justify-center items-center my-8">
+          <div className="circles circle6"></div>
+          <div className="circles circle7"></div>
+          <div className="circles circle8"></div>
         </div>
+        <h1 className="coming-soon-title text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+          Something Exciting is Coming Soon!
+        </h1>
+        <p className="coming-soon-text text-lg text-gray-600 mb-8 text-center">
+          We are working hard to bring you the new Tender page. Stay tuned!
+        </p>
+        <a href="/" className="back-link text-indigo-600 hover:underline text-lg">
+          Go Back Home
+        </a>
       </div>
       <Footer />
     </>
