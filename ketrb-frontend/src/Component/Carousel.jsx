@@ -32,12 +32,6 @@ const images = [
     coreValueContent:
       "We foster a culture of creativity and continuous improvement, embracing new ideas and technologies.",
   },
-  {
-    className: "image5",
-    coreValueTitle: "Commitment",
-    coreValueContent:
-      "We are dedicated to achieving excellence in everything we do, putting our best efforts into every task.",
-  },
 ];
 
 function Carousel() {
