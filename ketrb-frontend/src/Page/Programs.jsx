@@ -33,7 +33,7 @@ const Programs = () => {
           Something Exciting is Coming Soon!
         </h1>
         <p className="coming-soon-text text-lg text-gray-600 mb-8 text-center">
-          We are working hard to bring you the new Tender page. Stay tuned!
+          We are working hard to bring you the new Programs page. Stay tuned!
         </p>
         <a href="/" className="back-link text-indigo-600 hover:underline text-lg">
           Go Back Home
