@@ -27,7 +27,7 @@ const Charter = () => {
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
   };
-  const services = t("servicesTable", { returnObjects: true });
+  
 
   return (
     <>
