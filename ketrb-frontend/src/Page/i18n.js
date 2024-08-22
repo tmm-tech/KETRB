@@ -56,35 +56,35 @@ const resources = {
                 </tr>
                 <tr>
                   <td>Consulting firms</td>
-                  <td>5,000/</td>
+                  <td>5,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Consulting Engineering Technologist</td>
-                  <td>5,000/</td>
+                  <td>5,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Candidate/Professional Engineering Technologist</td>
-                  <td>2,000/</td>
+                  <td>2,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Certified Engineering Technician</td>
-                  <td>2,000/</td>
+                  <td>2,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Candidate Engineering Technician</td>
-                  <td>500/</td>
+                  <td>500&#47;</td>
                 </tr>
                 <tr>
                   <td>Candidate Engineering Technician (Craft-person)</td>
-                  <td>100/</td>
+                  <td>100&#47;</td>
                 </tr>
                 <tr>
-                  <td>Candidate Engineering Technician (Artisan\)</td>
-                  <td>100/</td>
+                  <td>Candidate Engineering Technician (Artisan)</td>
+                  <td>100&#47;</td>
                 </tr>
               </table>
             </td>
-            <td>Immediate</td>
+            <td></td>
           </tr>
           <tr>
             <td>Annual subscription/License renewal</td>
@@ -93,31 +93,31 @@ const resources = {
               <table className="nested-table">
                 <tr>
                   <td>Consulting firms</td>
-                  <td>50,000/</td>
+                  <td>50,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Consulting Engineering Technologist</td>
-                  <td>30,000/</td>
+                  <td>30,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Candidate/Professional Engineering Technologist</td>
-                  <td>3,000/</td>
+                  <td>3,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Certified Engineering Technician</td>
-                  <td>7,000/</td>
+                  <td>7,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Candidate Engineering Technician</td>
-                  <td>2,000/</td>
+                  <td>2,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Candidate Engineering Technician (Craft-person)</td>
-                  <td>500/</td>
+                  <td>500&#47;</td>
                 </tr>
                 <tr>
-                  <td>Candidate Engineering Technician (Artisan\)</td>
-                  <td>500/</td>
+                  <td>Candidate Engineering Technician (Artisan)</td>
+                  <td>500&#47;</td>
                 </tr>
               </table>
             </td>
@@ -212,35 +212,35 @@ const resources = {
                 </tr>
                 <tr>
                   <td>Makampuni ya ushauri</td>
-                  <td>5,000/</td>
+                  <td>5,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Mtaalamu wa Teknolojia ya Uhandisi wa Ushauri Mtaalamu wa Teknolojia ya Uhandisi wa Ushauri</td>
-                  <td>5,000/</td>
+                  <td>5,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Mgombea/Mtaalamu wa Teknolojia ya Uhandisi</td>
-                  <td>2,000/</td>
+                  <td>2,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Fundi wa Uhandisi Aliyeidhinishwa</td>
-                  <td>2,000/</td>
+                  <td>2,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Fundi Mtahiniwa wa Uhandisi</td>
-                  <td>500/</td>
+                  <td>500&#47;</td>
                 </tr>
                 <tr>
                   <td>Fundi Mtahiniwa wa Uhandisi (Craft-person)</td>
-                  <td>100/</td>
+                  <td>100&#47;</td>
                 </tr>
                 <tr>
                   <td>Fundi Mtahiniwa wa Uhandisi (Artisan)</td>
-                  <td>100/</td>
+                  <td>100&#47;</td>
                 </tr>
               </table>
             </td>
-            <td>Mara moja</td>           
+            <td></td>           
             </tr>
           <tr>
             <td>Usajili wa kila mwaka/Usasishaji wa leseni</td>
@@ -249,31 +249,31 @@ const resources = {
                 
                 <tr>
                   <td>Makampuni ya ushauri</td>
-                  <td>50,000/</td>
+                  <td>50,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Mtaalamu wa Teknolojia ya Uhandisi wa Ushauri Mtaalamu wa Teknolojia ya Uhandisi wa Ushauri</td>
-                  <td>30,000/</td>
+                  <td>30,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Mgombea/Mtaalamu wa Teknolojia ya Uhandisi</td>
-                  <td>3,000/</td>
+                  <td>3,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Fundi wa Uhandisi Aliyeidhinishwa</td>
-                  <td>7,000/</td>
+                  <td>7,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Fundi Mtahiniwa wa Uhandisi</td>
-                  <td>2,000/</td>
+                  <td>2,000&#47;</td>
                 </tr>
                 <tr>
                   <td>Fundi Mtahiniwa wa Uhandisi (Craft-person)</td>
-                  <td>500/</td>
+                  <td>500&#47;</td>
                 </tr>
                 <tr>
                   <td>Fundi Mtahiniwa wa Uhandisi (Artisan)</td>
-                  <td>500/</td>
+                  <td>500&#47;</td>
                 </tr>
               </table>
             </td>
