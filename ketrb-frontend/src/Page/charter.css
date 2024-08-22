@@ -103,6 +103,12 @@
   margin-top: 20px;
 }
 
+.nested-table{
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+}
+
 .commitment-section th,
 .commitment-section td {
   border: 1px solid #ddd;
