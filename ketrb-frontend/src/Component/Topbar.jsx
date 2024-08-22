@@ -73,7 +73,7 @@ const TopBar = () => {
             <div className="dropdown-content">
               <ul>
                 <li>
-                  <Link to="/programs">Programs</Link>
+                  <Link to="/programs">Programs & Projects</Link>
                 </li>
                 <li>
                   <Link to="/news&events">News & Events</Link>
