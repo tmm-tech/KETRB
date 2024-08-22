@@ -1,39 +1,51 @@
 import React, { useState, useEffect } from "react";
-import "./programs.css";
-import TopBar from "../Component/Topbar";
+import './programs.css';
+import TopBar from '../Component/Topbar';
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-import program1 from "../Asset/Carousel/engineer_group.webp";
-import program2 from "../Asset/Carousel/lady2.jpeg";
-import program3 from "../Asset/Carousel/man.jpeg";
-import program4 from "../Asset/Carousel/lady&man.jpg";
+import kengen from '../Asset/programs/kengen.png';
+import ndur from '../Asset/programs/NdurumoTech.png';
+import rvist from '../Asset/programs/RVIST.png';
+import solarDryer from '../Asset/programs/SolarGrainDryer.png';
+import irrigationSys from '../Asset/programs/irrigationSys.png';
 
-const programsData = [
+const programs = [
   {
-    title: "Program One",
-    description:
-      "This is the description for Program One. It provides comprehensive details on the topic.",
-    image: program1,
+    image: kengen,
+    title: "OLKARIA 1AU 140 MW",
+    description: "OLKARIA IAU is part of Kenya's geothermal power generation complex located in the Olkaria geothermal field, near Naivasha in the Rift Valley. It is a geothermal power plant that generates electricity by harnessing the heat from underground steam reservoirs. This provides power to homes, businesses and industries across Kenya hence a significant contribution to Kenya’s renewable energy.",
+    link: "#",
+    date: "2024-08-08",
   },
   {
-    title: "Program Two",
-    description:
-      "This is the description for Program Two. It includes various aspects of the subject matter.",
-    image: program2,
+    image: ndur,
+    title: "NDURURUMO TECHNOLOGIES",
+    description: "Ndururumo Technologies is a leading supplier of water and energy-related equipment within Naivasha and its environs. They provide equipment and systems for water pumping, storage, and treatment, helping communities and businesses access clean water.",
+    link: "#",
+    date: "2024-08-08",
   },
   {
-    title: "Program Three",
-    description:
-      "This is the description for Program Three. Learn more about this program and its features.",
-    image: program3,
+    image: solarDryer,
+    title: "SOLAR GRAIN DRYER",
+    description: "A solar grain dryer utilizes the sun's energy to dry harvested grains. This process involves capturing solar heat to dehydrate the grains, reducing their moisture content and preventing spoilage.",
+    link: "#",
+    date: "2024-08-08",
   },
   {
-    title: "Program Four",
-    description:
-      "This is the description for Program Four. Learn more about this program and its features.",
-    image: program4,
+    image: rvist,
+    title: "SMOKE DETECTOR ALARM",
+    description: "Rift Valley Institute of Science and Technology (RVIST) developed a smoke detector system.\n A smoke detector system is designed to detect the presence of smoke in the air, which is a common indicator of fire. It is therefore designed to protect households, office premises and industries against fire. (Developed by Rift Valley Institute of Science and Technology)",
+    link: "#",
+    date: "2024-08-08",
   },
-];
+  {
+    image: irrigationSys,
+    title: "AUTOMATIC IRRIGATION SYSTEM",
+    description: "An automatic irrigation system is a technology that controls the watering of plants without manual intervention. It uses sensors, timers, or computer programs to determine when and how much water to apply to crops or landscapes. (Developed by Rift Valley Institute of Science and Technology)",
+    link: "#",
+    date: "2024-08-08",
+  },
+]
 
 const Programs = () => {
   const [loading, setLoading] = useState(true);
@@ -50,21 +62,38 @@ const Programs = () => {
   if (loading) {
     return <Loading />;
   }
+
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: "170px" }} className="programs">
-        <h1 className="programs-title">Our Programs</h1>
-        <div className="programs-container">
-          {programsData.map((program, index) => (
-            <div key={index} className="program-card">
-              <img
-                src={program.image}
-                alt={program.title}
-                className="program-image"
-              />
-              <h2 className="program-title">{program.title}</h2>
-              <p className="program-description">{program.description}</p>
+      {/*<div className="program-page-container flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="animation-wrapper flex justify-center items-center my-8">
+          <div className="circles circle6"></div>
+          <div className="circles circle7"></div>
+          <div className="circles circle8"></div>
+        </div>
+        <h1 className="coming-soon-title text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+          Something Exciting is Coming Soon!
+        </h1>
+        <p className="coming-soon-text text-lg text-gray-600 mb-8 text-center">
+          We are working hard to bring you the new Programs page. Stay tuned!
+        </p>
+        <a href="/" className="back-link text-indigo-600 hover:underline text-lg">
+          Go Back Home
+        </a>
+      </div>*/}
+      <div style={{ paddingTop: '170px' }} className="news-container">
+        <h2 className="news-title">Programs</h2>
+        <div className="news-list">
+          {programs.map((program, index) => (
+            <div key={index} className="news-item">
+              <img src={program.image} alt={program.title} className="news-image" />
+              <div className="news-content">
+                <h3 className="news-item-title">{program.title}</h3>
+                {/*<p className="news-date">Published on: {new Date(program.date).toLocaleDateString()}</p>*/}
+                <p className="news-description">{program.description}</p>
+                {/*<a href={program.link} className="news-link">Read more</a>*/}
+              </div>
             </div>
           ))}
         </div>
