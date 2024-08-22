@@ -35,7 +35,7 @@ const Charter = () => {
       <div style={{ paddingTop: "170px" }} className="charter-page">
         <header className="charter-header">
           <div className="charter-header-content">
-            <img src={logo} alt="Kenya Logo" className="charter-logo" />
+            <img src={logo} alt="Kenya Logo" className="charter-logo1" />
             <h1 className="charter-title">{t("charter")}</h1>
             <img src={logo1} alt="KETRB Logo" className="charter-logo" />
           </div>
