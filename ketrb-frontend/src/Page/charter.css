@@ -125,6 +125,11 @@
   background-color: #f9f9f9;
 }
 
+.commitment-section  a {
+  color:#4673b6;
+  text-decoration: underline;
+}
+
 .commitment-section tr:nth-child(even) td {
   background-color: #fff;
 }
@@ -145,10 +150,7 @@
   margin-top: 5px;
 }
 
-.commitment-section p a {
-  color:#4673b6;
-  text-decoration: underline;
-}
+
 
 .commitment-section td[colspan="4"],
 .commitment-section td[colspan="2"] {
