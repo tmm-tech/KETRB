@@ -19,21 +19,27 @@
 .charter-header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 20px;
 }
 
 .charter-logo {
-  width: 250px;
+  width: 200px;
   height: auto;
-  margin-bottom: 20px;
+  margin: 0 10px;
 }
 
 .charter-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 0;
+  flex: 1;
+  text-align: center;
 }
+
 
 .language-switcher {
   margin-top: 10px;
@@ -138,16 +144,16 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .charter-header {
-    padding: 15px 0;
+  .charter-header-content {
+    flex-direction: column;
   }
 
   .charter-logo {
-    width: 120px;
+    width: 150px;
   }
 
   .charter-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .charter-content {
@@ -175,6 +181,7 @@
 
   .commitment-section th,
   .commitment-section td {
-    min-width: 120px; /* Adjust as necessary to fit content */
+    min-width: 120px;
+    /* Adjust as necessary to fit content */
   }
 }
