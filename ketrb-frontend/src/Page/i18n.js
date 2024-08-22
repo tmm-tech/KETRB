@@ -46,8 +46,8 @@ const resources = {
             </td>
           </tr>
           <tr>
-            <td>Registration of Engineering Technology Professionals & Firms:<br>-Consulting Engineering Technology firms</td>
-            <td>-Submission of duly filled application forms with relevant and certified documents<br>Payment of the prescribed fees</td>
+            <td>Registration of Engineering Technology Professionals & Firms:<br>- Consulting Engineering Technology firms</td>
+            <td>- Submission of duly filled application forms with relevant and certified documents<br>Payment of the prescribed fees</td>
             <td>
               <table className="nested-table">
                 <tr>
@@ -203,9 +203,10 @@ const resources = {
             </td>
           </tr>
           <tr>
-            <td>Usajili wa Wataalamu na Makampuni ya Teknolojia ya Uhandisi:<br>- Makampuni ya Teknolojia ya Uhandisi ya Ushauri<br>-Teknolojia za Uhandisi (Ushauri, Mtaalamu & Mgombea)<br>-Mafundi wa Uhandisi wakiwemo Wafundi na Mafundi (Walioidhinishwa na Wagombea)</td>
-            <td>-Uwasilishaji wa fomu za maombi zilizojazwa ipasavyo na hati zinazofaa na zilizoidhinishwa<br>-  vm ya ada zilizowekwa</td>
-            <table className="nested-table">
+            <td>Usajili wa Wataalamu na Makampuni ya Teknolojia ya Uhandisi:<br>- Makampuni ya Teknolojia ya Uhandisi ya Ushauri<br>- Teknolojia za Uhandisi (Ushauri, Mtaalamu & Mgombea)<br>-Mafundi wa Uhandisi wakiwemo Wafundi na Mafundi (Walioidhinishwa na Wagombea)</td>
+            <td>- Uwasilishaji wa fomu za maombi zilizojazwa ipasavyo na hati zinazofaa na zilizoidhinishwa<br>- Malipo ya ada zilizowekwa</td>
+            <td>  
+              <table className="nested-table">
                 <tr>
                   <td>Ada za Maombi (Kes)</td>
                   <td>Robo mwaka</td>
@@ -245,7 +246,8 @@ const resources = {
           <tr>
             <td>Usajili wa kila mwaka/Usasishaji wa leseni</td>
             <td>Malipo ya ada zilizowekwa</td>
-            <table className="nested-table">
+            <td>
+              <table className="nested-table">
                 
                 <tr>
                   <td>Makampuni ya ushauri</td>
