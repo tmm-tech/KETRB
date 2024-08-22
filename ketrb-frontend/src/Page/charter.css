@@ -160,6 +160,8 @@
     padding: 20px;
   }
 
+
+
   .mission-section h2,
   .vision-section h2,
   .commitment-section h2 {
@@ -170,7 +172,11 @@
   .commitment-section td {
     font-size: 0.9rem;
   }
-
+.nested-table{
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+}
   /* Table responsiveness */
   .commitment-section table {
     display: block;
