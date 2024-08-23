@@ -6,9 +6,9 @@ const ApplySection = () => {
   return (
     <div className="apply-section-container">
       <section className="apply-section">
-        <h1>Join The KETRB</h1>
+        <h1>Join KETRB</h1>
         <p>
-          At the Kenya Engineering Technology Registration Board (KETRB), we're committed to advancing engineering technology in Kenya. We’re always on the lookout for talented individuals who are passionate about our mission. If you're eager to contribute and grow with us, we'd love to hear from you.
+          At the Kenya Engineering Technology Registration Board (KETRB), we are committed to advancing engineering technology in Kenya. We are always on the lookout for talented individuals who are passionate about our mission. If you are eager to contribute and grow with us, we would love to hear from you.
         </p>
         <p>
           Ready to take the next step in your career and join a dynamic team? Follow our streamlined application process to become a registered member and start making an impact.
