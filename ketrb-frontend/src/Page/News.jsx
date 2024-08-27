@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./news.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-
-
-
 
 const News = ({ articles }) => {
   const [loading, setLoading] = useState(true);
