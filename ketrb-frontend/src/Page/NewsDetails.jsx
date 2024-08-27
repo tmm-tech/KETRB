@@ -42,7 +42,7 @@ const NewsDetails = ({ articles }) => {
                 </h1>
                 <p className="text-gray-700 md:text-lg">
                   {article.description.length > 150
-                    ? `${article.description.substring(0, 150)}...`
+                    ? `${article.description.substring(0, 100)}...`
                     : article.description}
                 </p>
               </div>
