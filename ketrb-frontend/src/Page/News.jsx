@@ -38,7 +38,7 @@ const sortedArticles = articles.sort((a, b) => new Date(b.date) - new Date(a.dat
                 <h3 className="news-item-title">{article.title}</h3>
                 <p className="news-date">Published on: {new Date(article.date).toLocaleDateString()}</p>
                 <p className="news-description">{article.description}</p>
-                <Link to={`/news/${index}`} className="news-link">Read more</Link>
+                <Link to={`/news&events/${index}`} className="news-link">Read more</Link>
               </div>
             </div>
           ))}
