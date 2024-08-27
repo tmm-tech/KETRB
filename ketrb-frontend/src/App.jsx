@@ -13,12 +13,12 @@ import Application from "./Page/Application";
 import Charter from "./Page/Charter";
 import ActPage from "./Page/Act";
 import TenderPage from "./Page/Tender";
-import news1 from "../Asset/News/IMG_3467.jpeg";
-import news2 from "../Asset/News/IMG_3468.jpeg";
-import news3 from "../Asset/Carousel/city.jpeg";
-import news4 from "../Asset/Carousel/lady2.jpeg";
-import news5 from "../Asset/Carousel/man.jpeg";
-import news6 from "../Asset/Carousel/lady&man.jpg";
+import news1 from "./Asset/News/IMG_3467.jpeg";
+import news2 from "./Asset/News/IMG_3468.jpeg";
+import news3 from "./Asset/Carousel/city.jpeg";
+import news4 from "./Asset/Carousel/lady2.jpeg";
+import news5 from "./Asset/Carousel/man.jpeg";
+import news6 from "./Asset/Carousel/lady&man.jpg";
 function App() {
   const newsArticles = [
     {
