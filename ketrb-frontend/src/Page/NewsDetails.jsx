@@ -10,10 +10,6 @@ const NewsDetail = ({ articles }) => {
   const [loading, setLoading] = useState(true);
   const article = articles.find((_, index) => index === parseInt(id));
 
-  if (!article) {
-    return <div>Article not found</div>;
-  }
-
   useEffect(() => {
     const loadData = async () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -22,6 +18,10 @@ const NewsDetail = ({ articles }) => {
 
     loadData();
   }, []);
+
+  if (!article) {
+    return <div>Article not found</div>;
+  }
 
   if (loading) {
     return <Loading />;
