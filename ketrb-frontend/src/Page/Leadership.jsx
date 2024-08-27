@@ -15,46 +15,45 @@ import leader8 from "../Asset/Leaders/THUMBI.png";
 const leadershipData = [
   {
     image: leader7,
-    name: "MR NICHOLAS KIPRUTO TEMOET",
-    description: "BOARD CHAIRMAN",
+    name: "mr nicholas kipruto temoet",
+    description: "board chairman",
   },
   {
     image: leader1,
-    name: "MRS ALICE MUTAI",
-    description: "CEO",
+    name: "mrs alice mutai",
+    description: "ceo",
   },
   {
     image: leader4,
-    name: "MR FRED NYAMBENE OANDA",
-    description: "BOARD MEMBER",
+    name: "mr fred nyambene oanda",
+    description: "board member",
   },
   {
     image: leader5,
-    name: "MR PETER NG'ANG'A KARIUKI",
-    description: "BOARD MEMBER",
+    name: "mr peter ng'ang'a kariuki",
+    description: "board member",
   },
   {
     image: leader3,
-    name: "MRS LINDA AYUKU WEKHOBA",
-    description: "BOARD MEMBER",
+    name: "mrs linda ayuku wekhoba",
+    description: "board member",
   },
   {
     image: leader8,
-    name: "PROF GEORGE MITHURI GITHAMBI",
-    description: "BOARD MEMBER",
+    name: "prof george mithuri githambi",
+    description: "board member",
   },
   {
     image: leader2,
-    name: "MR CHARLES CHORE MAJANI",
-    description: "BOARD MEMBER",
+    name: "mr charles chore majani",
+    description: "board member",
   },
   {
     image: leader6,
-    name: "MR SAMUEL MUTHONDU",
-    description: "BOARD MEMBER",
+    name: "mr samuel muthondu",
+    description: "board member",
   },
 ];
-
 const Leadership = () => {
   const [loading, setLoading] = useState(true);
 
