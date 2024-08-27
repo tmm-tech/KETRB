@@ -35,7 +35,7 @@ const NewsDetails = ({ articles }) => {
             <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
               <div className="space-y-4">
                 <div className="inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-medium text-white">
-                  Government News
+                  News
                 </div>
                 <h1 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
                   {article.title}
