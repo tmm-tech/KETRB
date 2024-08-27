@@ -86,7 +86,7 @@ const Leadership = () => {
                 alt="MR NICHOLAS KIPRUTO TEMOET"
                 className="leadership-image"
               />
-              <h2 className="leadership-name">MR NICHOLAS KIPRUTO TEMOET</h2>
+              <h2 className="leadership-name">mr nicholas kipruto temoet</h2>
               <p className="leadership-description">BOARD CHAIRMAN</p>
             </div>
           </div>
@@ -116,7 +116,7 @@ const Leadership = () => {
                 alt="MS ALICE MUTAI"
                 className="leadership-image"
               />
-              <h2 className="leadership-name">MS ALICE MUTAI</h2>
+              <h2 className="leadership-name">mrs alice mutai</h2>
               <p className="leadership-description">CEO</p>
             </div>
           </div>
