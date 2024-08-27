@@ -101,9 +101,9 @@ const Leadership = () => {
                   alt={leader.name}
                   className="leadership-image"
                 />
-                <h2 className="leadership-name">{leader.name}</h2>
+                <h2 className="leadership-name">{leader.name.capitalize()}</h2>
                 <p className="leadership-description">
-                  {leader.description}
+                  {leader.description.capitalize()}
                 </p>
               </div>
             ))}
