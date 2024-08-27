@@ -7,13 +7,12 @@ import Loading from "../Component/Loading";
 
 const NewsDetail = ({ articles }) => {
   const { id } = useParams();
+  const [loading, setLoading] = useState(true);
   const article = articles.find((_, index) => index === parseInt(id));
 
   if (!article) {
     return <div>Article not found</div>;
   }
-
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadData = async () => {
