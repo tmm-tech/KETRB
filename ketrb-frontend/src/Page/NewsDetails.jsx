@@ -4,7 +4,7 @@ import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 
-const NewsDetail = ({ articles }) => {
+const NewsDetails = ({ articles }) => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const article = articles.find((_, index) => index === parseInt(id));
@@ -61,7 +61,7 @@ const NewsDetail = ({ articles }) => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-gray-600">
                     <UserIcon className="h-5 w-5 text-gray-500" />
-                    <p className="text-sm font-medium">John Doe</p>
+                    <p className="text-sm font-medium"></p>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CalendarIcon className="h-5 w-5 text-gray-500" />
@@ -104,6 +104,8 @@ function CalendarIcon(props) {
     </svg>
   );
 }
+
+export default NewsDetails;
 
 function UserIcon(props) {
   return (
