@@ -20,7 +20,7 @@ const leadershipData = [
   },
   {
     image: leader1,
-    name: "MS ALICE MUTAI",
+    name: "MRS ALICE MUTAI",
     description: "CEO",
   },
   {
