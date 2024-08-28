@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image1 from "../Asset/Gallery/IMG_0289.JPG";
+//import Image1 from "../Asset/Gallery/IMG_0289.JPG";
 import Image2 from "../Asset/Gallery/IMG_0723.JPG";
 import "./about.css";
 import TopBar from "../Component/Topbar";
@@ -9,6 +9,12 @@ import partner1 from "../Asset/Partners/cdacc.jpeg";
 import partner2 from "../Asset/Partners/cue.png";
 import partner3 from "../Asset/Partners/tveta.png";
 import partner4 from "../Asset/Partners/transport.jpeg";
+//import Fafu2 from "../Asset/Fafuu/Fafu2.jpeg";
+//import Fafu3 from "../Asset/Fafuu/Fafu3.jpeg";
+import Fafu4 from "../Asset/Fafuu/Fafu4.jpg";
+import Fafu5 from "../Asset/Fafuu/Fafu5.jpg";
+//import Fafu6 from "../Asset/Fafuu/Fafu6.jpg";
+//import Fafu7 from "../Asset/Fafuu/Fafu7.jpg";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -35,7 +41,7 @@ const About = () => {
         {/* About Section */}
         <div className="about-content max-w-6xl mx-auto flex flex-wrap items-stretch">
           <div className="about-image-item w-full md:w-1/2">
-            <img src={Image1} alt="About Us" className="w-full rounded" />
+            <img src={Fafu4} alt="About Us" className="w-full rounded" />
           </div>
           <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0 flex items-center">
             <div>
@@ -120,7 +126,7 @@ const About = () => {
             </div>
           </div>
           <div className="about-image-item w-full md:w-1/2">
-            <img src={Image2} alt="About Us" className="w-full rounded" />
+            <img src={Fafu5} alt="About Us" className="w-full rounded" />
           </div>
         </div>
 
