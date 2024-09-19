@@ -25,15 +25,15 @@ const TopBar = () => {
             <ul className="flex items-center flex-wrap menu-lists">
               <li className="mr-4 flex items-center">
                 <FaEnvelope className="mr-2" />
-                <Link to="mailto:kipkogeit@gmail.com">kipkogeit@gmail.com</Link>
+                <Link to="mailto:info@ketrb.go.ke">info@ketrb.go.ke</Link>
               </li>
               <li className="mr-4 flex items-center">
                 <FaPhone className="mr-2" />
-                <Link to="tel:+254729777711">+254 724027435</Link>
+                <Link to="tel: +254724027435">+254 724027435</Link>
               </li>
               <li className="mr-4 flex items-center">
                 <FaMapMarker className="mr-2" />
-                <p>Lower Kabete / Kiplombe Eldoret</p>
+                <p>National Bank Building, 11th floor,Harambee Avenue, Nairobi</p>
               </li>
             </ul>
           </div>
@@ -41,34 +41,25 @@ const TopBar = () => {
             <ul className="flex items-center flex-wrap menu-lists">
               <li className="mr-4 flex items-center">
                 <FaClock className="mr-2" />
-                <p>Mon - Fri: 8:00 - 16:00, Sat: 8:00 - Noon</p>
+                <p>Mon-Fri 08:00 AM – 5:00 PM</p>
               </li>
               {/* Social Media Icons */}
               <li className="mr-4 flex items-center">
-                <Link to="https://web.facebook.com/profile.php?id=61555197753208" target="_blank">
+                <Link to="https://www.facebook.com/KETRBOARD" target="_blank">
                   <FaFacebook />
                 </Link>
               </li>
               <li className="mr-4 flex items-center">
-                <Link to="#" target="_blank">
+                <Link to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09" target="_blank">
                   <FaTwitter />
                 </Link>
               </li>
               <li className="mr-4 flex items-center">
-                <Link to="#" target="_blank">
+                <Link to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/" target="_blank">
                   <FaLinkedin />
                 </Link>
               </li>
-              <li className="mr-4 flex items-center">
-                <Link to="#" target="_blank">
-                  <FaInstagram />
-                </Link>
-              </li>
-              <li className="mr-4 flex items-center">
-                <Link to="#" target="_blank">
-                  <FaYoutube />
-                </Link>
-              </li>
+        
             </ul>
           </div>
         </div>
