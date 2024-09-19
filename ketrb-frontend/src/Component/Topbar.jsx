@@ -118,8 +118,46 @@ const TopBar = () => {
           )}
         </div>
 
-        {/* Other Dropdowns */}
-        {/* Similar approach for 'Download' and 'Resources' dropdowns */}
+       <div className="dropdown">
+  <div className="dropdown-link" onClick={() => setShowDropdownDownload(!showDropdownDownload)}>
+    Download{" "}
+    <i className={`fas ${showDropdownDownload ? "fa-angle-up" : "fa-angle-down"}`}></i>
+  </div>
+  {showDropdownDownload && (
+    <div className="dropdown-content">
+      <ul>
+        <li>
+          <Link to="/act">Act</Link>
+        </li>
+        <li>
+          <Link to="/application">Application Requirement</Link>
+        </li>
+        <li>
+          <Link to="/charter">Charter</Link>
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
+
+<div className="dropdown">
+  <div className="dropdown-link" onClick={() => setShowDropdownResources(!showDropdownResources)}>
+    Resources{" "}
+    <i className={`fas ${showDropdownResources ? "fa-angle-up" : "fa-angle-down"}`}></i>
+  </div>
+  {showDropdownResources && (
+    <div className="dropdown-content">
+      <ul>
+        <li>
+          <Link to="/tender">Tender</Link>
+        </li>
+        <li>
+          <Link to="/faq">FAQ</Link>
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
       </nav>
 
       {/* Hamburger for mobile */}
