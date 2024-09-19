@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
 import logo from "../Asset/Logo/logo_1.png";
+import { FaEnvelope, FaPhone, FaMapMarker, FaClock, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa"; // Import social icons
 import MobileMenu from "./MobileMenu"; // Import the MobileMenu component
 
 const TopBar = () => {
