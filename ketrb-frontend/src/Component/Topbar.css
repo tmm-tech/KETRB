@@ -7,7 +7,6 @@
   width:100%;
   top:0;
   font-weight: 600;
-  padding: 10px 20px;
   border-bottom: 6px #f39c12 solid;
   position: fixed;
   z-index: 1000;
@@ -36,7 +35,7 @@
 }
 
 .company-name {
-  color: #f39c12;
+  color: #5b92e5;
 }
 .logo-img {
   width: 100px;
