@@ -17,8 +17,10 @@
   margin-bottom: 10px;
 }
 .toolbar-area {
-  background-color: #2d3748; /* Example dark background */
-  padding: 10px 0;
+  width: 100%;
+  background-color: #f39c12;
+  padding: 10px; 
+  
   color: white;
 }
 
@@ -29,7 +31,11 @@
 }
 
 .logo-container {
-  padding: 15px 0;
+  display: flex;
+ justify-content: space-between; /* This will ensure items are spread evenly */
+  align-items: center; /* Vertically align items */
+  max-width: 1200px; /* Optional: to limit the max width of the content */
+  width: 100%;
 }
 
 .company-name {
