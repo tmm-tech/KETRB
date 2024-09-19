@@ -18,9 +18,7 @@
 }
 .toolbar-area {
   width: 100%;
-  background-color: #f39c12;
-  padding: 10px; 
-  
+  background-color: #f39c12;   vm
   color: white;
 }
 
@@ -32,9 +30,8 @@
 
 .logo-container {
   display: flex;
- justify-content: space-between; /* This will ensure items are spread evenly */
-  align-items: center; /* Vertically align items */
-  max-width: 1200px; /* Optional: to limit the max width of the content */
+ justify-content: space-between; 
+  max-width: 1200px; 
   width: 100%;
 }
 
