@@ -3,7 +3,7 @@ import "./Topbar.css";
 import { Link } from "react-router-dom";
 import logo from "../Asset/Logo/logo_1.png";
 import {
-  FaEnvelope, FaPhone, FaMapMarker, FaClock, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaAngleUp, FaAngleDown
+  FaEnvelope, FaPhone, FaMapMarker, FaClock, FaFacebook, FaTwitter, FaLinkedin, FaAngleUp, FaAngleDown
 } from "react-icons/fa"; 
 import MobileMenu from "./MobileMenu";
 
