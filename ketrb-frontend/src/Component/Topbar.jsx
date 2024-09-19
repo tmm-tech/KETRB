@@ -19,7 +19,7 @@ const TopBar = () => {
   return (
     <header className="top-bar">
       {/* Toolbar Area */}
-     <div className="toolbar-area py-4"> {/* Added padding */}
+     <div className="toolbar-area py-2"> {/* Added padding */}
   <div className="container flex justify-between items-center">
     <div className="w-full lg:w-1/2 flex justify-start">
       <ul className="flex items-center flex-wrap menu-lists">
@@ -66,7 +66,7 @@ const TopBar = () => {
       </div>
 
       {/* Logo Section */}
-      <div className="logo-container py-4 flex items-center"> 
+      <div className="logo-container py-2 flex items-center"> 
       <Link to="/" className="flex items-center">
         <img src={logo} alt="logo" className="logo-img mr-4" /> {/* Added margin-right for spacing */}
         <h1 className="company-name text-xl font-bold">KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD</h1>
