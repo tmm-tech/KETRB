@@ -33,7 +33,7 @@ const TopBar = () => {
               </li>
               <li className="mr-4 flex items-center">
                 <FaMapMarker className="mr-2" />
-                <p>National Bank Building, 11th floor,Harambee Avenue, Nairobi</p>
+                <p>Harambee Avenue, Nairobi</p>
               </li>
             </ul>
           </div>
