@@ -16,7 +16,25 @@
 .logo-container {
   margin-bottom: 10px;
 }
+.toolbar-area {
+  background-color: #2d3748; /* Example dark background */
+  padding: 10px 0;
+  color: white;
+}
 
+.toolbar-area .menu-lists li {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.logo-container {
+  padding: 15px 0;
+}
+
+.company-name {
+  color: #f39c12;
+}
 .logo-img {
   width: 100px;
   height: auto;
