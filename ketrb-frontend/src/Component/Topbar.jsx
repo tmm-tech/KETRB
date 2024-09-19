@@ -19,11 +19,11 @@ const TopBar = () => {
   return (
     <header className="top-bar">
       {/* Toolbar Area */}
-      <div className="toolbar-area">
-        <div className="container flex justify-between items-center">
-          <div className="w-full lg:w-1/2 flex justify-start">
-            <ul className="flex items-center flex-wrap menu-lists">
-              <li className="mr-4 flex items-center">
+     <div className="toolbar-area py-4"> {/* Added padding */}
+  <div className="container flex justify-between items-center">
+    <div className="w-full lg:w-1/2 flex justify-start">
+      <ul className="flex items-center flex-wrap menu-lists">
+        <li className="mr-4 flex items-center">
                 <FaEnvelope className="mr-2" />
                 <Link to="mailto:info@ketrb.go.ke">info@ketrb.go.ke</Link>
               </li>
@@ -66,12 +66,12 @@ const TopBar = () => {
       </div>
 
       {/* Logo Section */}
-      <div className="logo-container">
-        <Link to="/">
-          <img src={logo} alt="logo" className="logo-img" />
-          <h1 className="company-name text-xl font-bold">KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD</h1>
-        </Link>
-      </div>
+      <div className="logo-container py-4 flex items-center"> 
+      <Link to="/" className="flex items-center">
+        <img src={logo} alt="logo" className="logo-img mr-4" /> {/* Added margin-right for spacing */}
+        <h1 className="company-name text-xl font-bold">KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD</h1>
+      </Link>
+</div>
 
       {/* Navigation */}
       <nav className={`nav-links ${showMenu ? "hidden" : ""}`}>
