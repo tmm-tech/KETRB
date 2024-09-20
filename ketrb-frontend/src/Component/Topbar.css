@@ -63,7 +63,7 @@
 .nav-link {
   color: #5b92e5;
   text-decoration: none;
-  padding: 10px 40px; 
+  margin-right: 20px;
   transition: color 0.2s ease
 }
 
@@ -76,7 +76,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  padding: 10px 40px;
+  margin-right: 20px;
   cursor: pointer;
 }
 
