@@ -68,7 +68,7 @@ const TopBar = () => {
       {/* Logo Section */}
       <div className="logo-container w-full flex items-center"> 
         <Link to="/"><img src={logo} alt="logo" className="logo-img mr-4" /></Link>
-        <h1 className="company-name text-xl font-bold">KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD</h1>
+        <h1 className="company-name text-xxl font-bold">KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD</h1>
 </div>
 
       {/* Navigation */}
