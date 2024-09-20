@@ -12,9 +12,7 @@
   z-index: 1000;
 }
 
-.logo-container {
-  margin-bottom: 10px;
-}
+
 .toolbar-area {
   width: 100%;
   background-color: #f39c12;
@@ -27,17 +25,23 @@
   margin-right: 15px;
 }
 
+
 .logo-container {
   display: flex;
   align-items: center;
+  justify-content: center; 
+  margin-bottom: 10px;
   width: 100%;
 }
 
 .company-name {
   color: #5b92e5;
+  font-size: 1.75rem; 
+  margin-left: 10px; 
 }
+
 .logo-img {
-  width: 100px;
+  width: 120px; 
   height: auto;
 }
 
@@ -47,7 +51,7 @@
   margin-right: 20px;
   padding: 10px 20px;
   transition: opacity 0.3s ease;
-  /* Smooth transition for hiding/showing */
+
 }
 
 .nav-links.hidden {
@@ -58,8 +62,9 @@
 .nav-link {
   color: #5b92e5;
   text-decoration: none;
-  margin-left: 20px;
+  padding: 10px 40px; 
   transition: color 0.2s ease;
+  font-size: 1.25rem;
 }
 
 .nav-link:hover {
