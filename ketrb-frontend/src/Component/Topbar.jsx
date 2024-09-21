@@ -152,7 +152,7 @@ const TopBar = () => {
 
       {/* Hamburger for mobile */}
         <div className="mobile-container">
-        <Link to="/"><img src={logo} alt="logo" className="logo-img mr-4" /></Link>
+        <Link to="/"><img src={logo} alt="logo" className="mobile-logo mr-4" /></Link>
       <div className="hamburger" onClick={toggleMenu}>
         <i className={`fas ${showMenu ? "fa-times" : "fa-bars"}`}></i>
       </div>
