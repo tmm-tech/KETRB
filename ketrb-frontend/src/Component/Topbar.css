@@ -122,7 +122,7 @@
 .dropdown-content li:not(:last-child) {
   border-bottom: 2px solid transparent;
 }
-
+ 
 .dropdown-content li:hover {
   background-color: #f3f3f3;
   border-bottom: 2px solid #f39c12;
@@ -134,7 +134,7 @@
   display: block;
   transition: color 0.2s ease;
 }
-
+  
 .dropdown-content li a:hover {
   color: #f39c12;
 }
@@ -178,7 +178,7 @@
   .company-name {
     display: none; /* Hide the company name on smaller screens */
   }
-
+ 
   .logo-img {
     width: 100px;
     height: auto;
