@@ -218,21 +218,16 @@
 
   /* Style the toolbar area and menu lists */
     .toolbar-area {
-    flex-direction: column; /* Vertical layout on mobile */
-    align-items: flex-start; /* Align items to the start on mobile */
-  }
-
-  .toolbar-area .menu-lists {
-    flex-direction: column; /* Stack menu items vertically */
-    width: 100%; /* Ensure the menu takes up full width */
+    flex-direction: row; 
+    justify-content: space-between; 
   }
 
   .toolbar-area .menu-lists li {
-    margin-bottom: 10px; /* Add space between vertical menu items */
-    margin-right: 0; /* Remove right margin for vertical layout */
+    margin-right: 10px; /* Adjust margin for mobile */
   }
 
-  .toolbar-area .menu-lists li:last-child {
-    margin-bottom: 0; /* No margin for the last item */
+  /* Optional: Add margin or padding below the logo-container for spacing */
+  .logo-container {
+    margin-bottom: 10px; 
   }
   }
