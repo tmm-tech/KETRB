@@ -234,8 +234,4 @@
     margin-bottom: 10px; /* Add space between vertical menu items */
     margin-right: 15px; 
   }
-
-  .toolbar-area .menu-lists li:last-child {
-    margin-bottom: 0; /* No margin for the last item */
-  }
   }
