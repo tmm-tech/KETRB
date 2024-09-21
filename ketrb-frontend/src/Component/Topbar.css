@@ -179,7 +179,7 @@
   }
 
   /* Style the logo container and hamburger menu to appear below the toolbar */
-  .logo-container {
+  .mobile-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -217,7 +217,8 @@
 
   /* Style the toolbar area and menu lists */
   .toolbar-area {
-    display: none; /* Hide the toolbar area and menu items on mobile */
+    flex-direction: row; 
+    justify-content: space-between; 
   }
 
   .toolbar-area .menu-lists li {
