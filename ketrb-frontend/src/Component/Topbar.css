@@ -177,6 +177,9 @@
   .logo-container {
     display: none;
   }
+  .company-name {
+    display: none;
+  }
 
   /* Style the logo container and hamburger menu to appear below the toolbar */
   .mobile-container {
