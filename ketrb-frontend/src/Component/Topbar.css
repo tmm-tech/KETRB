@@ -164,55 +164,68 @@
 }
 
 @media (max-width: 768px) {
+  /* Style the top-bar to be a simple toolbar with no company name */
   .top-bar {
     flex-direction: column; /* Stack elements vertically */
-    justify-content: center;
-    padding: 10px;
+    justify-content: center; 
+    align-items: center;
+    background-color: #f39c12;
+    color: white;
   }
 
-  .logo-container {
-    margin-bottom: 10px;
-    justify-content: center; /* Center the logo horizontally */
-  }
-
+  /* Hide the company name on mobile */
   .company-name {
-    display: none; /* Hide the company name on smaller screens */
+    display: none;
   }
- 
+
+  /* Style the logo container and hamburger menu to appear below the toolbar */
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff; /* Ensure the background contrasts the toolbar */
+  }
+
+  /* Adjust logo size for mobile */
   .logo-img {
     width: 100px;
     height: auto;
   }
 
+  /* Display the hamburger menu to the right of the logo */
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #5b92e5;
+  }
+
+  .hamburger i {
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger:hover i {
+    color: #f39c12;
+  }
+
+  /* Hide navigation links on mobile */
   .nav-links {
     display: none;
   }
 
-  .hamburger {
-    display: block;
-    align-self: flex-end; /* Align hamburger menu to the right */
-    margin-top: 10px;
-  }
-
+  /* Style the toolbar area and menu lists */
   .toolbar-area {
-    width: 100%;
-    margin-bottom: 0; /* Remove margin between toolbar and other elements */
-    display: flex;
-    flex-direction: column; /* Stack the toolbar items vertically */
-    align-items: center;
-    justify-content: center;
-  }
-
-  .toolbar-area .menu-lists {
-    display: flex;
-    flex-direction: column; /* Stack the menu items vertically */
-    align-items: center;
-    width: 100%;
+    display: none; /* Hide the toolbar area and menu items on mobile */
   }
 
   .toolbar-area .menu-lists li {
-    margin-right: 0; /* Remove right margin for mobile */
-    margin-bottom: 10px; /* Add bottom margin between menu items */
+    margin-right: 10px; /* Adjust margin for mobile */
   }
-}
 
+  /* Optional: Add margin or padding below the logo-container for spacing */
+  .logo-container {
+    margin-bottom: 10px; 
+  }
+  }
