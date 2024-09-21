@@ -174,7 +174,7 @@
   }
 
   /* Hide the company name on mobile */
-  .company-name {
+  .logo-container {
     display: none;
   }
 
@@ -229,7 +229,7 @@
 
   .toolbar-area .menu-lists li {
     margin-bottom: 10px; /* Add space between vertical menu items */
-    margin-right: 0; /* Remove right margin for vertical layout */
+    margin-right: 15px; 
   }
 
   .toolbar-area .menu-lists li:last-child {
