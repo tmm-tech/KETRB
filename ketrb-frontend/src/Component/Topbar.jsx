@@ -66,6 +66,7 @@ const TopBar = () => {
       </div>
 
       {/* Logo Section */}
+      <div className="mobile-container">
       <div className="logo-container w-full flex items-center"> 
         <Link to="/"><img src={logo} alt="logo" className="logo-img mr-4" /></Link>
         <h1 className="company-name text-xxl font-bold">KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD</h1>
@@ -153,6 +154,7 @@ const TopBar = () => {
       <div className="hamburger" onClick={toggleMenu}>
         <i className={`fas ${showMenu ? "fa-times" : "fa-bars"}`}></i>
       </div>
+        </div>
       
       <MobileMenu showMenu={showMenu} toggleMenu={toggleMenu} />
     </header>
