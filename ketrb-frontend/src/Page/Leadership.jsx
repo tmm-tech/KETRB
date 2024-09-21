@@ -11,57 +11,49 @@ import leader5 from "../Asset/Leaders/peter_nganga_kariuki.jpeg";
 import leader6 from "../Asset/Leaders/samuel_muthondu.jpeg";
 import leader7 from "../Asset/Leaders/temoet.jpeg";
 import leader8 from "../Asset/Leaders/THUMBI.png";
+
 const leadershipData = [
   {
     image: leader7,
-    name: "MR NICHOLAS KIPRUTO TEMOET",
-    description:
-      "BOARD CHAIRMAN",
+    name: "mr nicholas kipruto temoet",
+    description: "board chairman",
   },
   {
     image: leader1,
-    name: "MS ALICE MUTAI",
-    description:
-      "CEO",
+    name: "mrs alice mutai",
+    description: "ceo",
   },
   {
     image: leader4,
-    name: "MR FRED NYAMBENE OANDA",
-    description:
-      "BOARD MEMBER",
+    name: "mr fred nyambene oanda",
+    description: "board member",
   },
   {
     image: leader5,
-    name: "MR PETER NG'ANG'A KARIUKI",
-    description:
-      "BOARD MEMBER",
+    name: "mr peter ng'ang'a kariuki",
+    description: "board member",
   },
   {
     image: leader3,
-    name: "MRS LINDA AYUKU WEKHOBA",
-    description:
-      "BOARD MEMBER",
+    name: "mrs linda ayuku wekhoba",
+    description: "board member",
   },
   {
     image: leader8,
-    name: "PROF GEORGE MITHURI GITHAMBI",
-    description:
-      "BOARD MEMBER",
+    name: "prof george mithuri githambi",
+    description: "board member",
   },
   {
     image: leader2,
-    name: "MR CHARLES CHORE MAJANI",
-    description:
-      "BOARD MEMBER",
+    name: "mr charles chore majani",
+    description: "board member",
   },
   {
     image: leader6,
-    name: "Samuel Muthondu",
-    description:
-      "BOARD MEMBER",
-  }
+    name: "mr samuel muthondu",
+    description: "board member",
+  },
 ];
-
 const Leadership = () => {
   const [loading, setLoading] = useState(true);
 
@@ -77,23 +69,57 @@ const Leadership = () => {
   if (loading) {
     return <Loading />;
   }
+
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: '170px' }}  className="leadership">
+      <div style={{ paddingTop: "170px" }} className="leadership">
         <h1 className="leadership-title">Our Leadership Team</h1>
         <div className="leadership-container">
-          {leadershipData.map((leader, index) => (
-            <div key={index} className="leadership-card">
+          <div className="leadership-hierarchy-line"></div>
+
+          {/* Chairman Row */}
+          <div className="leadership-row chairman">
+            <div className="leadership-card">
               <img
-                src={leader.image}
-                alt={leader.name}
+                src={leader7}
+                alt="MR NICHOLAS KIPRUTO TEMOET"
                 className="leadership-image"
               />
-              <h2 className="leadership-name">{leader.name}</h2>
-              <p className="leadership-description">{leader.description}</p>
+              <h2 className="leadership-name">mr nicholas kipruto temoet</h2>
+              <p className="leadership-description">BOARD CHAIRMAN</p>
             </div>
-          ))}
+          </div>
+
+          {/* Members Row */}
+          <div className="leadership-row members">
+            {leadershipData.slice(2, 8).map((leader, index) => (
+              <div key={index} className="leadership-card">
+                <img
+                  src={leader.image}
+                  alt={leader.name}
+                  className="leadership-image"
+                />
+                <h2 className="leadership-name">{leader.name}</h2>
+                <p className="leadership-description">
+                  {leader.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CEO Row */}
+          <div className="leadership-row ceo">
+            <div className="leadership-card">
+              <img
+                src={leader1}
+                alt="MS ALICE MUTAI"
+                className="leadership-image"
+              />
+              <h2 className="leadership-name">mrs alice mutai</h2>
+              <p className="leadership-description">CEO</p>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

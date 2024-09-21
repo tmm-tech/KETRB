@@ -12,9 +12,28 @@
 }
 
 .leadership-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.leadership-hierarchy-line {
+    position: absolute;
+    top: 0; /* Start at the top */
+    bottom: 0; /* End at the bottom */
+    left: 50%;
+    width: 4px; 
+    background-color: #2d3748; /* Dark gray color for the line */
+    border-radius: 2px;
+    z-index: -1;
+}
+
+.leadership-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .leadership-card {
@@ -24,6 +43,7 @@
     padding: 1rem;
     text-align: center;
     transition: transform 0.3s ease;
+    width: 250px; /* Maintain card width */
 }
 
 .leadership-card:hover {
@@ -41,9 +61,27 @@
     font-size: 1.5rem;
     color: #2d3748;
     margin: 0.5rem 0;
+    text-transform: capitalize;
 }
 
 .leadership-description {
     font-size: 1rem;
     color: #4a5568;
+    text-transform: uppercase;
+}
+
+/* Specific styling for different roles */
+.chairman {
+    order: 1;
+}
+
+.members {
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ceo {
+    order: 3;
 }

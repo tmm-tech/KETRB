@@ -1,7 +1,8 @@
 import React from "react";
-import Image1 from "../Asset/Carousel/img_001.jpeg";
+//import Image1 from "../Asset/Carousel/img_001.jpeg";
 import "./homeabout.css";
 import { Link } from "react-router-dom";
+import Faf1 from "../Asset/Fafuu/Fafu1.jpeg";
 
 const HomeAbout = () => {
   return (
@@ -11,12 +12,12 @@ const HomeAbout = () => {
         <div className="containers">
           <div className="row">
             <div className="col-lg-6 mb-4 mb-lg-0">
-              <img src={Image1} alt="About Us" className="img-fluid rounded" />
+              <img src={Faf1} alt="About Us" className="img-fluid rounded" />
             </div>
             <div className="col-lg-6">
               <h2 className="mb-4 home-about">About Us</h2>
               <p>
-                The Kenya Engineering Technology Registration Board (KETRB) was
+                The Kenya Engineering Technology Registration Board (KETRB) is
                 established in accordance with the Engineering Technology Act No
                 23 of 2016 Part II Section 3. (1) to set standards for
                 engineering technologists and technicians, register and issue
