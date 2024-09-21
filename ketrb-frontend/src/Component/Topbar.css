@@ -165,23 +165,23 @@
 
 @media (max-width: 768px) {
   .top-bar {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
     padding: 10px;
   }
 
   .logo-container {
-    margin-bottom: 0;
-    margin-right: auto;
-    justify-content: flex-start; /* Align logo to the left */
+    margin-bottom: 10px;
+    justify-content: center; /* Center the logo horizontally */
   }
 
   .company-name {
-    font-size: 1.25rem; /* Reduce company name font size */
-    margin-left: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Shorten text if it overflows */
+    display: none; /* Hide the company name on smaller screens */
+  }
+
+  .logo-img {
+    width: 100px;
+    height: auto;
   }
 
   .nav-links {
@@ -190,14 +190,29 @@
 
   .hamburger {
     display: block;
+    align-self: flex-end; /* Align hamburger menu to the right */
+    margin-top: 10px;
   }
 
-  .logo-img {
-    width: 100px;
-    height: auto;
+  .toolbar-area {
+    width: 100%;
+    margin-bottom: 0; /* Remove margin between toolbar and other elements */
+    display: flex;
+    flex-direction: column; /* Stack the toolbar items vertically */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toolbar-area .menu-lists {
+    display: flex;
+    flex-direction: column; /* Stack the menu items vertically */
+    align-items: center;
+    width: 100%;
   }
 
   .toolbar-area .menu-lists li {
-    margin-right: 10px; /* Adjust margin for mobile */
+    margin-right: 0; /* Remove right margin for mobile */
+    margin-bottom: 10px; /* Add bottom margin between menu items */
   }
 }
+
