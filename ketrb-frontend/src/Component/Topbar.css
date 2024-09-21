@@ -194,9 +194,12 @@
 
   /* Adjust logo size for mobile */
   .logo-img {
+     display:none;
+  }
+  .mobile-logo {
     width: 100px;
     height: auto;
-    justify-content: flex-start; 
+    justify-content: flex-start;
   }
 
   /* Display the hamburger menu to the right of the logo */
