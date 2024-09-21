@@ -192,6 +192,7 @@
   .logo-img {
     width: 100px;
     height: auto;
+    justify-content: flex-start; 
   }
 
   /* Display the hamburger menu to the right of the logo */
