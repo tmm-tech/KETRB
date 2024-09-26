@@ -8,6 +8,7 @@
   top: 0;
   font-weight: 600;
   border-bottom: 6px #f39c12 solid;
+  position: fixed;
   z-index: 1000;
 }
 
