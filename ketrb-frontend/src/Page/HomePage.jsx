@@ -27,7 +27,7 @@ function HomePage() {
     <div className="homepage">
       <TopBar />
       <Carousel />
-      <Facts />
+      {/*<Facts />*/}
       <ApplySection />
       <HomeAbout />
       <Footer />
