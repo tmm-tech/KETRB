@@ -25,27 +25,27 @@ const leadershipData = [
   },
   {
     image: leader4,
-    name: "mr fred nyambene oanda",
+    name: "mr fred n. oanda",
     description: "board member",
   },
   {
     image: leader5,
-    name: "mr peter ng'ang'a kariuki",
+    name: "mr peter n. kariuki",
     description: "board member",
   },
   {
     image: leader3,
-    name: "mrs linda ayuku wekhoba",
+    name: "mrs linda a. wekhoba",
     description: "board member",
   },
   {
     image: leader8,
-    name: "prof george mithuri githambi",
+    name: "prof george thumbi",
     description: "board member",
   },
   {
     image: leader2,
-    name: "mr charles chore majani",
+    name: "mr charles c. majani",
     description: "board member",
   },
   {
