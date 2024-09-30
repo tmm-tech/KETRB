@@ -66,23 +66,7 @@ const Programs = () => {
   return (
     <>
       <TopBar />
-      {/*<div className="program-page-container flex flex-col items-center justify-center min-h-screen bg-gray-100">
-        <div className="animation-wrapper flex justify-center items-center my-8">
-          <div className="circles circle6"></div>
-          <div className="circles circle7"></div>
-          <div className="circles circle8"></div>
-        </div>
-        <h1 className="coming-soon-title text-3xl md:text-5xl font-bold text-gray-800 mb-4">
-          Something Exciting is Coming Soon!
-        </h1>
-        <p className="coming-soon-text text-lg text-gray-600 mb-8 text-center">
-          We are working hard to bring you the new Programs page. Stay tuned!
-        </p>
-        <a href="/" className="back-link text-indigo-600 hover:underline text-lg">
-          Go Back Home
-        </a>
-      </div>*/}
-      <div style={{ paddingTop: '170px' }} className="news-container">
+      <div style={{ paddingTop: '180px' }} className="news-container">
         <h2 className="news-title">Programs</h2>
         <div className="news-list">
           {programs.map((program, index) => (
