@@ -74,7 +74,11 @@ function Carousel() {
             >
               <div className={`u-image u-shading ${image.className}`}>
                 <div className="u-container-layout">
-                  <div className="u-core-values">
+                  <div
+                    className={`u-core-values ${
+                      currentSlide === index ? "u-slide-up" : ""
+                    }`}
+                  >
                     <h2>{image.coreValueTitle}</h2>
                     <p>{image.coreValueContent}</p>
                   </div>
