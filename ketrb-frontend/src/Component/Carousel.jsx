@@ -56,7 +56,7 @@ function Carousel() {
 
   return (
     <section
-      style={{ paddingTop: "200px", position: "relative", overflow: "hidden" }}
+      style={{ paddingTop: "210px", position: "relative", overflow: "hidden" }}
       className="u-section-1"
       id="sec-63bc"
     >
