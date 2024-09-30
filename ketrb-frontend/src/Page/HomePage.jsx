@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TopBar from "../Component/Topbar";
 import Carousel from "../Component/Carousel";
 import Footer from "../Component/Footer";
-import Facts from "../Component/Facts";
+//import Facts from "../Component/Facts";
 import HomeAbout from "../Component/HomeAbout";
 import ApplySection from "../Component/ApplySection";
 import Loading from "../Component/Loading";
@@ -27,7 +27,7 @@ function HomePage() {
     <div className="homepage">
       <TopBar />
       <Carousel />
-      <Facts />
+      //<Facts />
       <ApplySection />
       <HomeAbout />
       <Footer />
