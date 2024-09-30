@@ -54,7 +54,7 @@ const Gallery = () => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: '170px' }}  className="gallery">
+      <div style={{ paddingTop: '180px' }}  className="gallery">
         <h1 className="gallery-title">Gallery</h1>
         <div className="gallery-grid">
           {images.map((src, index) => (
