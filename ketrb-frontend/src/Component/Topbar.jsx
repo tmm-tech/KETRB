@@ -29,7 +29,7 @@ const TopBar = () => {
               </li>
               <li className="mr-4 flex items-center">
                 <FaPhone className="mr-2" />
-                <Link to="tel: +254724027435">+254 724027435</Link>
+                <Link to="tel: +254740137877">+254 740137877</Link>
               </li>
               <li className="mr-4 flex items-center">
                 <FaMapMarker className="mr-2" />
