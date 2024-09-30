@@ -35,7 +35,7 @@ const News = ({ articles }) => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: '170px' }} className="news-container">
+      <div style={{ paddingTop: '180px' }} className="news-container">
         <h2 className="news-title">Latest News</h2>
         <div className="news-list">
           {sortedArticles.map((article, index) => (
