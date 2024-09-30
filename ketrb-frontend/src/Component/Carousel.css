@@ -18,8 +18,9 @@
   position: relative;
 }
 
-.u-image.image3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/Gallery/IMG_0499.JPG');
+/* Background images for each slide */
+.u-image.image0 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/Gallery/IMG_0114.JPG');
 }
 
 .u-image.image1 {
@@ -30,14 +31,13 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/Gallery/IMG_0093.JPG');
 }
 
-.u-image.image0 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/Gallery/IMG_0114.JPG');
+.u-image.image3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/Gallery/IMG_0499.JPG');
 }
 
 .u-image.image4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Asset/Gallery/IMG_0136.JPG');
 }
-
 
 .u-image::before {
   content: '';
@@ -93,6 +93,9 @@
 .u-carousel-control-next {
   position: absolute;
   top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
@@ -117,6 +120,7 @@
   fill: white;
 }
 
+/* Carousel indicators */
 .u-carousel-indicators {
   position: absolute;
   bottom: 10px;
