@@ -32,7 +32,7 @@ const Charter = () => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: "180px" }} className="charter-page">
+      <div style={{ paddingTop: "210px" }} className="charter-page">
         <header className="charter-header">
           <div className="charter-header-content">
             <img src={logo} alt="Kenya Logo" className="charter-logo1" />
