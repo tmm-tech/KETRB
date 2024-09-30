@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: '180px' }} className="contact-container">
+      <div style={{ paddingTop: '210px' }} className="contact-container">
         <div className="contact-inner-container">
           {/* Map and Location Details */}
           <div className="contact-map-section">
