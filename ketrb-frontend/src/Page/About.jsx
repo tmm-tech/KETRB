@@ -35,7 +35,7 @@ const About = () => {
     <>
       <TopBar />
       <div
-        style={{ paddingTop: "180px" }}
+        style={{ paddingTop: "210px" }}
         className="about-container mx-auto px-4 py-12"
       >
         {/* About Section */}
