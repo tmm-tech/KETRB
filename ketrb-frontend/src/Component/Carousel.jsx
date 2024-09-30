@@ -1,57 +1,46 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-import image1 from "../Asset/Gallery/IMG_0093.JPG";
-import image2 from "../Asset/Gallery/IMG_0723.JPG";
-import image3 from "../Asset/Carousel/lady&man.jpg";
-import image4 from "../Asset/Gallery/IMG_3465.jpeg";
-import image5 from "../Asset/Gallery/IMG_0136.JPG";
+
 const images = [
   {
     className: "image0",
     coreValueTitle: "KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD",
-    coreValueContent: '',
-    url: image1,
+    coreValueContent:
+      "",
   },
   {
     className: "image1",
     coreValueTitle: "Accountability",
-    coreValueContent: "We take responsibility for our actions and decisions.",
-    url: image2,
+    coreValueContent:
+      "We take responsibility for our actions and decisions, ensuring transparency and trust.",
   },
   {
     className: "image2",
     coreValueTitle: "Teamwork",
-    coreValueContent: "We collaborate and support each other to achieve common goals.",
-    url: image3,
+    coreValueContent:
+      "We collaborate and support each other to achieve common goals.",
   },
   {
     className: "image3",
     coreValueTitle: "Integrity",
-    coreValueContent: "We adhere to the highest ethical standards.",
-    url: image4,
+    coreValueContent:
+      "We adhere to the highest ethical standards, demonstrating honesty and fairness in every action.",
   },
   {
     className: "image4",
     coreValueTitle: "Innovation",
-    coreValueContent: "We foster a culture of creativity.",
-    url: image5,
+    coreValueContent:
+      "We foster a culture of creativity and continuous improvement, embracing new ideas and technologies.",
   },
 ];
 
 function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [loadedImages, setLoadedImages] = useState({});
-
-  // Preload the first image for faster first render
-  useEffect(() => {
-    const img = new Image();
-    img.src = images[currentSlide].url;
-  }, [currentSlide]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-    }, 5000);
+    }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -66,13 +55,6 @@ function Carousel() {
     );
   };
 
-  const handleImageLoad = (index) => {
-    setLoadedImages((prevLoadedImages) => ({
-      ...prevLoadedImages,
-      [index]: true,
-    }));
-  };
-
   return (
     <section style={{ paddingTop: '130px', position: 'relative', overflow: 'hidden' }} className="u-section-1" id="sec-63bc">
       <div className="u-carousel u-expanded-width u-slider-1">
@@ -82,18 +64,12 @@ function Carousel() {
         >
           {images.map((image, index) => (
             <div
-              className={`u-carousel-item ${currentSlide === index ? "u-active" : ""}`}
+              className={`u-carousel-item ${
+                currentSlide === index ? "u-active" : ""
+              }`}
               key={index}
             >
               <div className={`u-image u-shading ${image.className}`}>
-                {!loadedImages[index] && <span>Loading...</span>}
-                <img
-                  src={image.url}
-                  alt={image.coreValueTitle}
-                  className="carousel-image"
-                  loading="lazy"
-                  onLoad={() => handleImageLoad(index)}
-                />
                 <div className="u-container-layout">
                   <div className="u-core-values">
                     <h2>{image.coreValueTitle}</h2>
