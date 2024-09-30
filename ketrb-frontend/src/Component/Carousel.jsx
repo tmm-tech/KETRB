@@ -1,36 +1,40 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-
+import image1 from "../Asset/Gallery/IMG_0093.JPG";
+import image2 from "../Asset/Gallery/IMG_0723.JPG";
+import image3 from "../Asset/Carousel/lady&man.jpg";
+import image4 from "../Asset/Gallery/IMG_3465.jpeg";
+import image5 from "../Asset/Gallery/IMG_0136.JPG";
 const images = [
   {
     className: "image0",
     coreValueTitle: "KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD",
-    coreValueContent: "",
-    url: '../Asset/Gallery/IMG_0093.JPG',
+    coreValueContent: '',
+    url: image1,
   },
   {
     className: "image1",
     coreValueTitle: "Accountability",
     coreValueContent: "We take responsibility for our actions and decisions.",
-    url: '../Asset/Gallery/IMG_0723.JPG',
+    url: image2,
   },
   {
     className: "image2",
     coreValueTitle: "Teamwork",
     coreValueContent: "We collaborate and support each other to achieve common goals.",
-    url: '../Asset/Carousel/lady&man.jpg',
+    url: image3,
   },
   {
     className: "image3",
     coreValueTitle: "Integrity",
     coreValueContent: "We adhere to the highest ethical standards.",
-    url: '../Asset/Gallery/IMG_3465.jpeg',
+    url: image4,
   },
   {
     className: "image4",
     coreValueTitle: "Innovation",
     coreValueContent: "We foster a culture of creativity.",
-    url: '../Asset/Gallery/IMG_0136.JPG',
+    url: image5,
   },
 ];
 
