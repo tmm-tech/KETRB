@@ -120,7 +120,7 @@ const Footer = () => {
                     <FaWhatsapp />
                   </i>
                   <Link to="https://wa.me/254740137877" className="text-m">
-                    +254724027435
+                    +254740137877
                   </Link>
                 </li>
                 <li className="flex items-center">
