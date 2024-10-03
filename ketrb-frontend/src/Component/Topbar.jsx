@@ -20,10 +20,10 @@ const TopBar = () => {
     <header className="top-bar">
       {/* Toolbar Area */}
      <div className="toolbar-area"> {/* Added padding */}
-  <div className="container flex justify-between items-center">
-    <div className="w-full lg:w-1/2 flex justify-start">
-      <ul className="flex items-center flex-wrap menu-lists">
-        <li className="mr-4 flex items-center">
+  <div className="container">
+    <div className="w-full lg:w-1/2">
+      <ul className="menu-lists">
+        <li>
                 <FaEnvelope className="mr-2" />
                 <Link to="mailto:info@ketrb.go.ke">info@ketrb.go.ke</Link>
               </li>
@@ -38,7 +38,7 @@ const TopBar = () => {
             </ul>
           </div>
           <div className="w-full lg:w-1/2 flex justify-end">
-            <ul className="flex items-center flex-wrap menu-lists">
+            <ul className="menu-lists">
               <li className="mr-4 flex items-center">
                 <FaClock className="mr-2" />
                 <p>Mon-Fri 08:00 AM – 5:00 PM</p>
