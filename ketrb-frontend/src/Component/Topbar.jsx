@@ -19,32 +19,36 @@ const TopBar = () => {
   return (
     <header className="top-bar">
       {/* Toolbar Area */}
-     <div className="toolbar-area"> {/* Added padding */}
-  <div className="container">
-    <div className="w-full lg:w-1/2">
-      <ul className="menu-lists">
-        <li>
-                <FaEnvelope className="mr-2" />
-                <Link to="mailto:info@ketrb.go.ke">info@ketrb.go.ke</Link>
-              </li>
-              <li className="mr-4 flex items-center">
-                <FaPhone className="mr-2" />
-                <Link to="tel: +254740137877">+254 740137877</Link>
-              </li>
-              <li className="mr-4 flex items-center">
-                <FaMapMarker className="mr-2" />
-                <p>Harambee Avenue, Nairobi</p>
-              </li>
-            </ul>
-          </div>
-          <div className="w-full lg:w-1/2 flex justify-end">
-            <ul className="menu-lists">
-              <li className="mr-4 flex items-center">
-                <FaClock className="mr-2" />
-                <p>Mon-Fri 08:00 AM – 5:00 PM</p>
-              </li>
-             
-             {/* Social Media Icons */}
+     <div className="toolbar-area">
+      <div className="container flex justify-between">
+        {/* Left Section */}
+        <div className="w-full lg:w-1/2">
+          <ul className="menu-lists">
+            <li className="flex items-center">
+              <FaEnvelope className="mr-2" />
+              <Link to="mailto:info@ketrb.go.ke">info@ketrb.go.ke</Link>
+            </li>
+            <li className="flex items-center">
+              <FaPhone className="mr-2" />
+              <Link to="tel: +254740137877">+254 740137877</Link>
+            </li>
+            <li className="flex items-center">
+              <FaMapMarker className="mr-2" />
+              <p>Harambee Avenue, Nairobi</p>
+            </li>
+          </ul>
+        </div>
+    
+        {/* Right Section */}
+        <div className="w-full lg:w-1/2 flex justify-end">
+          <ul className="menu-lists">
+            <li className="flex items-center">
+              <FaClock className="mr-2" />
+              <p>Mon-Fri 08:00 AM – 5:00 PM</p>
+            </li>
+          </ul>
+    
+          {/* Social Media Icons */}
           <div className="social-media-icons flex">
             <li className="mr-4 flex items-center">
               <Link to="https://www.facebook.com/KETRBOARD" target="_blank">
@@ -62,10 +66,10 @@ const TopBar = () => {
               </Link>
             </li>
           </div>
-            </ul>
-          </div>
         </div>
       </div>
+    </div>
+
 
       {/* Logo Section */}
       
