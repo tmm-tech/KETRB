@@ -19,7 +19,7 @@ const TopBar = () => {
   return (
     <header className="top-bar">
       {/* Toolbar Area */}
-     <div className="toolbar-area py-2"> {/* Added padding */}
+     <div className="toolbar-area"> {/* Added padding */}
   <div className="container flex justify-between items-center">
     <div className="w-full lg:w-1/2 flex justify-start">
       <ul className="flex items-center flex-wrap menu-lists">
