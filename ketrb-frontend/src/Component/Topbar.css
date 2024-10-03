@@ -12,6 +12,7 @@
   z-index: 1000;
 }
 
+/* General toolbar area styling */
 .toolbar-area {
   display: flex;
   justify-content: space-between;
@@ -22,21 +23,21 @@
 
 .menu-lists {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+  align-items: center;
+  list-style: none;
 }
 
 .menu-lists li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px; /* Reduced bottom margin */
+  margin-right: 10px; /* Spacing between items */
 }
 
 .social-media-icons {
   display: flex;
-  justify-content: flex-start;
-  margin-top: 10px; /* Adjust spacing if necessary */
+  justify-content: center;
+}
+
+.social-media-icons li {
+  margin-right: 10px;
 }
 
 .logo-container {
@@ -232,13 +233,28 @@
     display: none;
   }
 
-.menu-lists {
-    flex-direction: row;
+ .container {
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
   }
-  
+
+  /* Left section items align at the start */
+  .left-section {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  /* Social icons align at the center */
   .social-media-icons {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  /* Right section items align at the end */
+  .right-section {
+    width: 100%;
     justify-content: flex-end;
   }
 
