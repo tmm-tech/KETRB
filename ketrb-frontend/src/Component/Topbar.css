@@ -185,6 +185,11 @@
     display: none;
   }
 
+
+  .logo-img {
+     display:none;
+  }
+
   /* Style the mobile menu container */
   .mobile-container {
     display: flex;
