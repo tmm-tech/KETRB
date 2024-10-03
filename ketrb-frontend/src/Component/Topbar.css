@@ -238,11 +238,8 @@
   }
 
   .menu-lists li {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
-  /* Remove margin-bottom for the last li */
-  .menu-lists li:last-child {
-    margin-bottom: 0;
-  }
+ 
 }
