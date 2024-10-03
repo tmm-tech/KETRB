@@ -13,16 +13,30 @@
 }
 
 .toolbar-area {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  padding: 10px;
   background-color: #f39c12;
-  color: white;
-  margin-bottom: 10px;
 }
 
-.toolbar-area .menu-lists li {
+.menu-lists {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.menu-lists li {
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px; /* Adjust spacing if necessary */
 }
 
 .logo-container {
@@ -218,30 +232,15 @@
     display: none;
   }
 
- /* Adjust the toolbar area */
-.toolbar-area {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  padding: 5px; 
-  background-color: #f39c12;
-}
-
-/* Style the menu lists */
 .menu-lists {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  padding-left: 0; 
-}
-
-.menu-lists li {
-  margin-bottom: 0px; 
-  padding: 5px 0; 
-}
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .social-media-icons {
+    justify-content: flex-end;
+  }
 
 
  
