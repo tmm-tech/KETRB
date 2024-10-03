@@ -43,23 +43,25 @@ const TopBar = () => {
                 <FaClock className="mr-2" />
                 <p>Mon-Fri 08:00 AM – 5:00 PM</p>
               </li>
-              {/* Social Media Icons */}
-              <li className="mr-4 flex items-center">
-                <Link to="https://www.facebook.com/KETRBOARD" target="_blank">
-                  <FaFacebook />
-                </Link>
-              </li>
-              <li className="mr-4 flex items-center">
-                <Link to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09" target="_blank">
-                  <FaTwitter />
-                </Link>
-              </li>
-              <li className="mr-4 flex items-center">
-                <Link to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/" target="_blank">
-                  <FaLinkedin />
-                </Link>
-              </li>
-        
+             
+             {/* Social Media Icons */}
+          <div className="social-media-icons flex">
+            <li className="mr-4 flex items-center">
+              <Link to="https://www.facebook.com/KETRBOARD" target="_blank">
+                <FaFacebook />
+              </Link>
+            </li>
+            <li className="mr-4 flex items-center">
+              <Link to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09" target="_blank">
+                <FaTwitter />
+              </Link>
+            </li>
+            <li className="mr-4 flex items-center">
+              <Link to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/" target="_blank">
+                <FaLinkedin />
+              </Link>
+            </li>
+          </div>
             </ul>
           </div>
         </div>
