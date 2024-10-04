@@ -196,6 +196,7 @@
   .toolbar-area {
     flex-direction: column; /* Stack the toolbar items vertically on mobile */
     align-items: flex-start; /* Align items to the left */
+    white-space: nowrap; 
   }
 
   /* Adjust menu lists for mobile */
