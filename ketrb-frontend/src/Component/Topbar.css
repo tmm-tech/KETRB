@@ -156,7 +156,7 @@
 @media (max-width: 768px) {
   .top-bar {
     display: flex;
-    width:100px;
+    width:100%;
     flex-direction: column;
     background-color: #f39c12;
     color: white;
@@ -177,7 +177,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width:100%;
     padding: 10px;
     background-color: #fff;
   }
