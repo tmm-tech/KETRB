@@ -157,7 +157,7 @@
   .top-bar {
     display: flex;
     width:100%;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #f39c12;
     color: white;
     padding: 10px 0;
@@ -204,7 +204,6 @@
     display: flex;
     width:100%;
     justify-content: space-between; 
-    align-items: center;
   }
 
   .left-section {
