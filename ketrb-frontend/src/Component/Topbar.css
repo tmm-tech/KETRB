@@ -239,26 +239,30 @@
     align-items: center;
   }
 
-  /* Left section items align at the start */
+  
+  /* Left section stacks vertically */
   .left-section {
-    width: 100%;
+    
     justify-content: flex-start;
+    flex-direction: column;
     margin-bottom: 10px;
   }
 
-  /* Social icons align at the center */
+  /* Right section stacks vertically */
+  .right-section {
+    
+    justify-content: flex-start; /* Align to start on mobile */
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  /* Social icons centered */
   .social-media-icons {
-    width: 100%;
     justify-content: center;
     margin-bottom: 10px;
   }
-
-  /* Right section items align at the end */
-  .right-section {
-    width: 100%;
-    justify-content: flex-end;
-  }
-
+  
+}
 
  
 }
