@@ -1,7 +1,6 @@
 .top-bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: #fff;
   color: #5b92e5;
   width: 100%;
@@ -35,8 +34,7 @@
 
 .social-media-icons {
   display: flex;
-  justify-content: center;
-  width: 100%; /* Ensure full width for proper spacing */
+  justify-content: flex-end; /* Align social media icons to the right */
 }
 
 .social-media-icons li {
@@ -46,7 +44,7 @@
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align logo and name to the left */
   margin-bottom: 10px;
   width: 100%;
 }
@@ -156,8 +154,6 @@
 @media (max-width: 768px) {
   .top-bar {
     display: flex;
-    width:100%;
-    align-items: center;
     flex-direction: column;
     background-color: #f39c12;
     color: white;
@@ -166,10 +162,7 @@
 
   /* Hide the company name and logo on mobile */
   .logo-container,
-  .company-name {
-    display: none;
-  }
-
+  .company-name,
   .logo-img {
     display: none;
   }
@@ -178,7 +171,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:100%;
+    width: 100%;
     padding: 10px;
     background-color: #fff;
   }
@@ -199,35 +192,19 @@
   .nav-links {
     display: none;
   }
-
-  .toolbar-area {
-  display: flex;
-  justify-content: space-between; /* Distribute space between sections */
-  width: 100%;
-  padding: 10px;
-  background-color: #f39c12;
-  color: #fff;
-}
-
-.menu-lists {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.menu-lists li {
-  margin-right: 10px; /* Spacing between items */
-}
-
-.social-media-icons {
-  display: flex;
-  justify-content: center;
-  width: 100%; /* Ensure full width for proper spacing */
-}
-
-.social-media-icons li {
-  margin-right: 10px;
-}
-
   
+  .toolbar-area {
+    flex-direction: column; /* Stack the toolbar items vertically on mobile */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  /* Adjust menu lists for mobile */
+  .menu-lists {
+    flex-direction: column; /* Stack menu items vertically */
+    width: 100%; /* Full width */
+  }
+
+  .social-media-icons {
+    justify-content: center; /* Center social media icons */
+  }
 }
