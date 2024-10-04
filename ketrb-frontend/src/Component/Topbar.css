@@ -207,8 +207,6 @@
   }
 
   .social-media-icons {
-    justify-content: center; /* Center social media icons */
-    padding:10px;
-    margin-bottom:5px;
+    display:none;
   }
 }
