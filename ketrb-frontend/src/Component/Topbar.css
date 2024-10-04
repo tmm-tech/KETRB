@@ -196,8 +196,16 @@
   .toolbar-area {
     flex-direction: column; /* Stack the toolbar items vertically on mobile */
     align-items: flex-start; /* Align items to the left */
-    white-space: nowrap; 
-    padding:15px;
+    margin-right: 10px;
+   white-space: nowrap; 
+  margin-right: 10px;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  width: fit-content;
+  text-overflow: ellipsis; 
+  width: fit-content;
+  padding:15px 0;
   }
 
   /* Adjust menu lists for mobile */
