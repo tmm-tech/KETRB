@@ -197,6 +197,7 @@
     flex-direction: column; /* Stack the toolbar items vertically on mobile */
     align-items: flex-start; /* Align items to the left */
     white-space: nowrap; 
+    padding:15px;
   }
 
   /* Adjust menu lists for mobile */
@@ -207,5 +208,7 @@
 
   .social-media-icons {
     justify-content: center; /* Center social media icons */
+    padding:10px;
+    margin-bottom:5px;
   }
 }
