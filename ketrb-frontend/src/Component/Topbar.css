@@ -15,7 +15,8 @@
 /* General toolbar area styling */
 .toolbar-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribute space between sections */
+  align-items: center; /* Vertically align items */
   width: 100%;
   padding: 10px;
   background-color: #f39c12;
@@ -35,6 +36,7 @@
 .social-media-icons {
   display: flex;
   justify-content: center;
+  width: 100%; /* Ensure full width for proper spacing */
 }
 
 .social-media-icons li {
@@ -86,6 +88,7 @@
   border-bottom: 2px solid #f39c12;
 }
 
+/* Dropdown styling */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -98,10 +101,6 @@
   align-items: center;
   color: #5b92e5;
   transition: color 0.2s ease;
-}
-
-.dropdown-link i {
-  margin-left: 5px;
 }
 
 .dropdown-link:hover {
@@ -135,24 +134,9 @@
   position: relative;
 }
 
-.dropdown-content li:not(:last-child) {
-  border-bottom: 2px solid transparent;
-}
- 
 .dropdown-content li:hover {
   background-color: #f3f3f3;
   border-bottom: 2px solid #f39c12;
-}
-
-.dropdown-content li a {
-  color: #5b92e5;
-  text-decoration: none;
-  display: block;
-  transition: color 0.2s ease;
-}
-  
-.dropdown-content li a:hover {
-  color: #f39c12;
 }
 
 .dropdown:hover .dropdown-content {
@@ -160,38 +144,21 @@
   transform: scaleY(1);
 }
 
-.active {
-  color: #f39c12;
-}
-.mobile-container{
-  display:none;
+/* Hamburger Menu */
+.mobile-container {
+  display: none;
 }
 
 .hamburger {
   display: none;
-  
-}
-
-.hamburger i {
-  transition: transform 0.3s ease;
-}
-
-.hamburger:hover i {
-  color: #f39c12;
 }
 
 @media (max-width: 768px) {
-  /* Style the top-bar for mobile devices */
   .top-bar {
-    display: flex;
     flex-direction: column;
     background-color: #f39c12;
     color: white;
     padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
   }
 
   /* Hide the company name and logo on mobile */
@@ -204,7 +171,6 @@
     display: none;
   }
 
-  /* Style the mobile menu container */
   .mobile-container {
     display: flex;
     justify-content: space-between;
@@ -218,8 +184,8 @@
     width: 100px;
     height: auto;
   }
-  
-  /* Display the hamburger menu */
+
+  /* Hamburger Menu */
   .hamburger {
     display: block;
     font-size: 24px;
@@ -231,38 +197,20 @@
     display: none;
   }
 
-  /* Adjust the container to stop centering everything */
-  .container {
-    display: flex;
+  /* Mobile Layout */
+  .toolbar-area {
     flex-direction: column;
+    align-items: flex-start; /* Align sections to start */
   }
 
-  /* Left section stacks vertically and aligns left */
-  .left-section {
+  .left-section, .right-section {
     width: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start; /* Align to the start (left) */
     margin-bottom: 10px;
   }
 
-  /* Right section stacks vertically and aligns left */
-  .right-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align to the start (left) */
-    align-items: flex-start; /* Ensure alignment to start */
-    margin-bottom: 10px;
-  }
-
-  /* Social icons are centered */
   .social-media-icons {
-    width: 100%;
-    display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    padding: 10px; /* Add padding for spacing */
+    padding: 10px;
   }
 }
