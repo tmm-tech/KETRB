@@ -203,7 +203,6 @@
   .toolbar-area {
   display: flex;
   justify-content: space-between; /* Distribute space between sections */
-  align-items: center; /* Vertically align items */
   width: 100%;
   padding: 10px;
   background-color: #f39c12;
