@@ -19,25 +19,31 @@ const TopBar = () => {
   return (
     <header className="top-bar">
       {/* Toolbar Area */}
-     <div className="toolbar-area">
-        <div className="container flex justify-between items-center w-full">
-          {/* Left Section */}
-          <div className="left-section flex items-center justify-start w-1/3">
-            <ul className="menu-lists flex">
-              <li className="flex items-center">
+     <div className="toolbar-area py-2"> {/* Added padding */}
+  <div className="container flex justify-between items-center">
+    <div className="w-full lg:w-1/2 flex justify-start">
+      <ul className="flex items-center flex-wrap menu-lists">
+        <li className="mr-4 flex items-center">
                 <FaEnvelope className="mr-2" />
                 <Link to="mailto:info@ketrb.go.ke">info@ketrb.go.ke</Link>
               </li>
-              <li className="flex items-center">
+              <li className="mr-4 flex items-center">
                 <FaPhone className="mr-2" />
                 <Link to="tel: +254740137877">+254 740137877</Link>
               </li>
+              <li className="mr-4 flex items-center">
+                <FaMapMarker className="mr-2" />
+                <p>Harambee Avenue, Nairobi</p>
+              </li>
             </ul>
           </div>
-      
-          {/* Social Media Icons */}
-          <div className="social-media-icons flex justify-center w-1/3">
-            <ul className="flex">
+          <div className="w-full lg:w-1/2 flex justify-end">
+            <ul className="flex items-center flex-wrap menu-lists">
+              <li className="mr-4 flex items-center">
+                <FaClock className="mr-2" />
+                <p>Mon-Fri 08:00 AM – 5:00 PM</p>
+              </li>
+              {/* Social Media Icons */}
               <li className="mr-4 flex items-center">
                 <Link to="https://www.facebook.com/KETRBOARD" target="_blank">
                   <FaFacebook />
@@ -53,25 +59,11 @@ const TopBar = () => {
                   <FaLinkedin />
                 </Link>
               </li>
-            </ul>
-          </div>
-      
-          {/* Right Section */}
-          <div className="right-section flex items-center justify-end w-1/3">
-            <ul className="menu-lists flex">
-              <li className="flex items-center">
-                <FaMapMarker className="mr-2" />
-                <p>Harambee Avenue, Nairobi</p>
-              </li>
-              <li className="flex items-center">
-                <FaClock className="mr-2" />
-                <p>Mon-Fri 08:00 AM – 5:00 PM</p>
-              </li>
+        
             </ul>
           </div>
         </div>
       </div>
-
 
       {/* Logo Section */}
       
