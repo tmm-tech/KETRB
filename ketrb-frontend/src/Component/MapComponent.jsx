@@ -14,7 +14,7 @@ const markerIcon = new L.Icon({
 });
 
 const MapComponent = () => {
-  const position = [-1.28333, 36.81667]; // Coordinates for National Bank Building
+  const position = [1.28868, 36.82543]; // Coordinates for National Bank Building
 
   return (
     <div className="map-container">
