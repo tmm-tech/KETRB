@@ -48,7 +48,7 @@ const Contact = () => {
             <div className="contact-details">
               <p>
                 <b>Call/Text/WhatsApp Us:</b>{" "}
-                <a href="tel:+254724027435">+254 724027435</a>
+                <a href="tel:+254740137877">+254 740137877</a>
               </p>
               <p>
                 <b>Email:</b>{" "}
@@ -56,7 +56,7 @@ const Contact = () => {
               </p>
               <p>
                 <b>Click here to WhatsApp Us:</b>{" "}
-                <a href="https://wa.me/2547240274351">WhatsApp</a>
+                <a href="https://wa.me/254740137877">WhatsApp</a>
               </p>
             </div>
           </div>
