@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
 import logo from "../Asset/Logo/logo_1.png";
+import logo1 from "../Asset/Logo/kenya.png";
 import {
   FaEnvelope,
   FaPhone,
@@ -84,11 +85,14 @@ const TopBar = () => {
 
       <div className="logo-container w-full flex items-center">
         <Link to="/">
-          <img src={logo} alt="logo" className="logo-img mr-4" />
+          <img src={logo1} alt="logo" className="logo-img mr-4" />
         </Link>
         <h1 className="company-name text-xxl font-bold">
           KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD
         </h1>
+        <Link to="/">
+          <img src={logo} alt="logo" className="logo-img mr-4" />
+        </Link>
       </div>
 
       {/* Navigation */}
@@ -205,8 +209,8 @@ const TopBar = () => {
             </div>
           )}
         </div>
-        <Link to="#">Careers</Link>
-        <Link to="/news&events">Latest News</Link>
+        <Link to="#" className="nav-link">Careers</Link>
+        <Link to="/news&events" className="nav-link">Latest News</Link>
       </nav>
 
       {/* Hamburger for mobile */}
