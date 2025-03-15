@@ -29,15 +29,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  gap: 20px; /* Ensures equal spacing */
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .company-name {
   color: #5b92e5;
   font-size: 1.75rem;
-  margin-left: 10px;
-  white-space: nowrap; /* Prevents text from breaking into new lines */
+  text-align: center;
+  white-space: nowrap;
 }
 
 .logo-img {
@@ -46,9 +47,10 @@
 }
 
 .logo1-img {
-  width: 200px;
+  width: 150px; /* Increased size to match logo */
   height: auto;
 }
+
 .nav-links {
   display: flex;
   align-items: center;

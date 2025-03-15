@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Topbar.css";
-import { Link, useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../Asset/Logo/logo_1.png";
 import logo1 from "../Asset/Logo/kenya.png";
 import {
@@ -84,29 +84,39 @@ const TopBar = () => {
 
       {/* Logo Section */}
 
-      <div className="logo-container w-full flex items-center">
+      <div className="logo-container w-full flex items-center justify-center gap-6">
         <Link to="/">
-          <img src={logo1} alt="logo" className="logo1-img mr-2" />
+          <img src={logo1} alt="logo" className="logo1-img" />
         </Link>
-        <h1 className="company-name text-xxl font-bold">
+        <h1 className="company-name text-xxl font-bold text-center">
           KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD
         </h1>
         <Link to="/">
-          <img src={logo} alt="logo" className="logo-img mr-4" />
+          <img src={logo} alt="logo" className="logo-img" />
         </Link>
       </div>
 
       {/* Navigation */}
       <nav className={`nav-links ${showMenu ? "hidden" : ""}`}>
-        <Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>
+        <Link
+          to="/"
+          className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+        >
           Home
         </Link>
 
         {/* Who We Are Dropdown */}
         <div className="dropdown">
           <div
-            className={`dropdown-link ${(showDropdownWhoWeAre || ["/about", "/our-mandate", "/leadership"].includes(location.pathname)) ? "active" : ""}`}
-            onClick={() => setShowDropdownWhoWeAre(!showDropdownWhoWeAre) }
+            className={`dropdown-link ${
+              showDropdownWhoWeAre ||
+              ["/about", "/our-mandate", "/leadership"].includes(
+                location.pathname
+              )
+                ? "active"
+                : ""
+            }`}
+            onClick={() => setShowDropdownWhoWeAre(!showDropdownWhoWeAre)}
           >
             Who We Are {showDropdownWhoWeAre ? <FaAngleUp /> : <FaAngleDown />}
           </div>
@@ -114,16 +124,40 @@ const TopBar = () => {
             <div className="dropdown-content">
               <ul>
                 <li>
-                  <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>About Us</Link>
+                  <Link
+                    to="/about"
+                    className={location.pathname === "/about" ? "active" : ""}
+                  >
+                    About Us
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/our-mandate" className={location.pathname === "/our-mandate" ? "active" : ""}>Our Mandate</Link>
+                  <Link
+                    to="/our-mandate"
+                    className={
+                      location.pathname === "/our-mandate" ? "active" : ""
+                    }
+                  >
+                    Our Mandate
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/leadership" className={location.pathname === "/leadership" ? "active" : ""}>Leadership</Link>
+                  <Link
+                    to="/leadership"
+                    className={
+                      location.pathname === "/leadership" ? "active" : ""
+                    }
+                  >
+                    Leadership
+                  </Link>
                 </li>
                 <li>
-                  <Link to="#" className={location.pathname === "#" ? "active" : ""}>Management</Link>
+                  <Link
+                    to="#"
+                    className={location.pathname === "#" ? "active" : ""}
+                  >
+                    Management
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -133,7 +167,14 @@ const TopBar = () => {
         {/* Discover & Explore Dropdown */}
         <div className="dropdown">
           <div
-            className={`dropdown-link ${(showDropdownDiscover || ["/programs", "/news&events", "/gallery"].includes(location.pathname)) ? "active" : ""}`}
+            className={`dropdown-link ${
+              showDropdownDiscover ||
+              ["/programs", "/news&events", "/gallery"].includes(
+                location.pathname
+              )
+                ? "active"
+                : ""
+            }`}
             onClick={() => setShowDropdownDiscover(!showDropdownDiscover)}
           >
             Discover & Explore{" "}
@@ -143,13 +184,32 @@ const TopBar = () => {
             <div className="dropdown-content">
               <ul>
                 <li>
-                  <Link to="/programs" className={location.pathname === "/programs" ? "active" : ""}>Programs & Projects</Link>
+                  <Link
+                    to="/programs"
+                    className={
+                      location.pathname === "/programs" ? "active" : ""
+                    }
+                  >
+                    Programs & Projects
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/news&events" className={location.pathname === "/news&events" ? "active" : ""}>News & Events</Link>
+                  <Link
+                    to="/news&events"
+                    className={
+                      location.pathname === "/news&events" ? "active" : ""
+                    }
+                  >
+                    News & Events
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/gallery" className={location.pathname === "/gallery" ? "active" : ""}>Gallery</Link>
+                  <Link
+                    to="/gallery"
+                    className={location.pathname === "/gallery" ? "active" : ""}
+                  >
+                    Gallery
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -158,7 +218,12 @@ const TopBar = () => {
 
         <div className="dropdown">
           <div
-            className={`dropdown-link ${(showDropdownDownload || ["/act", "/application", "/charter"].includes(location.pathname)) ? "active" : ""}`}
+            className={`dropdown-link ${
+              showDropdownDownload ||
+              ["/act", "/application", "/charter"].includes(location.pathname)
+                ? "active"
+                : ""
+            }`}
             onClick={() => setShowDropdownDownload(!showDropdownDownload)}
           >
             Download{" "}
@@ -172,13 +237,30 @@ const TopBar = () => {
             <div className="dropdown-content">
               <ul>
                 <li>
-                  <Link to="/act" className={location.pathname === "/act" ? "active" : ""}>Act</Link>
+                  <Link
+                    to="/act"
+                    className={location.pathname === "/act" ? "active" : ""}
+                  >
+                    Act
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/application" className={location.pathname === "/application" ? "active" : ""}>Application Requirement</Link>
+                  <Link
+                    to="/application"
+                    className={
+                      location.pathname === "/application" ? "active" : ""
+                    }
+                  >
+                    Application Requirement
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/charter" className={location.pathname === "/charter" ? "active" : ""}>Charter</Link>
+                  <Link
+                    to="/charter"
+                    className={location.pathname === "/charter" ? "active" : ""}
+                  >
+                    Charter
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -187,7 +269,12 @@ const TopBar = () => {
 
         <div className="dropdown">
           <div
-            className={`dropdown-link ${(showDropdownResources || ["/tender", "/faq"].includes(location.pathname)) ? "active" : ""}`}
+            className={`dropdown-link ${
+              showDropdownResources ||
+              ["/tender", "/faq"].includes(location.pathname)
+                ? "active"
+                : ""
+            }`}
             onClick={() => setShowDropdownResources(!showDropdownResources)}
           >
             Resources{" "}
@@ -201,17 +288,39 @@ const TopBar = () => {
             <div className="dropdown-content">
               <ul>
                 <li>
-                  <Link to="/tender" className={location.pathname === "/tender" ? "active" : ""}>Tender</Link>
+                  <Link
+                    to="/tender"
+                    className={location.pathname === "/tender" ? "active" : ""}
+                  >
+                    Tender
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/faq" className={location.pathname === "/faq" ? "active" : ""}>FAQ</Link>
+                  <Link
+                    to="/faq"
+                    className={location.pathname === "/faq" ? "active" : ""}
+                  >
+                    FAQ
+                  </Link>
                 </li>
               </ul>
             </div>
           )}
         </div>
-        <Link to="#" className={`nav-link ${location.pathname === "#" ? "active" : ""}`}>Careers</Link>
-        <Link to="/news&events" className={`nav-link ${location.pathname === "/news&events" ? "active" : ""}`}>Latest News</Link>
+        <Link
+          to="#"
+          className={`nav-link ${location.pathname === "#" ? "active" : ""}`}
+        >
+          Careers
+        </Link>
+        <Link
+          to="/news&events"
+          className={`nav-link ${
+            location.pathname === "/news&events" ? "active" : ""
+          }`}
+        >
+          Latest News
+        </Link>
       </nav>
 
       {/* Hamburger for mobile */}
