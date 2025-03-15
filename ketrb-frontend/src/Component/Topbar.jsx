@@ -85,7 +85,7 @@ const TopBar = () => {
 
       <div className="logo-container w-full flex items-center">
         <Link to="/">
-          <img src={logo1} alt="logo" className="logo-img mr-4" />
+          <img src={logo1} alt="logo" className="logo1-img mr-4" />
         </Link>
         <h1 className="company-name text-xxl font-bold">
           KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD
