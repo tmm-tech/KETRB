@@ -74,6 +74,12 @@
   border-bottom: 2px solid #f39c12;
 }
 
+.nav-link.active,
+.dropdown-link.active {
+  color: #f39c12;
+  transform: scale(1.1);
+  border-bottom: 2px solid #f39c12;
+}
 .dropdown {
   position: relative;
   display: inline-block;
