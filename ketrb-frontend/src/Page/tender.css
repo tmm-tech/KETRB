@@ -7,6 +7,10 @@
     text-align: center; 
     height:90vh;
   }
+  .tender-page-container {
+    transform: scale(0.9);
+    transform-origin: center top; 
+  }
   
   .animation-wrapper {
     display: flex;
