@@ -11,7 +11,7 @@ import partner3 from "../Asset/Partners/tveta.png";
 import partner4 from "../Asset/Partners/transport.jpeg";
 //import Fafu2 from "../Asset/Fafuu/Fafu2.jpeg";
 //import Fafu3 from "../Asset/Fafuu/Fafu3.jpeg";
-import Fafu4 from "../Asset/Fafuu/Fafu4.jpg";
+// import Fafu4 from "../Asset/Fafuu/Fafu4.jpg";
 import Fafu5 from "../Asset/Fafuu/Fafu5.jpg";
 //import Fafu6 from "../Asset/Fafuu/Fafu6.jpg";
 //import Fafu7 from "../Asset/Fafuu/Fafu7.jpg";
@@ -41,7 +41,7 @@ const About = () => {
         {/* About Section */}
         <div className="about-content max-w-6xl mx-auto flex flex-wrap items-stretch">
           <div className="about-image-item w-full md:w-1/2">
-            <img src={Fafu4} alt="About Us" className="w-full rounded" />
+            <img src="https://fakeimg.pl/600x400?text=About+Us+Image" alt="About Us" className="w-full rounded" />
           </div>
           <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0 flex items-center">
             <div>
@@ -59,7 +59,7 @@ const About = () => {
             </div>
           </div>
         </div>
-
+{/* 
         <div className="about-content max-w-6xl mx-auto flex flex-wrap items-stretch">
           <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0 flex items-center">
             <div>
@@ -126,9 +126,9 @@ const About = () => {
             </div>
           </div>
           <div className="about-image-item w-full md:w-1/2">
-            <img src={Fafu5} alt="About Us" className="w-full rounded" />
+            <img src="https://fakeimg.pl/600x400?text=About+Us+Image" alt="About Us" className="w-full rounded" />
           </div>
-        </div>
+        </div> */}
 
         {/* Our Mission and Vision Section */}
         <div className="mission-vision-section my-12">
@@ -150,7 +150,7 @@ const About = () => {
         </div>
 
         {/* Our Services Section */}
-        <div className="services-section my-12">
+        {/* <div className="services-section my-12">
           <div className="max-w-6xl mx-auto">
             <h2 className="about-heading text-center">Our Services</h2>
             <div className="services-content grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
@@ -207,7 +207,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Core Values Section */}
         <div className="core-values-section my-12 bg-gray-100 py-12">
