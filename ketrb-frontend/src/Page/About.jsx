@@ -12,7 +12,7 @@ import partner4 from "../Asset/Partners/transport.jpeg";
 //import Fafu2 from "../Asset/Fafuu/Fafu2.jpeg";
 //import Fafu3 from "../Asset/Fafuu/Fafu3.jpeg";
 // import Fafu4 from "../Asset/Fafuu/Fafu4.jpg";
-import Fafu5 from "../Asset/Fafuu/Fafu5.jpg";
+// import Fafu5 from "../Asset/Fafuu/Fafu5.jpg";
 //import Fafu6 from "../Asset/Fafuu/Fafu6.jpg";
 //import Fafu7 from "../Asset/Fafuu/Fafu7.jpg";
 

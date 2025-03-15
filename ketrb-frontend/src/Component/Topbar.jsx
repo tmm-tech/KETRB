@@ -117,6 +117,9 @@ const TopBar = () => {
                 <li>
                   <Link to="/leadership">Leadership</Link>
                 </li>
+                <li>
+                  <Link to="#">Management</Link>
+                </li>
               </ul>
             </div>
           )}

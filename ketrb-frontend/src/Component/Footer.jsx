@@ -98,10 +98,10 @@ const Footer = () => {
                   <i className="fa fa-map mr-2 text-lg"></i>
                   National Bank Building, 11th floor,Harambee Avenue, Nairobi
                 </li>
-                <li className="flex items-center">
+                {/* <li className="flex items-center">
                   <i className="fa fa-envelope mr-2 text-lg"></i>
                   P. O. Box 37046-0200
-                </li>
+                </li> */}
                 <li className="flex items-center">
                   <i className="fa fa-phone mr-2 text-lg"></i>
                   <Link to="tel:+254740137877" className="text-m">
