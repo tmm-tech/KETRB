@@ -106,7 +106,7 @@ const TopBar = () => {
         <div className="dropdown">
           <div
             className={`dropdown-link ${(showDropdownWhoWeAre || ["/about", "/our-mandate", "/leadership"].includes(location.pathname)) ? "active" : ""}`}
-            onClick={() => setShowDropdownWhoWeAre(!showDropdownWhoWeAre)}
+            onClick={() => setShowDropdownWhoWeAre(!showDropdownWhoWeAre) }
           >
             Who We Are {showDropdownWhoWeAre ? <FaAngleUp /> : <FaAngleDown />}
           </div>
@@ -133,7 +133,7 @@ const TopBar = () => {
         {/* Discover & Explore Dropdown */}
         <div className="dropdown">
           <div
-            className={`dropdown-link ${(showDropdownWhoWeAre || ["/programs", "/news&events", "/gallery"].includes(location.pathname)) ? "active" : ""}`}
+            className={`dropdown-link ${(showDropdownDiscover || ["/programs", "/news&events", "/gallery"].includes(location.pathname)) ? "active" : ""}`}
             onClick={() => setShowDropdownDiscover(!showDropdownDiscover)}
           >
             Discover & Explore{" "}
@@ -158,7 +158,7 @@ const TopBar = () => {
 
         <div className="dropdown">
           <div
-            className={`dropdown-link ${(showDropdownWhoWeAre || ["/act", "/application", "/charter"].includes(location.pathname)) ? "active" : ""}`}
+            className={`dropdown-link ${(showDropdownDownload || ["/act", "/application", "/charter"].includes(location.pathname)) ? "active" : ""}`}
             onClick={() => setShowDropdownDownload(!showDropdownDownload)}
           >
             Download{" "}
@@ -187,7 +187,7 @@ const TopBar = () => {
 
         <div className="dropdown">
           <div
-            className={`dropdown-link ${(showDropdownWhoWeAre || ["/tender", "/faq"].includes(location.pathname)) ? "active" : ""}`}
+            className={`dropdown-link ${(showDropdownResources || ["/tender", "/faq"].includes(location.pathname)) ? "active" : ""}`}
             onClick={() => setShowDropdownResources(!showDropdownResources)}
           >
             Resources{" "}
