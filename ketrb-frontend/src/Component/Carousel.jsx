@@ -4,7 +4,11 @@ import image1 from "../Asset/Gallery/IMG_0723.JPG";
 import image2 from "../Asset/Gallery/IMG_0093.JPG";
 import image3 from "../Asset/Gallery/IMG_0499.JPG";
 import image4 from "../Asset/Gallery/IMG_0136.JPG";
-
+import { Button } from "../Component/button";
+import {
+  ChevronLeft,
+  ChevronRight
+} from "lucide-react";
 
 const carouselItems = [
   {
