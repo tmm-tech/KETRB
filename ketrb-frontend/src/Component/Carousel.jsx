@@ -52,7 +52,7 @@ function Carousel() {
       );
     }, 5000);
     return () => clearInterval(interval);
-  }, [carouselItems]);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) =>
