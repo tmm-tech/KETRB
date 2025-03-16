@@ -77,12 +77,15 @@ const TopBar = () => {
     }
   };
 
-  const handleMenuItemClick = (parentId, childId = null) => {
-    setActiveMenuItem(childId || parentId); // If a child item is clicked, set it as active, otherwise set the parent.
-    setOpenDropdown(parentId); // Keep the parent dropdown open when clicking a child item.
-
+  const handleMenuItemClick = (id, parentId = null) => {
+    if (parentId) {
+      setActiveMenuItem(parentId); // Set parent menu active for dropdown items
+    } else {
+      setActiveMenuItem(id); // Set the clicked menu active
+    }
+  
     if (window.innerWidth < 768) {
-      setIsMenuOpen(false); // Close menu on mobile after clicking
+      setIsMenuOpen(false); // Close the mobile menu after selection
     }
   };
 
@@ -214,27 +217,15 @@ const TopBar = () => {
                           handleMenuItemClick(item.id);
                         }}
                         className={`flex items-center justify-between w-full py-2 px-3 md:px-4 rounded-md font-bold
-                            ${
-                              activeMenuItem === item.id ||
-                              (openDropdown === item.id &&
-                                item.dropdown.some(
-                                  (sub) => activeMenuItem === sub.id
-                                ))
-                                ? "border-b-2 border-[#f39c12]"
-                                : "border-b-2 border-transparent hover:border-[#f39c12]"
-                            }
-  `}
+                          ${activeMenuItem === item.id
+                            ? "border-b-2 border-[#f39c12]"
+                            : "border-b-2 border-transparent hover:border-[#f39c12]"
+                          }`}
                         style={{
-                          color:
-                            activeMenuItem === item.id ||
-                            (item.dropdown &&
-                              item.dropdown.some(
-                                (sub) => activeMenuItem === sub.id
-                              ))
-                              ? "#f39c12"
-                              : "#5b92e5",
+                          color: activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
                           transition: "color 0.3s, border-color 0.3s",
                         }}
+                        
                         onMouseOver={(e) =>
                           (e.currentTarget.style.color = "#f39c12")
                         }
@@ -266,22 +257,18 @@ const TopBar = () => {
                                 key={subItem.id}
                                 to={subItem.path}
                                 className={`block px-4 py-2 text-sm font-bold hover:bg-gray-100
-                                  ${
-                                    activeMenuItem === subItem.id
-                                      ? "border-l-4 border-[#f39c12] bg-gray-50"
-                                      : "border-l-4 border-transparent hover:border-[#f39c12]"
+                                  ${activeMenuItem === subItem.id || activeMenuItem === item.id
+                                    ? "border-l-4 border-[#f39c12] bg-gray-50"
+                                    : "border-l-4 border-transparent hover:border-[#f39c12]"
                                   }`}
                                 style={{
-                                  color:
-                                    activeMenuItem === subItem.id
-                                      ? "#f39c12"
-                                      : "#5b92e5",
-                                  transition:
-                                    "color 0.3s, border-color 0.3s, background-color 0.3s",
+                                  color: activeMenuItem === subItem.id || activeMenuItem === item.id
+                                    ? "#f39c12"
+                                    : "#5b92e5",
+                                  transition: "color 0.3s, border-color 0.3s, background-color 0.3s",
                                 }}
-                                onClick={() =>
-                                  handleMenuItemClick(item.id, subItem.id)
-                                }
+                                onClick={() => handleMenuItemClick(subItem.id, item.id)} // Pass parent ID
+                              
                                 onMouseOver={(e) => {
                                   e.currentTarget.style.color = "#f39c12";
                                   e.currentTarget.style.backgroundColor =
