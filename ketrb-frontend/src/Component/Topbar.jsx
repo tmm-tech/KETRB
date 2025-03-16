@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import logo from "../Asset/Logo/logo_1.png";
 import logo1 from "../Asset/Logo/kenya.png";
 import { Button } from "../Component/button";
@@ -16,8 +16,8 @@ import {
 } from "lucide-react";
 
 const TopBar = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeMenuItem, setActiveMenuItem] = useState("home");
   const [openDropdown, setOpenDropdown] = useState(null);
   // Navigation menu structure with dropdowns
   const navigationItems = [
@@ -76,6 +76,13 @@ const TopBar = () => {
       setOpenDropdown(id);
     }
   };
+
+  const activeMenuItem = navigationItems.find(
+    (item) =>
+      item.path === location.pathname ||
+      (item.dropdown &&
+        item.dropdown.some((subItem) => subItem.path === location.pathname))
+  )?.id;
 
   const handleMenuItemClick = (id, parentId = null) => {
     if (parentId) {
@@ -225,7 +232,7 @@ const TopBar = () => {
                           color: activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
                           transition: "color 0.3s, border-color 0.3s",
                         }}
-                        
+
                         onMouseOver={(e) =>
                           (e.currentTarget.style.color = "#f39c12")
                         }
@@ -256,17 +263,10 @@ const TopBar = () => {
                               <Link
                                 key={subItem.id}
                                 to={subItem.path}
-                                className={`block px-4 py-2 text-sm font-bold hover:bg-gray-100
-                                  ${activeMenuItem === subItem.id || activeMenuItem === item.id
-                                    ? "border-l-4 border-[#f39c12] bg-gray-50"
-                                    : "border-l-4 border-transparent hover:border-[#f39c12]"
-                                  }`}
-                                style={{
-                                  color: activeMenuItem === subItem.id || activeMenuItem === item.id
-                                    ? "#f39c12"
-                                    : "#5b92e5",
-                                  transition: "color 0.3s, border-color 0.3s, background-color 0.3s",
-                                }}
+                                className={`block px-4 py-2 text-sm font-bold hover:bg-gray-100 transition-all
+                                  ${location.pathname === subItem.path ? "border-l-4 border-[#f39c12] bg-gray-50" : "border-l-4 border-transparent hover:border-[#f39c12]"}
+                                `}
+                                style={{ color: location.pathname === subItem.path ? "#f39c12" : "#5b92e5" }}
                                 onClick={() => handleMenuItemClick(subItem.id, item.id)} // Pass parent ID
                               
                                 onMouseOver={(e) => {
@@ -290,30 +290,14 @@ const TopBar = () => {
                     </div>
                   ) : (
                     <Link
-                      to={item.path}
-                      className={`block py-2 px-3 md:px-4 rounded-md font-bold
-                        ${
-                          activeMenuItem === item.id
-                            ? "border-b-2 border-[#f39c12]"
-                            : "border-b-2 border-transparent hover:border-[#f39c12]"
-                        }`}
-                      style={{
-                        color:
-                          activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
-                        transition: "color 0.3s, border-color 0.3s",
-                      }}
-                      onClick={() => handleMenuItemClick(item.id)}
-                      onMouseOver={(e) =>
-                        (e.currentTarget.style.color = "#f39c12")
-                      }
-                      onMouseOut={(e) => {
-                        if (activeMenuItem !== item.id) {
-                          e.currentTarget.style.color = "#5b92e5";
-                        }
-                      }}
-                    >
-                      {item.label}
-                    </Link>
+                    to={item.path}
+                    className={`block py-2 px-3 md:px-4 rounded-md font-bold transition-all
+                      ${location.pathname === item.path ? "border-b-2 border-[#f39c12]" : "border-b-2 border-transparent hover:border-[#f39c12]"}
+                    `}
+                    style={{ color: location.pathname === item.path ? "#f39c12" : "#5b92e5" }}
+                  >
+                    {item.label}
+                  </Link>
                   )}
                 </li>
               ))}
