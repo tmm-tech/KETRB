@@ -25,7 +25,7 @@ const Application = () => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: '230px' }} className="application-requirements">
+      <div style={{ paddingTop: '30px' }} className="application-requirements">
         <h1 className="title">Application Requirements</h1>
 
         <section className="section">

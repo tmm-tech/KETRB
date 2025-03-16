@@ -73,7 +73,7 @@ const Leadership = () => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: "230px" }} className="leadership">
+      <div style={{ paddingTop: "30px" }} className="leadership">
         <h1 className="leadership-title">Our Leadership Team</h1>
         <div className="leadership-container">
           <div className="leadership-hierarchy-line"></div>
