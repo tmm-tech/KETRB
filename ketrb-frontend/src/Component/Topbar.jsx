@@ -21,7 +21,7 @@ const TopBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   // Navigation menu structure with dropdowns
   const navigationItems = [
-    { id: "home", label: "Home", path: "#", active: true },
+    { id: "home", label: "Home", path: "/", active: true },
     {
       id: "about",
       label: "Who We Are",
