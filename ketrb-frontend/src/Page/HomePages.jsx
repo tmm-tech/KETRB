@@ -5,7 +5,7 @@ import image0 from "../Asset/Gallery/IMG_0114.JPG";
 import image1 from "../Asset/Gallery/IMG_0723.JPG";
 import image2 from "../Asset/Gallery/IMG_0093.JPG";
 import image3 from "../Asset/Gallery/IMG_0499.JPG";
-// import image4 from "../Asset/Gallery/IMG_0136.JPG";
+import image4 from "../Asset/Gallery/IMG_0136.JPG";
 import { Button } from "../Component/button";
 import {
   Facebook,
@@ -81,24 +81,29 @@ export default function GovernmentLandingPage() {
 
   const carouselItems = [
     {
-      image: {image0},
+      image: image0,
       title: "Kenya Engineering Technology Registration Board",
       description: "Regulating Engineering Technology Professionals for Excellence",
     },
     {
-      image: {image1},
+      image: image1,
+      title: "Accountability",
+      description: "We take responsibility for our actions and decisions, ensuring transparency and trust.",
+    },
+    {
+      image: image2,
+      title: "Teamwork",
+      description: "We collaborate and support each other to achieve common goals.",
+    },
+    {
+      image: image3,
       title: "Integrity",
-      description: "We uphold the highest standards of professional ethics and accountability in all our operations.",
+      description: "We adhere to the highest ethical standards, demonstrating honesty and fairness in every action.",
     },
     {
-      image: {image2},
-      title: "Excellence",
-      description: "We are committed to excellence in service delivery and professional standards.",
-    },
-    {
-      image: {image3},
+      image: image4,
       title: "Innovation",
-      description: "We embrace innovative approaches to engineering technology and regulatory practices.",
+      description: "We foster a culture of creativity and continuous improvement, embracing new ideas and technologies.",
     },
   ]
 
