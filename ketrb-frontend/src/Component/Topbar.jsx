@@ -6,7 +6,7 @@ import logo1 from "../Asset/Logo/kenya.png";
 import {
   Facebook,
   X,
-  LinkedIn,
+  Linkedin,
   Mail,
   Phone,
   MapPin,
@@ -138,7 +138,7 @@ const TopBar = () => {
                 aria-label="LinkedIn"
                 className="hover:text-white"
               >
-                <LinkedIn className="h-4 w-4" />
+                <Linkedin className="h-4 w-4" />
               </Link>
             </div>
           </div>
