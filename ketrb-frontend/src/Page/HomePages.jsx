@@ -1,4 +1,4 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../Asset/Logo/logo_1.png";
 import logo1 from "../Asset/Logo/kenya.png";
 import image0 from "../Asset/Gallery/IMG_0114.JPG";
@@ -24,8 +24,8 @@ import {
   Users,
   BookOpen,
   GraduationCap,
-} from "lucide-react"
-import { useState, useEffect } from "react"
+} from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function GovernmentLandingPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -157,14 +157,14 @@ export default function GovernmentLandingPage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs">
             <div className="flex items-center space-x-4 mb-2 md:mb-0">
-              <a href="mailto:info@ketrb.go.ke" className="flex items-center hover:underline">
+              <Link to="mailto:info@ketrb.go.ke" className="flex items-center hover:underline">
                 <Mail className="h-4 w-4 mr-1" />
                 info@ketrb.go.ke
-              </a>
-              <a href="tel:+254202345678" className="flex items-center hover:underline">
+              </Link>
+              <Link to="tel:+254202345678" className="flex items-center hover:underline">
                 <Phone className="h-4 w-4 mr-1" />
                 +254 20 234 5678
-              </a>
+              </Link>
             </div>
             <div className="flex items-center space-x-4 mb-2 md:mb-0">
               <span className="flex items-center">
@@ -177,15 +177,15 @@ export default function GovernmentLandingPage() {
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="#" aria-label="Facebook" className="hover:text-white">
+              <Link to="#" aria-label="Facebook" className="hover:text-white">
                 <Facebook className="h-4 w-4" />
-              </a>
-              <a href="#" aria-label="Twitter" className="hover:text-white">
+              </Link>
+              <Link to="#" aria-label="Twitter" className="hover:text-white">
                 <X className="h-4 w-4" />
-              </a>
-              <a href="#" aria-label="Instagram" className="hover:text-white">
+              </Link>
+              <Link to="#" aria-label="Instagram" className="hover:text-white">
                 <Instagram className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function GovernmentLandingPage() {
                             {item.dropdown.map((subItem) => (
                               <Link
                                 key={subItem.id}
-                                href={subItem.href}
+                                to={subItem.href}
                                 className={`block px-4 py-2 text-sm hover:bg-muted ${
                                   activeMenuItem === subItem.id ? "bg-primary/10 text-primary font-medium" : ""
                                 }`}
@@ -267,7 +267,7 @@ export default function GovernmentLandingPage() {
                     </div>
                   ) : (
                     <Link
-                      href={item.href}
+                      to={item.href}
                       className={`block py-2 px-3 md:px-4 rounded-md font-medium 
                         ${activeMenuItem === item.id ? "bg-primary/10 text-primary" : "hover:bg-muted-foreground/10 hover:text-primary"}`}
                       onClick={() => handleMenuItemClick(item.id)}
@@ -487,15 +487,15 @@ export default function GovernmentLandingPage() {
                 </ul>
                 <h3 className="font-bold mt-6 mb-4">Connect With Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" aria-label="Facebook" className="bg-primary/10 hover:bg-primary/20 p-2 rounded-full">
+                  <Link to="#" aria-label="Facebook" className="bg-primary/10 hover:bg-primary/20 p-2 rounded-full">
                     <Facebook className="h-5 w-5 text-primary" />
-                  </a>
-                  <a href="#" aria-label="Twitter" className="bg-primary/10 hover:bg-primary/20 p-2 rounded-full">
+                  </Link>
+                  <Link to="#" aria-label="Twitter" className="bg-primary/10 hover:bg-primary/20 p-2 rounded-full">
                     <X className="h-5 w-5 text-primary" />
-                  </a>
-                  <a href="#" aria-label="Instagram" className="bg-primary/10 hover:bg-primary/20 p-2 rounded-full">
+                  </Link>
+                  <Link to="#" aria-label="Instagram" className="bg-primary/10 hover:bg-primary/20 p-2 rounded-full">
                     <Instagram className="h-5 w-5 text-primary" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -506,37 +506,37 @@ export default function GovernmentLandingPage() {
                 <h3 className="font-bold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       About Us
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Services
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Registration
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Resources
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       News & Events
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Contact Us
                     </Link>
                   </li>
@@ -546,32 +546,32 @@ export default function GovernmentLandingPage() {
                 <h3 className="font-bold mb-4">Resources</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Acts & Regulations
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Forms & Guidelines
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Publications
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       FAQs
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Careers
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:underline">
+                    <Link to="#" className="hover:underline">
                       Tenders
                     </Link>
                   </li>
@@ -594,15 +594,15 @@ export default function GovernmentLandingPage() {
           <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
             <p>© {new Date().getFullYear()} Kenya Engineering Technology Registration Board. All rights reserved.</p>
             <p className="mt-2">
-              <Link href="#" className="hover:underline">
+              <Link to="#" className="hover:underline">
                 Privacy Policy
               </Link>{" "}
               |
-              <Link href="#" className="hover:underline ml-2">
+              <Link to="#" className="hover:underline ml-2">
                 Terms of Service
               </Link>{" "}
               |
-              <Link href="#" className="hover:underline ml-2">
+              <Link to="#" className="hover:underline ml-2">
                 Accessibility
               </Link>
             </p>
