@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaLinkedin,
-  FaTwitter,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import MapComponent from "./MapComponent";
 import "./Footer.css";
@@ -17,39 +12,6 @@ const Footer = () => {
             <section className="widget widget_finoptissocialiconwi_widget">
               <h3 className="footer-title">Location</h3>
               <MapComponent />
-            </section>
-            <section className="widget widget_finoptissocialiconwi_widget">
-              <br />
-              <h3 className="footer-title">Follow Us</h3>
-              <ul className="footer_social">
-                <li>
-                  <Link
-                    to="https://www.facebook.com/KETRBOARD"
-                    target="_blank"
-                    className="text-2xl"
-                  >
-                    <FaFacebook />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
-                    target="_blank"
-                    className="text-2xl"
-                  >
-                    <FaTwitter/>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
-                    target="_blank"
-                    className="text-2xl"
-                  >
-                    <FaLinkedin />
-                  </Link>
-                </li>
-              </ul>
             </section>
           </div>
           <div className="col-lg-3">
@@ -86,8 +48,39 @@ const Footer = () => {
           </div>
           <div className="col-lg-3">
             <div className="recent-widget">
-              <h3 className="footer-title">News & Events</h3>
-              <div className="recent-post-widget widget clearfix"></div>
+              <section className="widget widget_finoptissocialiconwi_widget">
+                <br />
+                <h3 className="footer-title">Follow Us</h3>
+                <ul className="footer_social">
+                  <li>
+                    <Link
+                      to="https://www.facebook.com/KETRBOARD"
+                      target="_blank"
+                      className="text-2xl"
+                    >
+                      <FaFacebook />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
+                      target="_blank"
+                      className="text-2xl"
+                    >
+                      <FaTwitter />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
+                      target="_blank"
+                      className="text-2xl"
+                    >
+                      <FaLinkedin />
+                    </Link>
+                  </li>
+                </ul>
+              </section>
             </div>
           </div>
           <div className="col-lg-3">
