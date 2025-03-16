@@ -264,7 +264,7 @@ const TopBar = () => {
                             {item.dropdown.map((subItem) => (
                               <Link
                                 key={subItem.id}
-                                href={subItem.href}
+                                to={subItem.path}
                                 className={`block px-4 py-2 text-sm font-bold hover:bg-gray-100
                                   ${
                                     activeMenuItem === subItem.id
