@@ -26,9 +26,12 @@ function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <TopBar />
-      <Carousel />
-      <ApplySection />
-      <HomeAbout />
+
+      <main className="flex-1">
+        <Carousel />
+        <ApplySection />
+        <HomeAbout />
+      </main>
       <Footer />
     </div>
   );
