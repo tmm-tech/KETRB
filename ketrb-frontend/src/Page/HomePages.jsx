@@ -7,7 +7,6 @@ import image2 from "../Asset/Gallery/IMG_0093.JPG";
 import image3 from "../Asset/Gallery/IMG_0499.JPG";
 // import image4 from "../Asset/Gallery/IMG_0136.JPG";
 import { Button } from "../Component/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../Component/card";
 import {
   Facebook,
   X,
@@ -19,11 +18,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Menu,
-  ChevronDown,
-  FileText,
-  Users,
-  BookOpen,
-  GraduationCap,
+  ChevronDown
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -35,53 +30,53 @@ export default function GovernmentLandingPage() {
 
   // Navigation menu structure with dropdowns
   const navigationItems = [
-    { id: "home", label: "Home", href: "#", active: true },
+    { id: "home", label: "Home", path: "#", active: true },
     {
       id: "about",
       label: "About Us",
-      href: "#about",
+      path: "#about",
       dropdown: [
-        { id: "mandate", label: "Our Mandate", href: "#mandate" },
-        { id: "vision", label: "Vision & Mission", href: "#vision" },
-        { id: "board", label: "Board Members", href: "#board" },
-        { id: "history", label: "Our History", href: "#history" },
+        { id: "mandate", label: "Our Mandate", path: "#mandate" },
+        { id: "vision", label: "Vision & Mission", path: "#vision" },
+        { id: "board", label: "Board Members", path: "#board" },
+        { id: "history", label: "Our History", path: "#history" },
       ],
     },
     {
       id: "services",
       label: "Services",
-      href: "#",
+      path: "#",
       dropdown: [
-        { id: "registration", label: "Registration", href: "#registration" },
-        { id: "licensing", label: "Licensing", href: "#licensing" },
-        { id: "accreditation", label: "Accreditation", href: "#accreditation" },
-        { id: "verification", label: "Verification", href: "#verification" },
+        { id: "registration", label: "Registration", path: "#registration" },
+        { id: "licensing", label: "Licensing", path: "#licensing" },
+        { id: "accreditation", label: "Accreditation", path: "#accreditation" },
+        { id: "verification", label: "Verification", path: "#verification" },
       ],
     },
     {
       id: "registration",
       label: "Registration",
-      href: "#",
+      path: "#",
       dropdown: [
-        { id: "individuals", label: "For Individuals", href: "#individuals" },
-        { id: "companies", label: "For Companies", href: "#companies" },
-        { id: "students", label: "For Students", href: "#students" },
-        { id: "institutions", label: "For Institutions", href: "#institutions" },
+        { id: "individuals", label: "For Individuals", path: "#individuals" },
+        { id: "companies", label: "For Companies", path: "#companies" },
+        { id: "students", label: "For Students", path: "#students" },
+        { id: "institutions", label: "For Institutions", path: "#institutions" },
       ],
     },
     {
       id: "resources",
       label: "Resources",
-      href: "#",
+      path: "#",
       dropdown: [
-        { id: "acts", label: "Acts & Regulations", href: "#acts" },
-        { id: "forms", label: "Forms & Guidelines", href: "#forms" },
-        { id: "publications", label: "Publications", href: "#publications" },
-        { id: "faqs", label: "FAQs", href: "#faqs" },
+        { id: "acts", label: "Acts & Regulations", path: "#acts" },
+        { id: "forms", label: "Forms & Guidelines", path: "#forms" },
+        { id: "publications", label: "Publications", path: "#publications" },
+        { id: "faqs", label: "FAQs", path: "#faqs" },
       ],
     },
-    { id: "news", label: "News & Events", href: "#" },
-    { id: "contact", label: "Contact Us", href: "#" },
+    { id: "news", label: "News & Events", path: "#" },
+    { id: "contact", label: "Contact Us", path: "#" },
   ]
 
   const carouselItems = [
@@ -252,7 +247,7 @@ export default function GovernmentLandingPage() {
                             {item.dropdown.map((subItem) => (
                               <Link
                                 key={subItem.id}
-                                to={subItem.href}
+                                to={subItem.path}
                                 className={`block px-4 py-2 text-sm hover:bg-muted ${
                                   activeMenuItem === subItem.id ? "bg-primary/10 text-primary font-medium" : ""
                                 }`}
@@ -267,7 +262,7 @@ export default function GovernmentLandingPage() {
                     </div>
                   ) : (
                     <Link
-                      to={item.href}
+                      to={item.path}
                       className={`block py-2 px-3 md:px-4 rounded-md font-medium 
                         ${activeMenuItem === item.id ? "bg-primary/10 text-primary" : "hover:bg-muted-foreground/10 hover:text-primary"}`}
                       onClick={() => handleMenuItemClick(item.id)}
@@ -349,64 +344,10 @@ export default function GovernmentLandingPage() {
                   </Button>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-lg flex items-center">
-                      <Users className="h-5 w-5 mr-2 text-primary" />
-                      For Individuals
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Registration for engineering technologists, technicians, and craftspeople.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-lg flex items-center">
-                      <FileText className="h-5 w-5 mr-2 text-primary" />
-                      For Companies
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Registration for engineering technology consulting firms.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-lg flex items-center">
-                      <GraduationCap className="h-5 w-5 mr-2 text-primary" />
-                      For Students
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Information and resources for engineering technology students.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-lg flex items-center">
-                      <BookOpen className="h-5 w-5 mr-2 text-primary" />
-                      For Institutions
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Accreditation for engineering technology training institutions.
-                    </p>
-                  </CardContent>
-                </Card>
               </div>
             </div>
-          </div>
-        </section>
-
+         </section>
+             
         {/* About Us Section */}
         <section id="about" className="py-12 md:py-16">
           <div className="container px-4 md:px-6">
