@@ -91,7 +91,7 @@ const TopBar = () => {
   return (
     <>
       {/* Toolbar Area */}
-      <div className="toolbar py-2">
+      <div className="py-2" style={{ backgroundColor: "#f39c12", color: "white" }}>
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs">
             <div className="flex items-center space-x-4 mb-2 md:mb-0">
