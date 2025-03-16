@@ -85,7 +85,7 @@ function Carousel() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white p-4 text-center">
-                <h2 className="text-2xl md:text-4xl font-bold mb-2">
+                <h2 className="text-2xl md:text-4xl font-bold mb-2" style={{ color: "#f39c12" }}>
                   {item.title}
                 </h2>
                 <p className="max-w-2xl text-sm md:text-base">

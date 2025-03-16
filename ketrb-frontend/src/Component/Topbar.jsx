@@ -179,7 +179,7 @@ const TopBar = () => {
               <img
                 src={logo1}
                 alt="Kenya Coat of Arms"
-                width={100}
+                width={80}
                 height={80}
                 className="object-contain"
               />
@@ -224,37 +224,59 @@ const TopBar = () => {
                           toggleDropdown(item.id);
                           handleMenuItemClick(item.id);
                         }}
-                        className={`flex items-center justify-between w-full py-2 px-3 md:px-4 rounded-md font-medium 
+                        className={`flex items-center justify-between w-full py-2 px-3 md:px-4 rounded-md font-bold
                           ${
                             activeMenuItem === item.id
-                              ? "bg-primary/10 text-primary"
-                              : "hover:bg-muted-foreground/10 hover:text-primary"
+                              ? "border-b-2 border-[#f39c12]"
+                              : "border-b-2 border-transparent hover:border-[#f39c12]"
                           }`}
+                        style={{
+                          color: activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
+                          transition: "color 0.3s, border-color 0.3s",
+                        }}
+                        onMouseOver={(e) => (e.currentTarget.style.color = "#f39c12")}
+                        onMouseOut={(e) => {
+                          if (activeMenuItem !== item.id) {
+                            e.currentTarget.style.color = "#5b92e5"
+                          }
+                        }}
                       >
                         {item.label}
                         <ChevronDown
-                          className={`ml-1 h-4 w-4 transition-transform ${
-                            openDropdown === item.id ? "rotate-180" : ""
-                          }`}
+                          className={`ml-1 h-4 w-4 transition-transform ${openDropdown === item.id ? "rotate-180" : ""}`}
                         />
                       </button>
                       {openDropdown === item.id && (
-                        <div className="absolute z-10 left-0 md:left-auto mt-1 w-56 rounded-md shadow-lg bg-background border">
-                          <div
-                            className="py-1"
-                            role="menu"
-                            aria-orientation="vertical"
-                          >
+                        <div
+                          className="absolute z-10 left-0 md:left-auto mt-1 w-56 rounded-md shadow-lg border"
+                          style={{ backgroundColor: "white" }}
+                        >
+                          <div className="py-1" role="menu" aria-orientation="vertical">
                             {item.dropdown.map((subItem) => (
                               <Link
                                 key={subItem.id}
-                                to={subItem.path}
-                                className={`block px-4 py-2 text-sm hover:bg-muted ${
-                                  activeMenuItem === subItem.id
-                                    ? "bg-primary/10 text-primary font-medium"
-                                    : ""
-                                }`}
+                                href={subItem.href}
+                                className={`block px-4 py-2 text-sm font-bold hover:bg-gray-100
+                                  ${
+                                    activeMenuItem === subItem.id
+                                      ? "border-l-4 border-[#f39c12] bg-gray-50"
+                                      : "border-l-4 border-transparent hover:border-[#f39c12]"
+                                  }`}
+                                style={{
+                                  color: activeMenuItem === subItem.id ? "#f39c12" : "#5b92e5",
+                                  transition: "color 0.3s, border-color 0.3s, background-color 0.3s",
+                                }}
                                 onClick={() => handleMenuItemClick(subItem.id)}
+                                onMouseOver={(e) => {
+                                  e.currentTarget.style.color = "#f39c12"
+                                  e.currentTarget.style.backgroundColor = "#f8f9fa"
+                                }}
+                                onMouseOut={(e) => {
+                                  if (activeMenuItem !== subItem.id) {
+                                    e.currentTarget.style.color = "#5b92e5"
+                                    e.currentTarget.style.backgroundColor = ""
+                                  }
+                                }}
                               >
                                 {subItem.label}
                               </Link>
