@@ -77,11 +77,12 @@ const TopBar = () => {
     }
   };
 
-  const handleMenuItemClick = (id) => {
-    setActiveMenuItem(id);
+  const handleMenuItemClick = (parentId, childId = null) => {
+    setActiveMenuItem(childId || parentId); // If a child item is clicked, set it as active, otherwise set the parent.
+    setOpenDropdown(parentId); // Keep the parent dropdown open when clicking a child item.
+
     if (window.innerWidth < 768) {
-      // Close menu on mobile after clicking
-      setIsMenuOpen(false);
+      setIsMenuOpen(false); // Close menu on mobile after clicking
     }
   };
 
@@ -162,18 +163,6 @@ const TopBar = () => {
       {/* Main Header */}
       <header className="bg-background border-b">
         <div className="container px-4 md:px-6 py-4">
-          {/* Mobile menu button positioned absolutely */}
-          <div className="absolute left-4 top-4 md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </div>
-
           <div className="flex flex-col items-center justify-center">
             <div className="flex items-center justify-center space-x-4">
               <img
@@ -225,14 +214,25 @@ const TopBar = () => {
                           handleMenuItemClick(item.id);
                         }}
                         className={`flex items-center justify-between w-full py-2 px-3 md:px-4 rounded-md font-bold
-                          ${
-                            activeMenuItem === item.id
-                              ? "border-b-2 border-[#f39c12]"
-                              : "border-b-2 border-transparent hover:border-[#f39c12]"
-                          }`}
+                            ${
+                              activeMenuItem === item.id ||
+                              (openDropdown === item.id &&
+                                item.dropdown.some(
+                                  (sub) => activeMenuItem === sub.id
+                                ))
+                                ? "border-b-2 border-[#f39c12]"
+                                : "border-b-2 border-transparent hover:border-[#f39c12]"
+                            }
+  `}
                         style={{
                           color:
-                            activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
+                            activeMenuItem === item.id ||
+                            (item.dropdown &&
+                              item.dropdown.some(
+                                (sub) => activeMenuItem === sub.id
+                              ))
+                              ? "#f39c12"
+                              : "#5b92e5",
                           transition: "color 0.3s, border-color 0.3s",
                         }}
                         onMouseOver={(e) =>
@@ -279,7 +279,9 @@ const TopBar = () => {
                                   transition:
                                     "color 0.3s, border-color 0.3s, background-color 0.3s",
                                 }}
-                                onClick={() => handleMenuItemClick(subItem.id)}
+                                onClick={() =>
+                                  handleMenuItemClick(item.id, subItem.id)
+                                }
                                 onMouseOver={(e) => {
                                   e.currentTarget.style.color = "#f39c12";
                                   e.currentTarget.style.backgroundColor =

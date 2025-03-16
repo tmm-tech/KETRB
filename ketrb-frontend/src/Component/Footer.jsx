@@ -49,8 +49,7 @@ const Footer = () => {
           <div className="col-lg-3">
             <div className="recent-widget">
               <section className="widget widget_finoptissocialiconwi_widget">
-                <br />
-                <h3 className="footer-title">Follow Us</h3>
+                <h3 className="footer-title">Connect with Us</h3>
                 <ul className="footer_social">
                   <li>
                     <Link
