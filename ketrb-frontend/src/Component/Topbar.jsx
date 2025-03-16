@@ -85,6 +85,18 @@ const TopBar = () => {
     }
   };
 
+    // Close dropdown when clicking outside
+    useEffect(() => {
+      const handleClickOutside = () => {
+        setOpenDropdown(null)
+      }
+  
+      document.addEventListener("click", handleClickOutside)
+      return () => {
+        document.removeEventListener("click", handleClickOutside)
+      }
+    }, [])
+
   return (
     <>
       {/* Toolbar Area */}
@@ -167,7 +179,7 @@ const TopBar = () => {
               <img
                 src={logo1}
                 alt="Kenya Coat of Arms"
-                width={80}
+                width={100}
                 height={80}
                 className="object-contain"
               />

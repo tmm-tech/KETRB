@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
-import image0 from "../Asset/Gallery/IMG_0114.JPG";
-import image1 from "../Asset/Gallery/IMG_0723.JPG";
-import image2 from "../Asset/Gallery/IMG_0093.JPG";
-import image3 from "../Asset/Gallery/IMG_0499.JPG";
-import image4 from "../Asset/Gallery/IMG_0136.JPG";
+
 import { Button } from "../Component/button";
 import {
   Facebook,
@@ -22,7 +18,7 @@ import {
 import { useState, useEffect } from "react";
 
 export default function GovernmentLandingPage() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeMenuItem, setActiveMenuItem] = useState("home")
   const [openDropdown, setOpenDropdown] = useState(null)
@@ -78,62 +74,12 @@ export default function GovernmentLandingPage() {
     { id: "contact", label: "Contact Us", path: "#" },
   ]
 
-  const carouselItems = [
-    {
-      image: image0,
-      title: "Kenya Engineering Technology Registration Board",
-      description: "",
-    },
-    {
-      image: image1,
-      title: "Accountability",
-      description: "We take responsibility for our actions and decisions, ensuring transparency and trust.",
-    },
-    {
-      image: image2,
-      title: "Teamwork",
-      description: "We collaborate and support each other to achieve common goals.",
-    },
-    {
-      image: image3,
-      title: "Integrity",
-      description: "We adhere to the highest ethical standards, demonstrating honesty and fairness in every action.",
-    },
-    {
-      image: image4,
-      title: "Innovation",
-      description: "We foster a culture of creativity and continuous improvement, embracing new ideas and technologies.",
-    },
-  ]
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === carouselItems.length - 1 ? 0 : prev + 1))
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [carouselItems.length])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === carouselItems.length - 1 ? 0 : prev + 1))
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? carouselItems.length - 1 : prev - 1))
-  }
-
   
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = () => {
-      setOpenDropdown(null)
-    }
+  
+  
 
-    document.addEventListener("click", handleClickOutside)
-    return () => {
-      document.removeEventListener("click", handleClickOutside)
-    }
-  }, [])
+
 
   return (
     <div className="flex min-h-screen flex-col">
