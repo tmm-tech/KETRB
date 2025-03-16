@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="row">
           <div className="col-lg-3">
-            <section className="widget widget_finoptissocialiconwi_widget">
+            <section className="widget widget_location">
               <h3 className="footer-title">Location</h3>
               <MapComponent />
             </section>
@@ -47,7 +47,6 @@ const Footer = () => {
             </section>
           </div>
           <div className="col-lg-3">
-            <div className="recent-widget">
               <section className="widget widget_finoptissocialiconwi_widget">
                 <h3 className="footer-title">Connect with Us</h3>
                 <ul className="footer_social">
@@ -80,7 +79,6 @@ const Footer = () => {
                   </li>
                 </ul>
               </section>
-            </div>
           </div>
           <div className="col-lg-3">
             <section className="widget widget_contact_widget">
