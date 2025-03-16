@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../Asset/Logo/logo_1.png";
-import logo1 from "../Asset/Logo/kenya.png";
 import image0 from "../Asset/Gallery/IMG_0114.JPG";
 import image1 from "../Asset/Gallery/IMG_0723.JPG";
 import image2 from "../Asset/Gallery/IMG_0093.JPG";
@@ -11,6 +9,7 @@ import {
   Facebook,
   X,
   Instagram,
+  LinkedIn,
   Mail,
   Phone,
   MapPin,
@@ -83,7 +82,7 @@ export default function GovernmentLandingPage() {
     {
       image: image0,
       title: "Kenya Engineering Technology Registration Board",
-      description: "Regulating Engineering Technology Professionals for Excellence",
+      description: "",
     },
     {
       image: image1,
@@ -161,15 +160,15 @@ export default function GovernmentLandingPage() {
                 <Mail className="h-4 w-4 mr-1" />
                 info@ketrb.go.ke
               </Link>
-              <Link to="tel:+254202345678" className="flex items-center hover:underline">
+              <Link to="tel:+254740137877" className="flex items-center hover:underline">
                 <Phone className="h-4 w-4 mr-1" />
-                +254 20 234 5678
+                +254 740137877
               </Link>
             </div>
             <div className="flex items-center space-x-4 mb-2 md:mb-0">
               <span className="flex items-center">
                 <MapPin className="h-4 w-4 mr-1" />
-                Nairobi, Kenya - Engineering Plaza, 3rd Floor
+                Harambee Avenue, Nairobi
               </span>
               <span className="flex items-center">
                 <Clock className="h-4 w-4 mr-1" />
@@ -177,110 +176,21 @@ export default function GovernmentLandingPage() {
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Link to="#" aria-label="Facebook" className="hover:text-white">
+              <Link to="https://www.facebook.com/KETRBOARD" aria-label="Facebook" className="hover:text-white">
                 <Facebook className="h-4 w-4" />
               </Link>
-              <Link to="#" aria-label="Twitter" className="hover:text-white">
+              <Link to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09" aria-label="Twitter" className="hover:text-white">
                 <X className="h-4 w-4" />
               </Link>
-              <Link to="#" aria-label="Instagram" className="hover:text-white">
-                <Instagram className="h-4 w-4" />
+              <Link to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/" aria-label="LinkedIn" className="hover:text-white">
+                <LinkedIn className="h-4 w-4" />
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Main Header */}
-      <header className="bg-background border-b">
-        <div className="container px-4 md:px-6 py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <img
-                src={logo1}
-                alt="Kenya Coat of Arms"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-              <div className="text-center md:text-left">
-                <h1 className="text-xl md:text-2xl font-bold">Kenya Engineering Technology Registration Board</h1>
-                <p className="text-sm text-muted-foreground">Ministry of Infrastructure and Transport</p>
-              </div>
-              <img
-                src={logo}
-                alt="KETRB Logo"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-            </div>
-            <div className="md:hidden">
-              <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </div>
-          </div>
-        </div>
 
-        {/* Navigation Menu */}
-        <nav className={`bg-muted ${isMenuOpen ? "block" : "hidden md:block"}`}>
-          <div className="container px-4 md:px-6">
-            <ul className="flex flex-col md:flex-row md:items-center md:justify-center py-2 space-y-2 md:space-y-0 md:space-x-1">
-              {navigationItems.map((item) => (
-                <li key={item.id} className="relative">
-                  {item.dropdown ? (
-                    <div className="relative">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          toggleDropdown(item.id)
-                          handleMenuItemClick(item.id)
-                        }}
-                        className={`flex items-center justify-between w-full py-2 px-3 md:px-4 rounded-md font-medium 
-                          ${activeMenuItem === item.id ? "bg-primary/10 text-primary" : "hover:bg-muted-foreground/10 hover:text-primary"}`}
-                      >
-                        {item.label}
-                        <ChevronDown
-                          className={`ml-1 h-4 w-4 transition-transform ${openDropdown === item.id ? "rotate-180" : ""}`}
-                        />
-                      </button>
-                      {openDropdown === item.id && (
-                        <div className="absolute z-10 left-0 md:left-auto mt-1 w-56 rounded-md shadow-lg bg-background border">
-                          <div className="py-1" role="menu" aria-orientation="vertical">
-                            {item.dropdown.map((subItem) => (
-                              <Link
-                                key={subItem.id}
-                                to={subItem.path}
-                                className={`block px-4 py-2 text-sm hover:bg-muted ${
-                                  activeMenuItem === subItem.id ? "bg-primary/10 text-primary font-medium" : ""
-                                }`}
-                                onClick={() => handleMenuItemClick(subItem.id)}
-                              >
-                                {subItem.label}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className={`block py-2 px-3 md:px-4 rounded-md font-medium 
-                        ${activeMenuItem === item.id ? "bg-primary/10 text-primary" : "hover:bg-muted-foreground/10 hover:text-primary"}`}
-                      onClick={() => handleMenuItemClick(item.id)}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
-      </header>
 
       <main className="flex-1">
         {/* Carousel Section */}
