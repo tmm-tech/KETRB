@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Topbar.css";
 import { Link } from "react-router-dom";
 import logo from "../Asset/Logo/logo_1.png";
 import logo1 from "../Asset/Logo/kenya.png";
@@ -15,7 +14,6 @@ import {
   Menu,
   ChevronDown,
 } from "lucide-react";
-
 
 const TopBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,11 +85,13 @@ const TopBar = () => {
     }
   };
 
-
   return (
     <>
       {/* Toolbar Area */}
-      <div className="py-2" style={{ backgroundColor: "#f39c12", color: "white" }}>
+      <div
+        className="py-2"
+        style={{ backgroundColor: "#f39c12", color: "white" }}
+      >
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs">
             <div className="flex items-center space-x-4 mb-2 md:mb-0">
@@ -150,8 +150,20 @@ const TopBar = () => {
       {/* Main Header */}
       <header className="bg-background border-b">
         <div className="container px-4 md:px-6 py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-4 mb-4 md:mb-0">
+          {/* Mobile menu button positioned absolutely */}
+          <div className="absolute left-4 top-4 md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </div>
+
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex items-center justify-center space-x-4">
               <img
                 src={logo1}
                 alt="Kenya Coat of Arms"
