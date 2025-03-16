@@ -24,7 +24,7 @@ function HomePage() {
   }
 
   return (
-    <div className="homepage">
+    <div className="flex min-h-screen flex-col">
       <TopBar />
       <Carousel />
       <ApplySection />
