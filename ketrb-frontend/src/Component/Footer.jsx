@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="row">
           <div className="col-lg-3">
-            <section className="widget widget_location">
+            <section className="widget widget_nav_menu quick-links">
               <h3 className="footer-title">Location</h3>
               <MapComponent />
             </section>
@@ -47,38 +47,38 @@ const Footer = () => {
             </section>
           </div>
           <div className="col-lg-3">
-              <section className="widget widget_finoptissocialiconwi_widget">
-                <h3 className="footer-title">Connect with Us</h3>
-                <ul className="footer_social">
-                  <li>
-                    <Link
-                      to="https://www.facebook.com/KETRBOARD"
-                      target="_blank"
-                      className="text-2xl"
-                    >
-                      <FaFacebook />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
-                      target="_blank"
-                      className="text-2xl"
-                    >
-                      <FaTwitter />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
-                      target="_blank"
-                      className="text-2xl"
-                    >
-                      <FaLinkedin />
-                    </Link>
-                  </li>
-                </ul>
-              </section>
+            <section className="widget widget_nav_menu quick-links">
+              <h3 className="footer-title">Connect With Us</h3>
+              <ul className="footer_social">
+                <li>
+                  <Link
+                    to="https://www.facebook.com/KETRBOARD"
+                    target="_blank"
+                    className="text-2xl"
+                  >
+                    <FaFacebook />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
+                    target="_blank"
+                    className="text-2xl"
+                  >
+                    <FaTwitter />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
+                    target="_blank"
+                    className="text-2xl"
+                  >
+                    <FaLinkedin />
+                  </Link>
+                </li>
+              </ul>
+            </section>
           </div>
           <div className="col-lg-3">
             <section className="widget widget_contact_widget">
