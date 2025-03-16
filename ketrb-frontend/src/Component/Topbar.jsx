@@ -85,17 +85,17 @@ const TopBar = () => {
     }
   };
 
-    // Close dropdown when clicking outside
-    useEffect(() => {
-      const handleClickOutside = () => {
-        setOpenDropdown(null)
-      }
-  
-      document.addEventListener("click", handleClickOutside)
-      return () => {
-        document.removeEventListener("click", handleClickOutside)
-      }
-    }, [])
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setOpenDropdown(null);
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -231,19 +231,24 @@ const TopBar = () => {
                               : "border-b-2 border-transparent hover:border-[#f39c12]"
                           }`}
                         style={{
-                          color: activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
+                          color:
+                            activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
                           transition: "color 0.3s, border-color 0.3s",
                         }}
-                        onMouseOver={(e) => (e.currentTarget.style.color = "#f39c12")}
+                        onMouseOver={(e) =>
+                          (e.currentTarget.style.color = "#f39c12")
+                        }
                         onMouseOut={(e) => {
                           if (activeMenuItem !== item.id) {
-                            e.currentTarget.style.color = "#5b92e5"
+                            e.currentTarget.style.color = "#5b92e5";
                           }
                         }}
                       >
                         {item.label}
                         <ChevronDown
-                          className={`ml-1 h-4 w-4 transition-transform ${openDropdown === item.id ? "rotate-180" : ""}`}
+                          className={`ml-1 h-4 w-4 transition-transform ${
+                            openDropdown === item.id ? "rotate-180" : ""
+                          }`}
                         />
                       </button>
                       {openDropdown === item.id && (
@@ -251,7 +256,11 @@ const TopBar = () => {
                           className="absolute z-10 left-0 md:left-auto mt-1 w-56 rounded-md shadow-lg border"
                           style={{ backgroundColor: "white" }}
                         >
-                          <div className="py-1" role="menu" aria-orientation="vertical">
+                          <div
+                            className="py-1"
+                            role="menu"
+                            aria-orientation="vertical"
+                          >
                             {item.dropdown.map((subItem) => (
                               <Link
                                 key={subItem.id}
@@ -263,18 +272,23 @@ const TopBar = () => {
                                       : "border-l-4 border-transparent hover:border-[#f39c12]"
                                   }`}
                                 style={{
-                                  color: activeMenuItem === subItem.id ? "#f39c12" : "#5b92e5",
-                                  transition: "color 0.3s, border-color 0.3s, background-color 0.3s",
+                                  color:
+                                    activeMenuItem === subItem.id
+                                      ? "#f39c12"
+                                      : "#5b92e5",
+                                  transition:
+                                    "color 0.3s, border-color 0.3s, background-color 0.3s",
                                 }}
                                 onClick={() => handleMenuItemClick(subItem.id)}
                                 onMouseOver={(e) => {
-                                  e.currentTarget.style.color = "#f39c12"
-                                  e.currentTarget.style.backgroundColor = "#f8f9fa"
+                                  e.currentTarget.style.color = "#f39c12";
+                                  e.currentTarget.style.backgroundColor =
+                                    "#f8f9fa";
                                 }}
                                 onMouseOut={(e) => {
                                   if (activeMenuItem !== subItem.id) {
-                                    e.currentTarget.style.color = "#5b92e5"
-                                    e.currentTarget.style.backgroundColor = ""
+                                    e.currentTarget.style.color = "#5b92e5";
+                                    e.currentTarget.style.backgroundColor = "";
                                   }
                                 }}
                               >
@@ -288,13 +302,26 @@ const TopBar = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`block py-2 px-3 md:px-4 rounded-md font-medium 
+                      className={`block py-2 px-3 md:px-4 rounded-md font-bold
                         ${
                           activeMenuItem === item.id
-                            ? "bg-primary/10 text-primary"
-                            : "hover:bg-muted-foreground/10 hover:text-primary"
+                            ? "border-b-2 border-[#f39c12]"
+                            : "border-b-2 border-transparent hover:border-[#f39c12]"
                         }`}
+                      style={{
+                        color:
+                          activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
+                        transition: "color 0.3s, border-color 0.3s",
+                      }}
                       onClick={() => handleMenuItemClick(item.id)}
+                      onMouseOver={(e) =>
+                        (e.currentTarget.style.color = "#f39c12")
+                      }
+                      onMouseOut={(e) => {
+                        if (activeMenuItem !== item.id) {
+                          e.currentTarget.style.color = "#5b92e5";
+                        }
+                      }}
                     >
                       {item.label}
                     </Link>
