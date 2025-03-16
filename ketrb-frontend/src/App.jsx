@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import React from "react";
-import HomePage from "./Page/HomePage";
+// import HomePage from "./Page/HomePage";
+import GovernmentLandingPage from "./Page/HomePages";
 import About from "./Page/About";
 import News from "./Page/News";
 import FAQ from "./Page/FAQ";
@@ -76,7 +77,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage/>} />
+        <Route path="/" element={<GovernmentLandingPage/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/news&events" element={<News articles={newsArticles} />} />
         <Route path="/news&events/:id" element={<NewsDetails articles={newsArticles} />} />
