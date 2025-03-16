@@ -196,7 +196,7 @@ export default function GovernmentLandingPage() {
         <div className="container px-4 md:px-6 py-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <Image
+              <img
                 src={logo1}
                 alt="Kenya Coat of Arms"
                 width={80}
@@ -207,7 +207,7 @@ export default function GovernmentLandingPage() {
                 <h1 className="text-xl md:text-2xl font-bold">Kenya Engineering Technology Registration Board</h1>
                 <p className="text-sm text-muted-foreground">Ministry of Infrastructure and Transport</p>
               </div>
-              <Image
+              <img
                 src={logo}
                 alt="KETRB Logo"
                 width={80}
@@ -293,7 +293,7 @@ export default function GovernmentLandingPage() {
                   index === currentSlide ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
+                <img src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white p-4 text-center">
                   <h2 className="text-2xl md:text-4xl font-bold mb-2">{item.title}</h2>
                   <p className="max-w-2xl text-sm md:text-base">{item.description}</p>
@@ -416,7 +416,7 @@ export default function GovernmentLandingPage() {
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <Image
+                <img
                   src="/placeholder.svg?height=400&width=600"
                   alt="About KETRB"
                   width={600}
