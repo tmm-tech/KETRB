@@ -121,21 +121,7 @@ export default function GovernmentLandingPage() {
     setCurrentSlide((prev) => (prev === 0 ? carouselItems.length - 1 : prev - 1))
   }
 
-  const toggleDropdown = (id) => {
-    if (openDropdown === id) {
-      setOpenDropdown(null)
-    } else {
-      setOpenDropdown(id)
-    }
-  }
-
-  const handleMenuItemClick = (id) => {
-    setActiveMenuItem(id)
-    if (window.innerWidth < 768) {
-      // Close menu on mobile after clicking
-      setIsMenuOpen(false)
-    }
-  }
+  
 
   // Close dropdown when clicking outside
   useEffect(() => {

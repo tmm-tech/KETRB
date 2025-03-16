@@ -3,6 +3,7 @@ import "./Topbar.css";
 import { Link } from "react-router-dom";
 import logo from "../Asset/Logo/logo_1.png";
 import logo1 from "../Asset/Logo/kenya.png";
+import { Button } from "../Component/button";
 import {
   Facebook,
   X,
@@ -14,7 +15,7 @@ import {
   Menu,
   ChevronDown,
 } from "lucide-react";
-import MobileMenu from "./MobileMenu";
+
 
 const TopBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,6 +86,7 @@ const TopBar = () => {
       setIsMenuOpen(false);
     }
   };
+
 
   return (
     <>
@@ -256,17 +258,6 @@ const TopBar = () => {
             </ul>
           </div>
         </nav>
-        {/* Hamburger for mobile */}
-        <div className="mobile-container">
-          <Link to="/">
-            <img src={logo} alt="logo" className="mobile-logo mr-4" />
-          </Link>
-          <div className="hamburger" onClick={toggleMenu}>
-            <i className={`fas ${showMenu ? "fa-times" : "fa-bars"}`}></i>
-          </div>
-        </div>
-
-        <MobileMenu showMenu={showMenu} toggleMenu={toggleMenu} />
       </header>
     </>
   );
