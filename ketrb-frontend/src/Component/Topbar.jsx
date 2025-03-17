@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation} from "react-router-dom";
-import logo from "../Asset/Logo/logo_1.png";
-import logo1 from "../Asset/Logo/kenya.png";
-import { Button } from "../Component/button";
-import {
-  Facebook,
-  X,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Menu,
-  ChevronDown,
-} from "lucide-react";
+"use client"
+
+import { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
+import logo from "../Asset/Logo/logo_1.png"
+import logo1 from "../Asset/Logo/kenya.png"
+import { Button } from "../Component/button"
+import { Facebook, X, Linkedin, Mail, Phone, MapPin, Clock, Menu, ChevronDown } from "lucide-react"
 
 const TopBar = () => {
-  const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const location = useLocation()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState(null)
   // Navigation menu structure with dropdowns
   const navigationItems = [
     { id: "home", label: "Home", path: "/", active: true },
@@ -68,67 +60,53 @@ const TopBar = () => {
     },
     { id: "careers", label: "Careers", path: "#careers" },
     { id: "latestnew", label: "Latest News", path: "/news&events" },
-  ];
+  ]
   const toggleDropdown = (id) => {
     if (openDropdown === id) {
-      setOpenDropdown(null);
+      setOpenDropdown(null)
     } else {
-      setOpenDropdown(id);
+      setOpenDropdown(id)
     }
-  };
+  }
 
-  const activeMenuItem = navigationItems.find(
-    (item) =>
-      item.path === location.pathname ||
-      (item.dropdown &&
-        item.dropdown.some((subItem) => subItem.path === location.pathname))
-  )?.id;
+  const isMenuItemActive = (item) => {
+    if (item.path === location.pathname) {
+      return true
+    }
+    if (item.dropdown) {
+      return item.dropdown.some((subItem) => subItem.path === location.pathname)
+    }
+    return false
+  }
 
-  const handleMenuItemClick = (id, parentId = null) => {
-    if (parentId) {
-      setActiveMenuItem(parentId); // Set parent menu active for dropdown items
-    } else {
-      setActiveMenuItem(id); // Set the clicked menu active
-    }
-  
-    if (window.innerWidth < 768) {
-      setIsMenuOpen(false); // Close the mobile menu after selection
-    }
-  };
+  const isDropdownItemActive = (path) => {
+    return path === location.pathname
+  }
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = () => {
-      setOpenDropdown(null);
-    };
+      setOpenDropdown(null)
+    }
 
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("click", handleClickOutside)
     return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener("click", handleClickOutside)
+    }
+  }, [])
 
   return (
     <>
       {/* Toolbar Area */}
-      <div
-        className="py-2"
-        style={{ backgroundColor: "#f39c12", color: "white" }}
-      >
+      <div className="py-2" style={{ backgroundColor: "#f39c12", color: "white" }}>
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs">
             <div className="flex items-center space-x-4 mb-2 md:mb-0">
-              <Link
-                to="mailto:info@ketrb.go.ke"
-                className="flex items-center hover:underline"
-              >
+              <Link to="mailto:info@ketrb.go.ke" className="flex items-center hover:underline">
                 <Mail className="h-4 w-4 mr-1" />
                 info@ketrb.go.ke
               </Link>
-              <Link
-                to="tel:+254740137877"
-                className="flex items-center hover:underline"
-              >
+              <Link to="tel:+254740137877" className="flex items-center hover:underline">
                 <Phone className="h-4 w-4 mr-1" />
                 +254 740137877
               </Link>
@@ -144,11 +122,7 @@ const TopBar = () => {
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Link
-                to="https://www.facebook.com/KETRBOARD"
-                aria-label="Facebook"
-                className="hover:text-white"
-              >
+              <Link to="https://www.facebook.com/KETRBOARD" aria-label="Facebook" className="hover:text-white">
                 <Facebook className="h-4 w-4" />
               </Link>
               <Link
@@ -183,9 +157,7 @@ const TopBar = () => {
                 className="object-contain"
               />
               <div className="text-center md:text-left">
-                <h1 className="text-xl md:text-2xl font-bold">
-                  Kenya Engineering Technology Registration Board
-                </h1>
+                <h1 className="text-xl md:text-2xl font-bold">Kenya Engineering Technology Registration Board</h1>
                 {/* <p className="text-sm text-muted-foreground"></p> */}
               </div>
               <img
@@ -197,11 +169,7 @@ const TopBar = () => {
               />
             </div>
             <div className="md:hidden">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
+              <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
@@ -219,26 +187,27 @@ const TopBar = () => {
                     <div className="relative">
                       <button
                         onClick={(e) => {
-                          e.stopPropagation();
-                          toggleDropdown(item.id);
-                          handleMenuItemClick(item.id);
+                          e.stopPropagation()
+                          toggleDropdown(item.id)
+                          // Close mobile menu if clicked
+                          if (window.innerWidth < 768) {
+                            setIsMenuOpen(false)
+                          }
                         }}
                         className={`flex items-center justify-between w-full py-2 px-3 md:px-4 rounded-md font-bold
-                          ${activeMenuItem === item.id
-                            ? "border-b-2 border-[#f39c12]"
-                            : "border-b-2 border-transparent hover:border-[#f39c12]"
+                          ${
+                            isMenuItemActive(item)
+                              ? "border-b-2 border-[#f39c12]"
+                              : "border-b-2 border-transparent hover:border-[#f39c12]"
                           }`}
                         style={{
-                          color: activeMenuItem === item.id ? "#f39c12" : "#5b92e5",
+                          color: isMenuItemActive(item) ? "#f39c12" : "#5b92e5",
                           transition: "color 0.3s, border-color 0.3s",
                         }}
-
-                        onMouseOver={(e) =>
-                          (e.currentTarget.style.color = "#f39c12")
-                        }
+                        onMouseOver={(e) => (e.currentTarget.style.color = "#f39c12")}
                         onMouseOut={(e) => {
-                          if (activeMenuItem !== item.id) {
-                            e.currentTarget.style.color = "#5b92e5";
+                          if (!isMenuItemActive(item)) {
+                            e.currentTarget.style.color = "#5b92e5"
                           }
                         }}
                       >
@@ -254,30 +223,29 @@ const TopBar = () => {
                           className="absolute z-10 left-0 md:left-auto mt-1 w-56 rounded-md shadow-lg border"
                           style={{ backgroundColor: "white" }}
                         >
-                          <div
-                            className="py-1"
-                            role="menu"
-                            aria-orientation="vertical"
-                          >
+                          <div className="py-1" role="menu" aria-orientation="vertical">
                             {item.dropdown.map((subItem) => (
                               <Link
                                 key={subItem.id}
                                 to={subItem.path}
                                 className={`block px-4 py-2 text-sm font-bold hover:bg-gray-100 transition-all
-                                  ${location.pathname === subItem.path ? "border-l-4 border-[#f39c12] bg-gray-50" : "border-l-4 border-transparent hover:border-[#f39c12]"}
+                                  ${isDropdownItemActive(subItem.path) ? "border-l-4 border-[#f39c12] bg-gray-50" : "border-l-4 border-transparent hover:border-[#f39c12]"}
                                 `}
-                                style={{ color: location.pathname === subItem.path ? "#f39c12" : "#5b92e5" }}
-                                onClick={() => handleMenuItemClick(subItem.id, item.id)} // Pass parent ID
-                              
+                                style={{ color: isDropdownItemActive(subItem.path) ? "#f39c12" : "#5b92e5" }}
+                                onClick={() => {
+                                  // Close mobile menu if clicked
+                                  if (window.innerWidth < 768) {
+                                    setIsMenuOpen(false)
+                                  }
+                                }}
                                 onMouseOver={(e) => {
-                                  e.currentTarget.style.color = "#f39c12";
-                                  e.currentTarget.style.backgroundColor =
-                                    "#f8f9fa";
+                                  e.currentTarget.style.color = "#f39c12"
+                                  e.currentTarget.style.backgroundColor = "#f8f9fa"
                                 }}
                                 onMouseOut={(e) => {
-                                  if (activeMenuItem !== subItem.id) {
-                                    e.currentTarget.style.color = "#5b92e5";
-                                    e.currentTarget.style.backgroundColor = "";
+                                  if (!isDropdownItemActive(subItem.path)) {
+                                    e.currentTarget.style.color = "#5b92e5"
+                                    e.currentTarget.style.backgroundColor = ""
                                   }
                                 }}
                               >
@@ -290,14 +258,26 @@ const TopBar = () => {
                     </div>
                   ) : (
                     <Link
-                    to={item.path}
-                    className={`block py-2 px-3 md:px-4 rounded-md font-bold transition-all
-                      ${location.pathname === item.path ? "border-b-2 border-[#f39c12]" : "border-b-2 border-transparent hover:border-[#f39c12]"}
-                    `}
-                    style={{ color: location.pathname === item.path ? "#f39c12" : "#5b92e5" }}
-                  >
-                    {item.label}
-                  </Link>
+                      to={item.path}
+                      className={`block py-2 px-3 md:px-4 rounded-md font-bold transition-all
+                        ${location.pathname === item.path ? "border-b-2 border-[#f39c12]" : "border-b-2 border-transparent hover:border-[#f39c12]"}
+                      `}
+                      style={{ color: location.pathname === item.path ? "#f39c12" : "#5b92e5" }}
+                      onClick={() => {
+                        // Close mobile menu if clicked
+                        if (window.innerWidth < 768) {
+                          setIsMenuOpen(false)
+                        }
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.color = "#f39c12")}
+                      onMouseOut={(e) => {
+                        if (location.pathname !== item.path) {
+                          e.currentTarget.style.color = "#5b92e5"
+                        }
+                      }}
+                    >
+                      {item.label}
+                    </Link>
                   )}
                 </li>
               ))}
@@ -306,7 +286,8 @@ const TopBar = () => {
         </nav>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default TopBar;
+export default TopBar
+

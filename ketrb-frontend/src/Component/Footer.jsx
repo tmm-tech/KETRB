@@ -1,5 +1,6 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaLinkedin,FaWhatsapp } from "react-icons/fa";
+import { X } from "lucide-react"
 import { Link } from "react-router-dom";
 import MapComponent from "./MapComponent";
 import "./Footer.css";
@@ -47,7 +48,7 @@ const Footer = () => {
             </section>
           </div>
           <div className="col-lg-3">
-            <section className="widget widget_nav_menu quick-links">
+            <section className="widget widget_contact_widget">
               <h3 className="footer-title">Connect With Us</h3>
               <ul className="footer_social">
                 <li>
@@ -65,7 +66,7 @@ const Footer = () => {
                     target="_blank"
                     className="text-2xl"
                   >
-                    <FaTwitter />
+                    <X />
                   </Link>
                 </li>
                 <li>
@@ -80,6 +81,7 @@ const Footer = () => {
               </ul>
             </section>
           </div>
+
           <div className="col-lg-3">
             <section className="widget widget_contact_widget">
               <h3 className="footer-title">Contact Us</h3>
