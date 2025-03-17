@@ -58,10 +58,13 @@ const TopBar = () => {
         { id: "faq", label: "FAQ", path: "/faq" },
       ],
     },
-    { id: "careers", label: "Careers", path: "#careers" },
+    { id: "careers", label: "Careers", path: "/careers" },
     { id: "latestnew", label: "Latest News", path: "/news&events" },
   ]
-  const toggleDropdown = (id) => {
+  const toggleDropdown = (id, e) => {
+    // Prevent the event from bubbling up to document click handler
+    e.stopPropagation()
+
     if (openDropdown === id) {
       setOpenDropdown(null)
     } else {
@@ -85,15 +88,23 @@ const TopBar = () => {
 
   // Close dropdown when clicking outside
   useEffect(() => {
-    const handleClickOutside = () => {
-      setOpenDropdown(null)
+    const handleClickOutside = (event) => {
+      // Don't close dropdown if we're on mobile and the menu is open
+      if (window.innerWidth < 768 && isMenuOpen) {
+        return
+      }
+
+      // Only close if clicking outside the dropdown area
+      if (!event.target.closest(".dropdown-container")) {
+        setOpenDropdown(null)
+      }
     }
 
     document.addEventListener("click", handleClickOutside)
     return () => {
       document.removeEventListener("click", handleClickOutside)
     }
-  }, [])
+  }, [isMenuOpen])
 
   return (
     <>
@@ -184,15 +195,12 @@ const TopBar = () => {
               {navigationItems.map((item) => (
                 <li key={item.id} className="relative">
                   {item.dropdown ? (
-                    <div className="relative">
+                    <div className="relative dropdown-container">
                       <button
                         onClick={(e) => {
-                          e.stopPropagation()
-                          toggleDropdown(item.id)
-                          // Close mobile menu if clicked
-                          if (window.innerWidth < 768) {
-                            setIsMenuOpen(false)
-                          }
+                          toggleDropdown(item.id, e)
+                          // Don't close mobile menu when dropdown is clicked
+                          // Only close when a specific item is selected
                         }}
                         className={`flex items-center justify-between w-full py-2 px-3 md:px-4 rounded-md font-bold
                           ${
@@ -289,5 +297,4 @@ const TopBar = () => {
   )
 }
 
-export default TopBar
-
+export default TopBar;
