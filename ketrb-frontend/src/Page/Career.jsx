@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState, useEffect } from "react";
 import {
   Briefcase,
   ChevronRight,
@@ -11,10 +11,11 @@ import {
   BookOpen,
   Heart,
   Coffee,
-} from "lucide-react"
-import { Button } from "../Component/button"
+} from "lucide-react";
+import { Button } from "../Component/button";
 import Footer from "../Component/Footer";
 import TopBar from "../Component/Topbar";
+import Loading from "../Component/Loading";
 
 // Sample job data - this would typically come from an API
 const jobOpenings = [
@@ -120,8 +121,22 @@ const applicationSteps = [
 ]
 
 const CareersPage = () => {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [filterType, setFilterType] = useState("All")
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterType, setFilterType] = useState("All");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setLoading(false);
+    };
+
+    loadData();
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   // Filter jobs based on search term and job type
   const filteredJobs = jobOpenings.filter((job) => {
