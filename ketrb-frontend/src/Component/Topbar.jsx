@@ -31,7 +31,6 @@ const TopBar = () => {
       path: "#",
       dropdown: [
         { id: "programs", label: "Programs & Projects", path: "/programs" },
-        { id: "news", label: "News & Events", path: "/news&events" },
         { id: "gallery", label: "Gallery", path: "/gallery" },
       ],
     },
