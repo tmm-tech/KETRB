@@ -362,7 +362,7 @@ const CareersPage = () => {
               <Button className="bg-white text-[#5b92e5] hover:bg-gray-100 font-bold py-3 px-6 rounded-md">
                 Contact HR
               </Button>
-              <Button className="bg-[#f39c12] hover:bg-[#e67e22] text-white font-bold py-3 px-6 rounded-md"><Link to="/faq">FAQ</Link></Button>
+              <Link to="/faq"><Button className="bg-[#f39c12] hover:bg-[#e67e22] text-white font-bold py-3 px-6 rounded-md">FAQ</Button></Link>
             </div>
           </div>
         </div>
