@@ -1,6 +1,6 @@
 import React from "react";
-import { FaFacebook, FaLinkedin,FaWhatsapp } from "react-icons/fa";
-import { X } from "lucide-react"
+import { FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import MapComponent from "./MapComponent";
 import "./Footer.css";
@@ -49,41 +49,6 @@ const Footer = () => {
           </div>
           <div className="col-lg-3">
             <section className="widget widget_contact_widget">
-              <h3 className="footer-title">Connect With Us</h3>
-              <ul className="footer_social">
-                <li>
-                  <Link
-                    to="https://www.facebook.com/KETRBOARD"
-                    target="_blank"
-                    className="text-2xl"
-                  >
-                    <FaFacebook />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
-                    target="_blank"
-                    className="text-2xl"
-                  >
-                    <X />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
-                    target="_blank"
-                    className="text-2xl"
-                  >
-                    <FaLinkedin />
-                  </Link>
-                </li>
-              </ul>
-            </section>
-          </div>
-
-          <div className="col-lg-3">
-            <section className="widget widget_contact_widget">
               <h3 className="footer-title">Contact Us</h3>
               <ul className="fa-ul">
                 <li className="flex items-center">
@@ -118,6 +83,40 @@ const Footer = () => {
                 <li className="flex items-center">
                   <i className="fa fa-clock mr-2 text-m"></i>
                   Mon-Fri 08:00 AM – 5:00 PM
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div className="col-lg-3">
+            <section className="widget widget_contact_widget">
+              <h3 className="footer-title">Connect With Us</h3>
+              <ul className="footer_social">
+                <li>
+                  <Link
+                    to="https://www.facebook.com/KETRBOARD"
+                    target="_blank"
+                    className="text-2xl"
+                  >
+                    <FaFacebook />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
+                    target="_blank"
+                    className="text-2xl"
+                  >
+                    <X />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
+                    target="_blank"
+                    className="text-2xl"
+                  >
+                    <FaLinkedin />
+                  </Link>
                 </li>
               </ul>
             </section>
