@@ -15,6 +15,8 @@ import Charter from "./Page/Charter";
 import ActPage from "./Page/Act";
 import NewsDetails from "./Page/NewsDetails";
 import TenderPage from "./Page/Tender";
+import CareerApplicationForm from "./Page/CareerApplicationForm";
+import CareerApplicationSuccess from "./Page/CareerApplicationSuccess";
 import news1 from "./Asset/News/IMG_3467.jpeg";
 import news2 from "./Asset/News/IMG_3468.jpeg";
 import news3 from "./Asset/Carousel/city.jpeg";
@@ -80,6 +82,8 @@ function App() {
         <Route path="/" element={<HomePage/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/careers" element={<CareersPage/>} />
+        <Route path="/careerapplyform/:id" element={<CareerApplicationForm/>} />
+        <Route path="/careersuccess" element={<CareerApplicationSuccess/>} />
         <Route path="/news&events" element={<News articles={newsArticles} />} />
         <Route path="/news&events/:id" element={<NewsDetails articles={newsArticles} />} />
         <Route path="/programs" element={<Programs/>} />
