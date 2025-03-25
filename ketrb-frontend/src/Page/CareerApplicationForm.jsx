@@ -1,7 +1,5 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import { Link, useParams, useNavigate } from "react-router-dom"
+import { useState, useEffect } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
   Upload,
@@ -19,18 +17,18 @@ import {
   DollarSign,
   Globe,
   Linkedin,
-} from "lucide-react"
-import { Button } from "../Component/button"
-import { Input } from "../Component/input"
-import { Textarea } from "../Component/textarea"
-import { Select } from "../Component/select"
-import { Checkbox } from "../Component/checkbox"
-import { Label } from "../Component/label"
-import { RadioGroup, RadioGroupItem } from "../Component/radio-group"
-import { Separator } from "../Component/separator"
-import Footer from "../Component/Footer"
-import TopBar from "../Component/Topbar"
-import Loading from "../Component/Loading"
+} from "lucide-react";
+import { Button } from "../Component/button";
+import { Input } from "../Component/input";
+import { Textarea } from "../Component/textarea";
+import { Select } from "../Component/select";
+import { Checkbox } from "../Component/checkbox";
+import { Label } from "../Component/label";
+import { RadioGroup, RadioGroupItem } from "../Component/radio-group";
+import { Separator } from "../Component/separator";
+import Footer from "../Component/Footer";
+import TopBar from "../Component/Topbar";
+import Loading from "../Component/Loading";
 
 const CareerApplicationForm = () => {
   const { id } = useParams()
