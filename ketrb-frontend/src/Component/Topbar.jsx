@@ -25,12 +25,13 @@ const TopBar = () => {
         { id: "management", label: "Management", path: "#management" },
       ],
     },
+    { id: "latestnew", label: "News", path: "/news&events" },
     {
       id: "discover",
       label: "Discover & Explore",
       path: "#",
       dropdown: [
-        { id: "programs", label: "Programs & Projects", path: "/programs" },
+        { id: "programs", label: "Programs", path: "/programs" },
         { id: "gallery", label: "Gallery", path: "/gallery" },
       ],
     },
@@ -58,7 +59,7 @@ const TopBar = () => {
       ],
     },
     { id: "careers", label: "Careers", path: "/careers" },
-    { id: "latestnew", label: "Latest News", path: "/news&events" },
+    
   ]
   const toggleDropdown = (id, e) => {
     // Prevent the event from bubbling up to document click handler
