@@ -67,7 +67,7 @@ const Programs = () => {
     <>
       <TopBar />
       <div style={{ paddingTop: '30px' }} className="news-container">
-        <h2 className="news-title">Programs</h2>
+        <h2 className="news-title">Projects</h2>
         <div className="news-list">
           {programs.map((program, index) => (
             <div key={index} className="news-item">
