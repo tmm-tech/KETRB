@@ -30,7 +30,7 @@ const TenderPage = () => {
           <div className="circles circle8"></div>
         </div>
         <h1 className="coming-soon-title text-3xl md:text-5xl font-bold text-gray-800 mb-4">
-          Something Exciting is Coming Soon!
+          Coming Soon!
         </h1>
         <p className="coming-soon-text text-lg text-gray-600 mb-8 text-center">
           We are working hard to bring you the new Tender page. Stay tuned!

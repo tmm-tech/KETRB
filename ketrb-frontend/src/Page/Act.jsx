@@ -8,7 +8,7 @@ const ActPage = () => {
     <>
       <TopBar />
       <div className="pdf-container">
-        <h1 className="pdf-title">KETRB Act</h1>
+        <h1 className="pdf-title">Engineering Technology Act</h1>
         <div className="iframe-container">
           <iframe
             src="/Engineering_Act.pdf"
