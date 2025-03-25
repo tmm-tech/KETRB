@@ -132,13 +132,14 @@ const TopBar = () => {
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Link to="https://www.facebook.com/KETRBOARD" aria-label="Facebook" className="hover:text-white">
+              <Link to="https://www.facebook.com/KETRBOARD" aria-label="Facebook" className="hover:text-white" target="_blank" rel="noreferrer">
                 <Facebook className="h-4 w-4" />
               </Link>
               <Link
                 to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"
                 aria-label="Twitter"
                 className="hover:text-white"
+                target="_blank"
               >
                 <X className="h-4 w-4" />
               </Link>
@@ -146,6 +147,7 @@ const TopBar = () => {
                 to="https://www.linkedin.com/company/kenya-engineering-technology-registration-board/"
                 aria-label="LinkedIn"
                 className="hover:text-white"
+                target="_blank"
               >
                 <Linkedin className="h-4 w-4" />
               </Link>
