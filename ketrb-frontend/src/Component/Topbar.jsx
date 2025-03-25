@@ -31,7 +31,7 @@ const TopBar = () => {
       label: "Discover & Explore",
       path: "#",
       dropdown: [
-        { id: "programs", label: "Programs", path: "/programs" },
+        { id: "projects", label: "Projects", path: "/programs" },
         { id: "gallery", label: "Gallery", path: "/gallery" },
       ],
     },
