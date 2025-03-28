@@ -136,14 +136,12 @@ const About = () => {
             <div className="mission-vision-content bg-white p-8 rounded shadow">
               <h2 className="about-heading">Mission</h2>
               <p className="about-description">
-                To set and enforce standards that promote the engineering
-                technology profession and ensure provision of quality services
-                and works by stakeholders
+                To regulate, oversee, and promote development of engineering technology profession to ensure public 
+                safety, uphold professional standards, and foster excellence for achievement of national development goals.
               </p>
               <h2 className="about-heading mt-8">Vision</h2>
               <p className="about-description">
-                To be renowned regulatory bosy for the advancement of the
-                engineering technology profession.
+                A leading regulatory body for advancement of the engineering technology.
               </p>
             </div>
           </div>
