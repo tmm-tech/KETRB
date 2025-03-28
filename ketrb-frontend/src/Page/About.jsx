@@ -15,6 +15,7 @@ import partner4 from "../Asset/Partners/transport.jpeg";
 // import Fafu5 from "../Asset/Fafuu/Fafu5.jpg";
 //import Fafu6 from "../Asset/Fafuu/Fafu6.jpg";
 //import Fafu7 from "../Asset/Fafuu/Fafu7.jpg";
+import aboutImage from "../Asset/Homepage/image2.jpg";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -41,7 +42,8 @@ const About = () => {
         {/* About Section */}
         <div className="about-content max-w-6xl mx-auto flex flex-wrap items-stretch">
           <div className="about-image-item w-full md:w-1/2">
-            <img src="https://fakeimg.pl/600x400?text=About+Us+Image" alt="About Us" className="w-full rounded" />
+            {/*<img src="https://fakeimg.pl/600x400?text=About+Us+Image" alt="About Us" className="w-full rounded" />*/}
+            <img src={aboutImage} alt="About Us" className="w-full rounded" />
           </div>
           <div className="about-text bg-white p-8 rounded shadow w-full md:w-1/2 mt-4 md:mt-0 flex items-center">
             <div>
