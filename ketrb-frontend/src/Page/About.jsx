@@ -50,11 +50,8 @@ const About = () => {
               <div className="about-subheading">Who We Are</div>
               <div className="text-gray-800">
                 <p>
-                  Kenya Engineering Technology Registration Board (KETRB)
-                  was established in accordance with the Engineering Technology
-                  Act No 23 of 2016 Part II Section 3. (1) to set standards for
-                  engineering technologists and technicians, register and issue
-                  licenses to qualified persons as per the provision of the Act.
+                KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD (KETRB)
+                 was established in accordance with the Engineering Technology Act CAP.530A.
                 </p>
                 <br />
               </div>
