@@ -20,7 +20,7 @@ const leadershipData = [
   },
   {
     image: leader1,
-    name: "mrs alice mutai",
+    name: "mrs florence kigo",
     description: "ceo",
   },
   {
@@ -112,11 +112,11 @@ const Leadership = () => {
           <div className="leadership-row ceo">
             <div className="leadership-card">
               <img
-                src={leader1}
-                alt="MS ALICE MUTAI"
+                //rc={leader1}
+                alt="Mrs Florence Kigo"
                 className="leadership-image"
               />
-              <h2 className="leadership-name">mrs alice mutai</h2>
+              <h2 className="leadership-name">mrs florence kigo</h2>
               <p className="leadership-description">CEO</p>
             </div>
           </div>
