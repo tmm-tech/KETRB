@@ -26,6 +26,12 @@ const managementData = {
       subDepartments: [],
     },
     {
+      image: management2,
+      name: "Robert Miller",
+      title: "Registration & Licensing",
+      subDepartments: [],
+    },
+    {
       image: management1,
       name: "",
       title: "Human Resource & Administration",
@@ -46,12 +52,6 @@ const managementData = {
           title: "Supply Chain Management",
         },
       ],
-    },
-    {
-      image: management2,
-      name: "Robert Miller",
-      title: "Registration & Licensing",
-      subDepartments: [],
     },
   ],
 }
