@@ -306,7 +306,7 @@ const CareerApplicationForm = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="pl-10 py-7"
+                    className="pl-10 py-10"
                     required
                   />
                 </div>
