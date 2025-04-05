@@ -266,14 +266,14 @@ const CareerApplicationForm = () => {
                   First Name <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <User className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
                   <Input
                     id="first_name"
                     name="first_name"
                     value={formData.first_name}
                     onChange={handleChange}
                     required
-                    className="left-6 left-6 pl-10 py-2"
+                    className="left-10 pl-10 py-2"
                   />
                 </div>
               </div>
