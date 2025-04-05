@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaWhatsapp,FaTiktok, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaWhatsapp,FaTiktok} from "react-icons/fa";
 import { X, InstagramIcon} from "lucide-react";
 import { Link } from "react-router-dom";
 import MapComponent from "./MapComponent";
