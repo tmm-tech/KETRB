@@ -1,12 +1,10 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import logo from "../Asset/Logo/logo_1.png"
 import logo1 from "../Asset/Logo/kenya.png"
 import { Button } from "../Component/button"
-import { Facebook, X, Linkedin, Mail, Phone, MapPin, Clock, Menu, ChevronDown } from "lucide-react"
-
+import { Facebook, X, Linkedin, Mail, Phone, MapPin,Tiktok, Clock, Menu, ChevronDown, InstagramIcon } from "lucide-react";
+import { TikTokIcon } from "./tiktokicon";
 const TopBar = () => {
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -135,6 +133,13 @@ const TopBar = () => {
             <div className="flex items-center space-x-4">
               <Link to="https://www.facebook.com/KETRBOARD" aria-label="Facebook" className="hover:text-white" target="_blank" rel="noreferrer">
                 <Facebook className="h-4 w-4" />
+              </Link>
+              <Link to="https://www.instagram.com/_ketrb/" aria-label="Instagram" className="hover:text-white" target="_blank" rel="noreferrer">
+                <InstagramIcon className="h-4 w-4" />
+              </Link>
+              <Link to="https://www.tiktok.com/@_ketrb" aria-label="Tiktok" className="hover:text-white" target="_blank" rel="noreferrer">
+                <Tiktok className="" />
+                <TikTokIcon size={32} className="text-white h-4 w-4"/>
               </Link>
               <Link
                 to="https://x.com/KETRB_?t=Lt-49iJFVYSIHO1MImoeHw&s=09"

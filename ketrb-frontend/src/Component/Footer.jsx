@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaWhatsapp,FaTiktok, FaInstagramSquare } from "react-icons/fa";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import MapComponent from "./MapComponent";
@@ -98,6 +98,24 @@ const Footer = () => {
                     className="text-2xl"
                   >
                     <FaFacebook />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://www.instagram.com/_ketrb/"
+                    target="_blank"
+                    className="text-2xl"
+                  >
+                    <FaInstagramSquare />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://www.tiktok.com/@_ketrb"
+                    target="_blank"
+                    className="text-2xl"
+                  >
+                    <FaTiktok />
                   </Link>
                 </li>
                 <li>
