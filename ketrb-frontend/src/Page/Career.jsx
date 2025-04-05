@@ -222,15 +222,15 @@ const CareersPage = () => {
                         </span>
                         <span className="flex items-center">
                           <Briefcase className="h-4 w-4 mr-1" />
-                          {job.type}
+                          {job.job_type}
                         </span>
                         <span className="flex items-center">
                           <Clock className="h-4 w-4 mr-1" />
-                          Posted: {job.posted}
+                          Posted: {job.posted_date}
                         </span>
                         <span className="flex items-center">
                           <FileText className="h-4 w-4 mr-1" />
-                          Deadline: {job.deadline}
+                          Deadline: {job.closing_date}
                         </span>
                       </div>
                     </div>
