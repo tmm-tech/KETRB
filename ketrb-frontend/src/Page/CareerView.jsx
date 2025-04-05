@@ -63,7 +63,7 @@ const CareerViewPage = () => {
     }, [id])
 
     const handleApply = () => {
-        navigate(`/careers/apply/${id}`)
+        navigate(`/careerapplyform/${id}`)
     }
 
     const handlePrint = () => {
