@@ -2,7 +2,7 @@ import React from "react";
 //import Image1 from "../Asset/Carousel/img_001.jpeg";
 import "./homeabout.css";
 import { Link } from "react-router-dom";
-import Faf1 from "../Asset/Fafuu/Fafu1.jpeg";
+import Faf1 from "../Asset/About/Fafu1.jpeg";
 
 const HomeAbout = () => {
   return (
@@ -16,7 +16,7 @@ const HomeAbout = () => {
             </div>
             <div className="col-lg-6">
               <h2 className="mb-4 home-about">About Us</h2>
-              <p>
+              <p className="about-description">
               KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD (KETRB) was established in accordance with the Engineering Technology Act CAP.530A
               </p>
               {/*<p>

@@ -3,7 +3,7 @@ import "./leadership.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-import leader1 from "../Asset/Leaders/ALICE.png";
+import leader1 from "../Asset/Leaders/lady.png";
 import leader2 from "../Asset/Leaders/chore.jpeg";
 import leader3 from "../Asset/Leaders/linda.jpeg";
 import leader4 from "../Asset/Leaders/ohande.jpeg";
@@ -112,7 +112,7 @@ const Leadership = () => {
           <div className="leadership-row ceo">
             <div className="leadership-card">
               <img
-                //rc={leader1}
+                src={leader1}
                 alt="Mrs Florence Kigo"
                 className="leadership-image"
               />

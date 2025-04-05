@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import image0 from "../Asset/Gallery/IMG_0114.JPG";
 import image1 from "../Asset/Gallery/IMG_0723.JPG";
-import image2 from "../Asset/Gallery/IMG_0093.JPG";
-import image3 from "../Asset/Homepage/image3.png";
+// import image2 from "../Asset/Gallery/IMG_0093.JPG";
+import image2 from "../Asset/Homepage/image5.jpg"
+;import image3 from "../Asset/Homepage/image3.png";
 import image4 from "../Asset/Homepage/image4.jpg";
 import { Button } from "../Component/button";
 import {

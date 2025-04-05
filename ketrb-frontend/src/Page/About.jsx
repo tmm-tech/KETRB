@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import Image1 from "../Asset/Gallery/IMG_0289.JPG";
-//import Image2 from "../Asset/Gallery/IMG_0723.JPG";
 import "./about.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
@@ -9,12 +7,6 @@ import partner1 from "../Asset/Partners/cdacc.jpeg";
 import partner2 from "../Asset/Partners/cue.png";
 import partner3 from "../Asset/Partners/tveta.png";
 import partner4 from "../Asset/Partners/transport.jpeg";
-//import Fafu2 from "../Asset/Fafuu/Fafu2.jpeg";
-//import Fafu3 from "../Asset/Fafuu/Fafu3.jpeg";
-// import Fafu4 from "../Asset/Fafuu/Fafu4.jpg";
-// import Fafu5 from "../Asset/Fafuu/Fafu5.jpg";
-//import Fafu6 from "../Asset/Fafuu/Fafu6.jpg";
-//import Fafu7 from "../Asset/Fafuu/Fafu7.jpg";
 import aboutImage from "../Asset/Homepage/image2.jpg";
 
 const About = () => {
@@ -49,7 +41,7 @@ const About = () => {
             <div>
               <div className="about-subheading">Who We Are</div>
               <div className="text-gray-800">
-                <p>
+                <p className="about-description">
                 KENYA ENGINEERING TECHNOLOGY REGISTRATION BOARD (KETRB)
                  was established in accordance with the Engineering Technology Act CAP.530A.
                 </p>
