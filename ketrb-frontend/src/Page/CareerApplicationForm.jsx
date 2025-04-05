@@ -272,7 +272,6 @@ const CareerApplicationForm = () => {
                     name="first_name"
                     value={formData.first_name}
                     onChange={handleChange}
-                    className="pl-10 py-2" // Adjust padding left to fit icon, padding top/bottom to align
                     required
                   />
                 </div>
