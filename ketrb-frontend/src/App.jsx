@@ -24,6 +24,7 @@ import news3 from "./Asset/Carousel/city.jpeg";
 import news4 from "./Asset/Carousel/lady2.jpeg";
 import news5 from "./Asset/Carousel/man.jpeg";
 import news6 from "./Asset/Carousel/lady&man.jpg";
+import RenewalPage from "./Page/Renewal";
 function App() {
   const newsArticles = [
     {
@@ -96,6 +97,7 @@ function App() {
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/application" element={<Application/>} />
         <Route path="/charter" element={<Charter/>} />
+        <Route path="/renewal" element={<RenewalPage/>} />
         <Route path="/act" element={<ActPage/>} />
         <Route path="/tender" element={<TenderPage/>} />
       </Routes>

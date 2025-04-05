@@ -44,6 +44,7 @@ const TopBar = () => {
           label: "Application Requirement",
           path: "/application",
         },
+        { id: "renewal", label: "Application &  Renewal", path: "/renewal" },
         { id: "charter", label: "Charter", path: "/charter" },
       ],
     },
