@@ -273,7 +273,7 @@ const CareerApplicationForm = () => {
                     value={formData.first_name}
                     onChange={handleChange}
                     required
-                    className="left-10 pl-10 py-2"
+                    className="left-10"
                   />
                 </div>
               </div>
