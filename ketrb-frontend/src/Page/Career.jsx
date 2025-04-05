@@ -18,46 +18,6 @@ import Footer from "../Component/Footer";
 import TopBar from "../Component/Topbar";
 import Loading from "../Component/Loading";
 
-// Sample job data - this would typically come from an API
-const jobOpenings = [
-  {
-    id: 1,
-    title: "Senior Engineering Technology Officer",
-    department: "Engineering Registration",
-    location: "Nairobi",
-    type: "Full-time",
-    posted: "2 weeks ago",
-    deadline: "March 31, 2025",
-  },
-  {
-    id: 2,
-    title: "Technology Registration Specialist",
-    department: "Registration Services",
-    location: "Nairobi",
-    type: "Full-time",
-    posted: "1 week ago",
-    deadline: "April 15, 2025",
-  },
-  {
-    id: 3,
-    title: "ICT Officer",
-    department: "Information Technology",
-    location: "Nairobi",
-    type: "Full-time",
-    posted: "3 days ago",
-    deadline: "April 10, 2025",
-  },
-  {
-    id: 4,
-    title: "Administrative Assistant",
-    department: "Administration",
-    location: "Nairobi",
-    type: "Contract",
-    posted: "1 month ago",
-    deadline: "March 25, 2025",
-  },
-]
-
 // Benefits data
 const benefits = [
   {
@@ -90,7 +50,7 @@ const benefits = [
     title: "Prime Location",
     description: "Modern offices located in the heart of Nairobi",
   },
-]
+];
 
 // Application steps
 const applicationSteps = [
@@ -119,34 +79,46 @@ const applicationSteps = [
     title: "Final Selection",
     description: "Selected candidates will receive a job offer with details about compensation and benefits.",
   },
-]
+];
 
 const CareersPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterType, setFilterType] = useState("All");
   const [loading, setLoading] = useState(true);
+  const [careers, setCareers] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const loadData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setLoading(false);
-    };
-
-    loadData();
+    fetchCareers();
   }, []);
+
+  const fetchCareers = async () => {
+    try {
+      const response = await fetch("https://ketrb-backend.onrender.com/careers/");
+      if (!response.ok) {
+        throw new Error("Failed to fetch careers data");
+      }
+      const data = await response.json();
+      setCareers(data);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Filter jobs based on search term and job type
+  const filteredJobs = careers.filter((job) => {
+    const matchesSearch =
+      job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      job.department.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesType = filterType === "All" || job.type === filterType;
+    return matchesSearch && matchesType;
+  });
 
   if (loading) {
     return <Loading />;
   }
-
-  // Filter jobs based on search term and job type
-  const filteredJobs = jobOpenings.filter((job) => {
-    const matchesSearch =
-      job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      job.department.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesType = filterType === "All" || job.type === filterType
-    return matchesSearch && matchesType
-  })
 
   return (
     <>
@@ -260,7 +232,7 @@ const CareersPage = () => {
                         </span>
                       </div>
                     </div>
-                    <Button className="mt-4 md:mt-0 bg-[#5b92e5] hover:bg-[#4a7fcf] text-white font-medium py-2 px-4 rounded-md flex items-center">
+                    <Button as={Link} to={`/careerapplyform/${job.id}`} className="mt-4 md:mt-0 bg-[#5b92e5] hover:bg-[#4a7fcf] text-white font-medium py-2 px-4 rounded-md flex items-center">
                       Apply Now
                       <ChevronRight className="ml-1 h-4 w-4" />
                     </Button>
@@ -280,99 +252,30 @@ const CareersPage = () => {
       <section className="py-16 bg-white">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#5b92e5] mb-4">Application Process</h2>
+            <h2 className="text-3xl font-bold text-[#5b92e5] mb-4">How to Apply</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our streamlined application process is designed to identify the best talent to join our team
+              Follow these steps to successfully apply for a job at KETRB.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="space-y-8">
             {applicationSteps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="bg-gray-50 p-6 rounded-lg h-full border-t-4 border-[#f39c12]">
-                  <div className="text-3xl font-bold text-[#f39c12] mb-3">{step.number}</div>
-                  <h3 className="text-lg font-bold text-[#5b92e5] mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-sm">{step.description}</p>
+              <div key={index} className="flex items-start space-x-4">
+                <div className="text-3xl font-bold text-[#5b92e5]">{step.number}</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-[#5b92e5]">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
                 </div>
-                {index < applicationSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
-                    <ChevronRight className="h-6 w-6 text-gray-300" />
-                  </div>
-                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#5b92e5] mb-4">What Our Team Says</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Hear from our employees about their experiences working at KETRB
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <p className="text-gray-600 italic mb-4">
-                "Working at KETRB has been a rewarding experience. I've had the opportunity to contribute to important
-                projects that impact Kenya's engineering sector while developing my professional skills."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-[#5b92e5] rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  JM
-                </div>
-                <div>
-                  <h4 className="font-bold">James Mwangi</h4>
-                  <p className="text-sm text-gray-500">Senior Registration Officer, 3 years</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <p className="text-gray-600 italic mb-4">
-                "The collaborative environment at KETRB encourages innovation and professional growth. I appreciate the
-                organization's commitment to work-life balance and continuous learning."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-[#f39c12] rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  FO
-                </div>
-                <div>
-                  <h4 className="font-bold">Faith Ochieng</h4>
-                  <p className="text-sm text-gray-500">Technology Officer, 2 years</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 bg-[#5b92e5] text-white">
-        <div className="container px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Have Questions?</h2>
-            <p className="text-lg mb-8">
-              Our HR team is here to help you with any questions about our current openings or the application process
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Button className="bg-white text-[#5b92e5] hover:bg-gray-100 font-bold py-3 px-6 rounded-md">
-                Contact HR
-              </Button>
-              <Link to="/faq"><Button className="bg-[#f39c12] hover:bg-[#e67e22] text-white font-bold py-3 px-6 rounded-md">FAQ</Button></Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <Footer/>
+      {/* Footer */}
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default CareersPage
-
+export default CareersPage;
