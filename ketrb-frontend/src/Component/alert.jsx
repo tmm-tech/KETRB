@@ -28,12 +28,22 @@ const Alert = React.forwardRef(({ className, variant, ...props }, ref) => (
 ))
 Alert.displayName = "Alert"
 
-const AlertTitle = React.forwardRef(({ className, ...props }, ref) => (
-  <h5
-    ref={ref}
-    className={cn("mb-1 font-medium leading-none tracking-tight", className)}
-    {...props} />
-))
+const AlertTitle = React.forwardRef(({ className, children, ...props }, ref) => {
+  // Ensure that the title has content
+  if (!children) {
+    console.warn('AlertTitle is missing content!');
+  }
+
+  return (
+    <h5
+      ref={ref}
+      className={cn("mb-1 font-medium leading-none tracking-tight", className)}
+      {...props}
+    >
+      {children || "Default Title"} {/* Ensure content inside the heading */}
+    </h5>
+  );
+});
 AlertTitle.displayName = "AlertTitle"
 
 const AlertDescription = React.forwardRef(({ className, ...props }, ref) => (
