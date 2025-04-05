@@ -266,14 +266,14 @@ const CareerApplicationForm = () => {
                   First Name <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <User className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
                   <Input
                     id="first_name"
                     name="first_name"
                     value={formData.first_name}
                     onChange={handleChange}
                     required
-                    className="left-3"
+                    className="left-6 left-6 pl-10 py-2"
                   />
                 </div>
               </div>
@@ -289,7 +289,7 @@ const CareerApplicationForm = () => {
                     name="last_name"
                     value={formData.last_name}
                     onChange={handleChange}
-                    className="pl-10 py-2"
+                    className="left-6 left-6 pl-10 py-2"
                     required
                   />
                 </div>
@@ -307,7 +307,7 @@ const CareerApplicationForm = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="pl-10 py-10"
+                    className="left-6 left-6 pl-10 py-2"
                     required
                   />
                 </div>
@@ -324,7 +324,7 @@ const CareerApplicationForm = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="pl-10 py-2"
+                    className="left-6 pl-10 py-2"
                     required
                   />
                 </div>
@@ -337,7 +337,7 @@ const CareerApplicationForm = () => {
               </Label>
               <div className="relative">
                 <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-                <Input id="address" name="address" value={formData.address} onChange={handleChange} className="pl-10 py-2" />
+                <Input id="address" name="address" value={formData.address} onChange={handleChange} className="left-6 pl-10 py-2" />
               </div>
             </div>
 
@@ -446,7 +446,7 @@ const CareerApplicationForm = () => {
                       value={formData.linkedin_url}
                       onChange={handleChange}
                       placeholder="https://linkedin.com/in/yourprofile"
-                      className="pl-10 py-2"
+                      className="left-6 pl-10 py-2"
                     />
                   </div>
                 </div>
@@ -463,7 +463,7 @@ const CareerApplicationForm = () => {
                       value={formData.portfolio_url}
                       onChange={handleChange}
                       placeholder="https://yourportfolio.com"
-                      className="pl-10 py-2"
+                      className="left-6 pl-10 py-2"
                     />
                   </div>
                 </div>
@@ -481,7 +481,7 @@ const CareerApplicationForm = () => {
                       name="current_employer"
                       value={formData.current_employer}
                       onChange={handleChange}
-                      className="pl-10 py-2"
+                      className="left-6 pl-10 py-2"
                     />
                   </div>
                 </div>
@@ -544,7 +544,7 @@ const CareerApplicationForm = () => {
                       value={formData.field_of_study}
                       onChange={handleChange}
                       placeholder="e.g. Engineering, Business Administration"
-                      className="pl-10 py-2"
+                      className="left-6 pl-10 py-2"
                     />
                   </div>
                 </div>
@@ -681,7 +681,7 @@ const CareerApplicationForm = () => {
                       type="date"
                       value={formData.available_start_date}
                       onChange={handleChange}
-                      className="pl-10 py-2"
+                      className="left-6 pl-10 py-2"
                     />
                   </div>
                 </div>
@@ -699,7 +699,7 @@ const CareerApplicationForm = () => {
                     value={formData.salary_expectation}
                     onChange={handleChange}
                     placeholder="e.g. $80,000 - $90,000"
-                    className="pl-10 py-2"
+                    className="left-6 pl-10 py-2"
                   />
                 </div>
               </div>
