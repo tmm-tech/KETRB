@@ -101,8 +101,8 @@ const CareersPage = () => {
       const data = await response.json();
       setCareers(data);
     } catch (error) {
-      setError(error.message);
-      console.log(error.message);
+      console.error("Error fetching careers:", error);
+      setError("Failed to load careers. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -127,6 +127,7 @@ const CareersPage = () => {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-[#5b92e5] to-[#3a7bd5] text-white">
+      {error && <div className="text-red-500">{error}</div>}
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container px-4 md:px-6 py-20 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
