@@ -207,7 +207,7 @@ const CareersPage = () => {
               onChange={(e) => setFilterType(e.target.value)}
             >
               <option value="All">All Types</option>
-              <option value="full-time">Full-time</option>
+              <option value="full_time">Full-time</option>
               <option value="contract">Contract</option>
               <option value="part-time">Part-time</option>
               <option value="internship">Internship</option>
