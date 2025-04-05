@@ -148,7 +148,7 @@ const CareersPage = () => {
 
       {/* Why Work With Us */}
       <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
+         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#5b92e5] mb-4">Why Work With Us</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -250,29 +250,106 @@ const CareersPage = () => {
         </div>
       </section>
 
-      {/* Application Process */}
       <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#5b92e5] mb-4">How to Apply</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Follow these steps to successfully apply for a job at KETRB.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {applicationSteps.map((step, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="text-3xl font-bold text-[#5b92e5]">{step.number}</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-[#5b92e5]">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+         <div className="container px-4 md:px-6">
+           <div className="text-center mb-12">
+             <h2 className="text-3xl font-bold text-[#5b92e5] mb-4">Application Process</h2>
+             <h2 className="text-3xl font-bold text-[#5b92e5] mb-4">How to Apply</h2>
+             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+               Our streamlined application process is designed to identify the best talent to join our team
+               Follow these steps to successfully apply for a job at KETRB.
+             </p>
+           </div>
+ 
+           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+           <div className="space-y-8">
+             {applicationSteps.map((step, index) => (
+               <div key={index} className="relative">
+                 <div className="bg-gray-50 p-6 rounded-lg h-full border-t-4 border-[#f39c12]">
+                   <div className="text-3xl font-bold text-[#f39c12] mb-3">{step.number}</div>
+                   <h3 className="text-lg font-bold text-[#5b92e5] mb-2">{step.title}</h3>
+                   <p className="text-gray-600 text-sm">{step.description}</p>
+                 </div>
+                 {index < applicationSteps.length - 1 && (
+                   <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
+                     <ChevronRight className="h-6 w-6 text-gray-300" />
+                   </div>
+                 )}
+               </div>
+             ))}
+           </div>
+         </div>
+         </div>
+       </section>
+ 
+       {/* Testimonials */}
+       <section className="py-16 bg-gray-50">
+         <div className="container px-4 md:px-6">
+           <div className="text-center mb-12">
+             <h2 className="text-3xl font-bold text-[#5b92e5] mb-4">What Our Team Says</h2>
+             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+               Hear from our employees about their experiences working at KETRB
+             </p>
+           </div>
+ 
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             <div className="bg-white p-6 rounded-lg shadow-sm">
+               <p className="text-gray-600 italic mb-4">
+                 "Working at KETRB has been a rewarding experience. I've had the opportunity to contribute to important
+                 projects that impact Kenya's engineering sector while developing my professional skills."
+               </p>
+               <div className="flex items-center">
+                 <div className="w-12 h-12 bg-[#5b92e5] rounded-full flex items-center justify-center text-white font-bold mr-4">
+                   JM
+                 </div>
+               <div key={index} className="flex items-start space-x-4">
+                 <div className="text-3xl font-bold text-[#5b92e5]">{step.number}</div>
+                 <div>
+                   <h4 className="font-bold">James Mwangi</h4>
+                   <p className="text-sm text-gray-500">Senior Registration Officer, 3 years</p>
+                   <h3 className="text-xl font-semibold text-[#5b92e5]">{step.title}</h3>
+                   <p className="text-gray-600">{step.description}</p>
+                 </div>
+               </div>
+             </div>
+ 
+             <div className="bg-white p-6 rounded-lg shadow-sm">
+               <p className="text-gray-600 italic mb-4">
+                 "The collaborative environment at KETRB encourages innovation and professional growth. I appreciate the
+                 organization's commitment to work-life balance and continuous learning."
+               </p>
+               <div className="flex items-center">
+                 <div className="w-12 h-12 bg-[#f39c12] rounded-full flex items-center justify-center text-white font-bold mr-4">
+                   FO
+                 </div>
+                 <div>
+                   <h4 className="font-bold">Faith Ochieng</h4>
+                   <p className="text-sm text-gray-500">Technology Officer, 2 years</p>
+                 </div>
+               </div>
+             </div>
+             </div>
+           </div>
+         </div>
+       </section>
+ 
+       {/* Contact Section */}
+       <section className="py-16 bg-[#5b92e5] text-white">
+         <div className="container px-4 md:px-6">
+           <div className="max-w-3xl mx-auto text-center">
+             <h2 className="text-3xl font-bold mb-4">Have Questions?</h2>
+             <p className="text-lg mb-8">
+               Our HR team is here to help you with any questions about our current openings or the application process
+             </p>
+             <div className="flex flex-col md:flex-row gap-4 justify-center">
+               <Button className="bg-white text-[#5b92e5] hover:bg-gray-100 font-bold py-3 px-6 rounded-md">
+                 Contact HR
+               </Button>
+               <Link to="/faq"><Button className="bg-[#f39c12] hover:bg-[#e67e22] text-white font-bold py-3 px-6 rounded-md">FAQ</Button></Link>
+             </div>
+           </div>
+         </div>
+       </section>
 
       {/* Footer */}
       <Footer />
