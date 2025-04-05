@@ -17,6 +17,7 @@ import NewsDetails from "./Page/NewsDetails";
 import TenderPage from "./Page/Tender";
 import CareerApplicationForm from "./Page/CareerApplicationForm";
 import CareerApplicationSuccess from "./Page/CareerApplicationSuccess";
+import Management from "./Page/Management";
 import news1 from "./Asset/News/IMG_3467.jpeg";
 import news2 from "./Asset/News/IMG_3468.jpeg";
 import news3 from "./Asset/Carousel/city.jpeg";
@@ -91,6 +92,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/our-mandate" element={<OurMandate/>} />
         <Route path="/leadership" element={<Leadership/>} />
+        <Route path="/management" element={<Management/>} />
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/application" element={<Application/>} />
         <Route path="/charter" element={<Charter/>} />

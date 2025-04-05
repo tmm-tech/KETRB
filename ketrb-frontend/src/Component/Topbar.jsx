@@ -20,7 +20,7 @@ const TopBar = () => {
         { id: "aboutus", label: "About Us", path: "/about" },
         { id: "mandate", label: "Our Mandate", path: "/our-mandate" },
         { id: "leadership", label: "Leadership", path: "/leadership" },
-        { id: "management", label: "Management", path: "#management" },
+        { id: "management", label: "Management", path: "/management" },
       ],
     },
     { id: "latestnew", label: "News", path: "/news&events" },
