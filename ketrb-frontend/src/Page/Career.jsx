@@ -113,7 +113,7 @@ const CareersPage = () => {
     const matchesSearch =
       job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       job.department.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesType = filterType === "All" || job.type === filterType;
+    const matchesType = filterType === "All" || job.job_type === filterType;
     return matchesSearch && matchesType;
   });
 
@@ -197,9 +197,10 @@ const CareersPage = () => {
               onChange={(e) => setFilterType(e.target.value)}
             >
               <option value="All">All Types</option>
-              <option value="Full-time">Full-time</option>
-              <option value="Contract">Contract</option>
-              <option value="Part-time">Part-time</option>
+              <option value="full-time">Full-time</option>
+              <option value="contract">Contract</option>
+              <option value="part-time">Part-time</option>
+              <option value="internship">Internship</option>
             </select>
           </div>
 
@@ -234,10 +235,10 @@ const CareersPage = () => {
                         </span>
                       </div>
                     </div>
-                    <Button as={Link} to={`/careerapplyform/${job.id}`} className="mt-4 md:mt-0 bg-[#5b92e5] hover:bg-[#4a7fcf] text-white font-medium py-2 px-4 rounded-md flex items-center">
+                    <Link to={`/careerapplyform/${job.id}`}><Button className="mt-4 md:mt-0 bg-[#5b92e5] hover:bg-[#4a7fcf] text-white font-medium py-2 px-4 rounded-md flex items-center">
                       Apply Now
                       <ChevronRight className="ml-1 h-4 w-4" />
-                    </Button>
+                    </Button></Link>
                   </div>
                 </div>
               ))
