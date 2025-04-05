@@ -325,7 +325,7 @@ const CareerViewPage = () => {
                                             letter ready.
                                         </p>
                                         <div className="print:hidden">
-                                            <Link to={`/careerapplyform/${job.id}`}><Button onClick={handleApply} className="bg-[#5b92e5] hover:bg-[#4a7fcf] text-white" size="lg">
+                                            <Link to={`/careerapplyform/${id}`}><Button onClick={handleApply} className="bg-[#5b92e5] hover:bg-[#4a7fcf] text-white" size="lg">
                                                 Apply Now
                                                 <ChevronRight className="ml-2 h-4 w-4" />
                                             </Button></Link>
