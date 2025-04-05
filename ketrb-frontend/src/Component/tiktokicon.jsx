@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils";
 
 export const TikTokIcon = ({ size = 24, className, ...props }) => {
   return (
