@@ -18,10 +18,10 @@ import {
   Globe,
   Linkedin,
 } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../Component/select";
 import { Button } from "../Component/button";
 import { Input } from "../Component/input";
 import { Textarea } from "../Component/textarea";
-import { Select } from "../Component/select";
 import { Checkbox } from "../Component/checkbox";
 import { Label } from "../Component/label";
 import { RadioGroup, RadioGroupItem } from "../Component/radio-group";
@@ -517,13 +517,17 @@ const CareerApplicationForm = () => {
                   value={formData.highest_education}
                   onValueChange={(value) => handleSelectChange("highest_education", value)}
                 >
-                  <option value="">Select education level</option>
-                  <option value="high_school">High School</option>
-                  <option value="associates">Associate's Degree</option>
-                  <option value="bachelors">Bachelor's Degree</option>
-                  <option value="masters">Master's Degree</option>
-                  <option value="doctorate">Doctorate</option>
-                  <option value="other">Other</option>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select education level" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="high_school">High School</SelectItem>
+                    <SelectItem value="associates">Associate's Degree</SelectItem>
+                    <SelectItem value="bachelors">Bachelor's Degree</SelectItem>
+                    <SelectItem value="masters">Master's Degree</SelectItem>
+                    <SelectItem value="doctorate">Doctorate</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
                 </Select>
               </div>
 
@@ -575,12 +579,16 @@ const CareerApplicationForm = () => {
                   value={formData.years_of_experience}
                   onValueChange={(value) => handleSelectChange("years_of_experience", value)}
                 >
-                  <option value="">Select years of experience</option>
-                  <option value="less_than_1">Less than 1 year</option>
-                  <option value="1_to_3">1-3 years</option>
-                  <option value="3_to_5">3-5 years</option>
-                  <option value="5_to_10">5-10 years</option>
-                  <option value="more_than_10">More than 10 years</option>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select years of experience" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="less_than_1">Less than 1 year</SelectItem>
+                    <SelectItem value="1_to_3">1-3 years</SelectItem>
+                    <SelectItem value="3_to_5">3-5 years</SelectItem>
+                    <SelectItem value="5_to_10">5-10 years</SelectItem>
+                    <SelectItem value="more_than_10">More than 10 years</SelectItem>
+                  </SelectContent>
                 </Select>
               </div>
             </div>
@@ -602,13 +610,17 @@ const CareerApplicationForm = () => {
                   value={formData.referral_source}
                   onValueChange={(value) => handleSelectChange("referral_source", value)}
                 >
-                  <option value="">Select referral source</option>
-                  <option value="job_board">Job Board</option>
-                  <option value="company_website">Company Website</option>
-                  <option value="linkedin">LinkedIn</option>
-                  <option value="employee_referral">Employee Referral</option>
-                  <option value="social_media">Social Media</option>
-                  <option value="other">Other</option>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select referral source" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="job_board">Job Board</SelectItem>
+                    <SelectItem value="company_website">Company Website</SelectItem>
+                    <SelectItem value="linkedin">LinkedIn</SelectItem>
+                    <SelectItem value="employee_referral">Employee Referral</SelectItem>
+                    <SelectItem value="social_media">Social Media</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
                 </Select>
               </div>
 
