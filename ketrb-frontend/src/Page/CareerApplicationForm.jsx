@@ -266,7 +266,7 @@ const CareerApplicationForm = () => {
                   First Name <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                   <Input
                     id="first_name"
                     name="first_name"
@@ -283,7 +283,7 @@ const CareerApplicationForm = () => {
                   Last Name <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2"  />
                   <Input
                     id="last_name"
                     name="last_name"
@@ -300,7 +300,7 @@ const CareerApplicationForm = () => {
                   Email <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                   <Input
                     id="email"
                     name="email"
@@ -318,7 +318,7 @@ const CareerApplicationForm = () => {
                   Phone <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                   <Input
                     id="phone"
                     name="phone"
@@ -336,7 +336,7 @@ const CareerApplicationForm = () => {
                 Address
               </Label>
               <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                 <Input id="address" name="address" value={formData.address} onChange={handleChange} className="pl-10" />
               </div>
             </div>
@@ -439,7 +439,7 @@ const CareerApplicationForm = () => {
                     LinkedIn Profile URL
                   </Label>
                   <div className="relative">
-                    <Linkedin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                    <Linkedin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                     <Input
                       id="linkedin_url"
                       name="linkedin_url"
@@ -456,7 +456,7 @@ const CareerApplicationForm = () => {
                     Portfolio/Website URL
                   </Label>
                   <div className="relative">
-                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                     <Input
                       id="portfolio_url"
                       name="portfolio_url"
@@ -475,7 +475,7 @@ const CareerApplicationForm = () => {
                     Current/Most Recent Employer
                   </Label>
                   <div className="relative">
-                    <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                    <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                     <Input
                       id="current_employer"
                       name="current_employer"
@@ -537,7 +537,7 @@ const CareerApplicationForm = () => {
                     Field of Study
                   </Label>
                   <div className="relative">
-                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                     <Input
                       id="field_of_study"
                       name="field_of_study"
@@ -674,7 +674,7 @@ const CareerApplicationForm = () => {
                     When can you start?
                   </Label>
                   <div className="relative">
-                    <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                    <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                     <Input
                       id="available_start_date"
                       name="available_start_date"
@@ -692,7 +692,7 @@ const CareerApplicationForm = () => {
                   Salary Expectation
                 </Label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5 mr-2" />
                   <Input
                     id="salary_expectation"
                     name="salary_expectation"
