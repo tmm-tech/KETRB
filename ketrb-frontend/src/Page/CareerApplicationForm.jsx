@@ -31,13 +31,13 @@ import TopBar from "../Component/Topbar";
 import Loading from "../Component/Loading";
 
 const CareerApplicationForm = () => {
-  const { id } = useParams()
-  const navigate = useNavigate()
-  const [loading, setLoading] = useState(true)
-  const [submitting, setSubmitting] = useState(false)
-  const [jobDetails, setJobDetails] = useState(null)
-  const [formStatus, setFormStatus] = useState({ type: "", message: "" })
-  const [formStep, setFormStep] = useState(1)
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [jobDetails, setJobDetails] = useState(null);
+  const [formStatus, setFormStatus] = useState({ type: "", message: "" });
+  const [formStep, setFormStep] = useState(1);
   const totalSteps = 4
 
   // Form data state
@@ -85,7 +85,7 @@ const CareerApplicationForm = () => {
     // Consent
     consent_to_process: false,
     consent_to_contact: false,
-  })
+  });
 
   useEffect(() => {
     const fetchJobDetails = async () => {

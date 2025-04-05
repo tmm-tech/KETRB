@@ -17,7 +17,7 @@ import { Button } from "../Component/button";
 import Footer from "../Component/Footer";
 import TopBar from "../Component/Topbar";
 import Loading from "../Component/Loading";
-
+import { Alert, AlertDescription, AlertTitle } from "../Component/alert";
 // Benefits data
 const benefits = [
   {
@@ -86,7 +86,8 @@ const CareersPage = () => {
   const [filterType, setFilterType] = useState("All");
   const [loading, setLoading] = useState(true);
   const [careers, setCareers] = useState([]);
-  const [error, setError] = useState(null);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertType, setAlertType] = useState("success");
 
   useEffect(() => {
     fetchCareers();
@@ -100,9 +101,10 @@ const CareersPage = () => {
       }
       const data = await response.json();
       setCareers(data);
-    } catch (error) {
+    } catch (error) { 
+      setAlertType("error");
       console.error("Error fetching careers:", error);
-      setError("Failed to load careers. Please try again later.");
+      setAlertMessage("Failed to load careers. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -124,10 +126,18 @@ const CareersPage = () => {
   return (
     <>
       <TopBar />
-
+      {alertMessage && (
+          <div className="fixed top-0 left-0 w-full z-50">
+            <Alert
+              className={`max-w-md mx-auto mt-4 ${alertType === "error" ? "bg-red-100 border-red-500" : "bg-green-100 border-green-500"}`}
+            >
+              <AlertTitle>{alertType === "error" ? "Error" : "Success"}</AlertTitle>
+              <AlertDescription>{alertMessage}</AlertDescription>
+            </Alert>
+          </div>
+        )}
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-[#5b92e5] to-[#3a7bd5] text-white">
-        {error && <div className="text-red-500">{error}</div>}
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container px-4 md:px-6 py-20 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
