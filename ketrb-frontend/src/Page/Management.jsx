@@ -22,7 +22,7 @@ const managementData = {
     {
       image: management2,
       name: "",
-      title: "Parimersh",
+      title: "Department",
       subDepartments: [],
     },
     {
