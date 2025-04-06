@@ -701,7 +701,7 @@ const CareerApplicationForm = () => {
                     name="salary_expectation"
                     value={formData.salary_expectation}
                     onChange={handleChange}
-                    placeholder="e.g. $80,000 - $90,000"
+                    placeholder="e.g. KES 80,000 - KES90,000"
                     className="pl-10 pr-3"
                   />
                 </div>
