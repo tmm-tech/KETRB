@@ -6,7 +6,8 @@ import Footer from "../Component/Footer";
 import TopBar from "../Component/Topbar";
 
 const CareerApplicationSuccess = () => {
- const { id } = useParams()
+ const { id } = useParams();
+ console.log(id);
   return (
     <>
       <TopBar />
