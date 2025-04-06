@@ -266,13 +266,13 @@ const CareerApplicationForm = () => {
                   First Name <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10 z-10" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
                   <Input
                     id="first_name"
                     name="first_name"
                     value={formData.first_name}
                     onChange={handleChange}
-                    className="pl-10 pr-3 z-0"
+                    className="pl-10 pr-3"
                     required
                   />
                 </div>
@@ -283,13 +283,13 @@ const CareerApplicationForm = () => {
                   Last Name <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                   <Input
                     id="last_name"
                     name="last_name"
                     value={formData.last_name}
                     onChange={handleChange}
-                    className="pl-10 pr-3 z-0"
+                    className="pl-10 pr-3"
                     required
                   />
                 </div>
@@ -300,14 +300,14 @@ const CareerApplicationForm = () => {
                   Email <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="pl-10 pr-3 z-0"
+                    className="pl-10 pr-3"
                     required
                   />
                 </div>
@@ -318,13 +318,13 @@ const CareerApplicationForm = () => {
                   Phone <span className="text-red-500">*</span>
                 </Label>
                 <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                   <Input
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="pl-10 pr-3 z-0"
+                    className="pl-10 pr-3"
                     required
                   />
                 </div>
@@ -336,8 +336,8 @@ const CareerApplicationForm = () => {
                 Address
               </Label>
               <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
-                <Input id="address" name="address" value={formData.address} onChange={handleChange} className="pl-10 pr-3 z-0" />
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
+                <Input id="address" name="address" value={formData.address} onChange={handleChange} className="pl-10 pr-3" />
               </div>
             </div>
 
@@ -346,28 +346,28 @@ const CareerApplicationForm = () => {
                 <Label htmlFor="city" className="text-gray-700">
                   City
                 </Label>
-                <Input id="city" name="city" value={formData.city} onChange={handleChange} />
+                <Input id="city" name="city" value={formData.city} onChange={handleChange} className="px-3"/>
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="state" className="text-gray-700">
                   State/Province
                 </Label>
-                <Input id="state" name="state" value={formData.state} onChange={handleChange} />
+                <Input id="state" name="state" value={formData.state} onChange={handleChange} className="px-3"/>
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="zip_code" className="text-gray-700">
                   ZIP/Postal Code
                 </Label>
-                <Input id="zip_code" name="zip_code" value={formData.zip_code} onChange={handleChange} />
+                <Input id="zip_code" name="zip_code" value={formData.zip_code} onChange={handleChange} className="px-3"/>
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="country" className="text-gray-700">
                   Country
                 </Label>
-                <Input id="country" name="country" value={formData.country} onChange={handleChange} />
+                <Input id="country" name="country" value={formData.country} onChange={handleChange} className="px-3"/>
               </div>
             </div>
           </div>
@@ -410,7 +410,7 @@ const CareerApplicationForm = () => {
                           type="file"
                           accept=".pdf,.doc,.docx"
                           onChange={handleFileChange}
-                          className="hidden"
+                          className="hidden px-3"
                         />
                       </label>
                       <p className="text-xs text-gray-500 mt-2">Accepted formats: PDF, DOC, DOCX. Max size: 5MB</p>
@@ -439,14 +439,14 @@ const CareerApplicationForm = () => {
                     LinkedIn Profile URL
                   </Label>
                   <div className="relative">
-                    <Linkedin className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                    <Linkedin className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                     <Input
                       id="linkedin_url"
                       name="linkedin_url"
                       value={formData.linkedin_url}
                       onChange={handleChange}
                       placeholder="https://linkedin.com/in/yourprofile"
-                      className="pl-10 pr-3 z-0"
+                      className="pl-10 pr-3"
                     />
                   </div>
                 </div>
@@ -456,14 +456,14 @@ const CareerApplicationForm = () => {
                     Portfolio/Website URL
                   </Label>
                   <div className="relative">
-                    <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                    <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                     <Input
                       id="portfolio_url"
                       name="portfolio_url"
                       value={formData.portfolio_url}
                       onChange={handleChange}
                       placeholder="https://yourportfolio.com"
-                      className="pl-10 pr-3 z-0"
+                      className="pl-10 pr-3"
                     />
                   </div>
                 </div>
@@ -475,13 +475,13 @@ const CareerApplicationForm = () => {
                     Current/Most Recent Employer
                   </Label>
                   <div className="relative">
-                    <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                    <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                     <Input
                       id="current_employer"
                       name="current_employer"
                       value={formData.current_employer}
                       onChange={handleChange}
-                      className="pl-10 pr-3 z-0"
+                      className="pl-10 pr-3"
                     />
                   </div>
                 </div>
@@ -495,6 +495,7 @@ const CareerApplicationForm = () => {
                     name="current_job_title"
                     value={formData.current_job_title}
                     onChange={handleChange}
+                    className="px-3"
                   />
                 </div>
               </div>
@@ -537,14 +538,14 @@ const CareerApplicationForm = () => {
                     Field of Study
                   </Label>
                   <div className="relative">
-                    <GraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                    <GraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                     <Input
                       id="field_of_study"
                       name="field_of_study"
                       value={formData.field_of_study}
                       onChange={handleChange}
                       placeholder="e.g. Engineering, Business Administration"
-                      className="pl-10 pr-3 z-0"
+                      className="pl-10 pr-3"
                     />
                   </div>
                 </div>
@@ -553,7 +554,7 @@ const CareerApplicationForm = () => {
                   <Label htmlFor="school_name" className="text-gray-700">
                     School/University Name
                   </Label>
-                  <Input id="school_name" name="school_name" value={formData.school_name} onChange={handleChange} />
+                  <Input id="school_name" name="school_name" value={formData.school_name} onChange={handleChange} className="px-3"/>
                 </div>
               </div>
 
@@ -567,6 +568,7 @@ const CareerApplicationForm = () => {
                   value={formData.graduation_year}
                   onChange={handleChange}
                   placeholder="e.g. 2020"
+                  className="px-3"
                 />
               </div>
 
@@ -634,6 +636,7 @@ const CareerApplicationForm = () => {
                     name="other_referral_source"
                     value={formData.other_referral_source}
                     onChange={handleChange}
+                    className="px-3"
                   />
                 </div>
               )}
@@ -674,14 +677,14 @@ const CareerApplicationForm = () => {
                     When can you start?
                   </Label>
                   <div className="relative">
-                    <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                    <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                     <Input
                       id="available_start_date"
                       name="available_start_date"
                       type="date"
                       value={formData.available_start_date}
                       onChange={handleChange}
-                      className="pl-10 pr-3 z-0"
+                      className="pl-10 pr-3"
                     />
                   </div>
                 </div>
@@ -692,14 +695,14 @@ const CareerApplicationForm = () => {
                   Salary Expectation
                 </Label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none z-10" />
+                  <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none" />
                   <Input
                     id="salary_expectation"
                     name="salary_expectation"
                     value={formData.salary_expectation}
                     onChange={handleChange}
                     placeholder="e.g. $80,000 - $90,000"
-                    className="pl-10 pr-3 z-0"
+                    className="pl-10 pr-3"
                   />
                 </div>
               </div>
