@@ -272,7 +272,7 @@ const CareerApplicationForm = () => {
                     name="first_name"
                     value={formData.first_name}
                     onChange={handleChange}
-                    className="pl-10 z-0"
+                    className="pl-10 pr-3 z-0"
                     required
                   />
                 </div>
