@@ -246,7 +246,7 @@ const CareersPage = () => {
                       </div>
                     </div>
                     <Link to={`/careerview/${job.id}`}><Button className="mt-4 md:mt-0 bg-[#5b92e5] hover:bg-[#4a7fcf] text-white font-medium py-2 px-4 rounded-md flex items-center">
-                      Apply Now
+                      View Details
                       <ChevronRight className="ml-1 h-4 w-4" />
                     </Button></Link>
                   </div>
