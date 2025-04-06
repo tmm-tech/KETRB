@@ -236,7 +236,7 @@ const CareerApplicationForm = () => {
       await new Promise((resolve) => setTimeout(resolve, 2000))
 
       // Redirect to success page
-      navigate(`/careers/application-success/${id}`)
+      navigate(`//careersuccess`)
     } catch (error) {
       console.error("Error submitting application:", error)
       setFormStatus({
