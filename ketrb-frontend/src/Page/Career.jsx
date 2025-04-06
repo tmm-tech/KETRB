@@ -308,10 +308,10 @@ const CareersPage = () => {
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-[#5b92e5] rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  JM
+                  JD
                 </div>
                 <div>
-                  <h4 className="font-bold">James Mwangi</h4>
+                  <h4 className="font-bold">John Doe</h4>
                   <p className="text-sm text-gray-500">Senior Registration Officer, 3 years</p>
                 </div>
               </div>
@@ -324,10 +324,10 @@ const CareersPage = () => {
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-[#f39c12] rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  FO
+                  JD
                 </div>
                 <div>
-                  <h4 className="font-bold">Faith Ochieng</h4>
+                  <h4 className="font-bold">Jane Doe</h4>
                   <p className="text-sm text-gray-500">Technology Officer, 2 years</p>
                 </div>
               </div>
