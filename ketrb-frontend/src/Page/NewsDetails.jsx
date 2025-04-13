@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
+import { Alert, AlertDescription, AlertTitle } from "../Component/alert";
 
 const NewsDetails = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [article, setArticle] = useState(null)
-
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertType, setAlertType] = useState("success");
   useEffect(() => {
     const fetchNewsDetails = async () => {
       try {
@@ -17,6 +19,9 @@ const NewsDetails = () => {
 
         if (!response.ok) {
           throw new Error("Failed to fetch news post")
+          setAlertType("error")
+          setAlertMessage("Failed to fetch news post.")
+
         }
 
         const data = await response.json()
@@ -24,7 +29,8 @@ const NewsDetails = () => {
         setLoading(false)
       } catch (error) {
         console.error("Error fetching news post:", error)
-        setError("Failed to load news post. Please try again later.")
+        setAlertType("error")
+        setAlertMessage("An error occurred while fetching news post.")
         setLoading(false)
       }
     }
@@ -45,6 +51,16 @@ const NewsDetails = () => {
   return (
     <>
       <TopBar />
+      {alertMessage && (
+        <div className="fixed top-0 left-0 w-full z-50">
+          <Alert
+            className={`max-w-md mx-auto mt-4 ${alertType === "error" ? "bg-red-100 border-red-500" : "bg-green-100 border-green-500"}`}
+          >
+            <AlertTitle>{alertType === "error" ? "Error" : "Success"}</AlertTitle>
+            <AlertDescription>{alertMessage}</AlertDescription>
+          </Alert>
+        </div>
+      )}
       <div className="pt-32 pb-12 px-4 md:px-8 lg:px-16">
         <section className="bg-gray-100 py-12 md:py-16 lg:py-20">
           <div className="container mx-auto">

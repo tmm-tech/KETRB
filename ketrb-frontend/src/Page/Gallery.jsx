@@ -7,6 +7,7 @@ import {
   FaArrowLeft,
   FaArrowRight
 } from "react-icons/fa";
+import { Alert, AlertDescription, AlertTitle } from "../Component/alert";
 
 const Gallery = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);

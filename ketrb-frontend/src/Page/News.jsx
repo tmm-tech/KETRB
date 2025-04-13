@@ -4,6 +4,7 @@ import "./news.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
+import { Alert, AlertDescription, AlertTitle } from "../Component/alert";
 
 const News = () => {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,16 @@ const News = () => {
   return (
     <>
       <TopBar />
+      {alertMessage && (
+        <div className="fixed top-0 left-0 w-full z-50">
+          <Alert
+            className={`max-w-md mx-auto mt-4 ${alertType === "error" ? "bg-red-100 border-red-500" : "bg-green-100 border-green-500"}`}
+          >
+            <AlertTitle>{alertType === "error" ? "Error" : "Success"}</AlertTitle>
+            <AlertDescription>{alertMessage}</AlertDescription>
+          </Alert>
+        </div>
+      )}
       <div style={{ paddingTop: '30px' }} className="news-container">
         <h2 className="news-title">Latest News</h2>
         <div className="news-list">
