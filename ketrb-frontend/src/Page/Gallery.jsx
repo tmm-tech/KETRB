@@ -3,10 +3,7 @@ import "./gallery.css";
 import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
-import {
-  FaArrowLeft,
-  FaArrowRight
-} from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Alert, AlertDescription, AlertTitle } from "../Component/alert";
 
 const Gallery = () => {
@@ -15,26 +12,30 @@ const Gallery = () => {
   const [loading, setLoading] = useState(true);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertType, setAlertType] = useState("success");
+
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch('https://ketrb-backend.onrender.com/images/images', {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const response = await fetch(
+          "https://ketrb-backend.onrender.com/images/images",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
         const result = await response.json();
 
         if (response.ok) {
-          setImages(result.images); // Assuming result.images is an array of URLs
+          setImages(result.images); // Array of objects with {id, url, title, ...}
         } else {
           setAlertType("error");
           setAlertMessage("Failed to fetch images.");
         }
       } catch (error) {
+        console.error("Error fetching images:", error);
         setAlertType("error");
-        console.log('Error fetching images:', error);
         setAlertMessage("An error occurred while fetching images.");
       } finally {
         setLoading(false);
@@ -44,10 +45,7 @@ const Gallery = () => {
     fetchImages();
   }, []);
 
-
-  if (loading) {
-    return <Loading />;
-  }
+  if (loading) return <Loading />;
 
   const openLightbox = (index) => {
     setSelectedImageIndex(index);
@@ -75,25 +73,32 @@ const Gallery = () => {
       {alertMessage && (
         <div className="fixed top-0 left-0 w-full z-50">
           <Alert
-            className={`max-w-md mx-auto mt-4 ${alertType === "error" ? "bg-red-100 border-red-500" : "bg-green-100 border-green-500"}`}
+            className={`max-w-md mx-auto mt-4 ${
+              alertType === "error"
+                ? "bg-red-100 border-red-500"
+                : "bg-green-100 border-green-500"
+            }`}
           >
-            <AlertTitle>{alertType === "error" ? "Error" : "Success"}</AlertTitle>
+            <AlertTitle>
+              {alertType === "error" ? "Error" : "Success"}
+            </AlertTitle>
             <AlertDescription>{alertMessage}</AlertDescription>
           </Alert>
         </div>
       )}
-      <div style={{ paddingTop: '30px' }} className="gallery">
+
+      <div style={{ paddingTop: "30px" }} className="gallery">
         <h1 className="gallery-title">Gallery</h1>
         <div className="gallery-grid">
-          {images.map((src, index) => (
+          {images.map((image, index) => (
             <div
-              key={index}
+              key={image.id}
               className="gallery-item"
               onClick={() => openLightbox(index)}
             >
               <img
-                src={src}
-                alt={`Gallery ${index + 1}`}
+                src={image.url}
+                alt={image.title || `Image ${index + 1}`}
                 className="gallery-image"
               />
             </div>
@@ -103,8 +108,8 @@ const Gallery = () => {
         {selectedImageIndex !== null && (
           <div className="lightbox" onClick={closeLightbox}>
             <img
-              src={images[selectedImageIndex]}
-              alt="Selected"
+              src={images[selectedImageIndex].url}
+              alt={images[selectedImageIndex].title}
               className="lightbox-image"
             />
             <button className="lightbox-close" onClick={closeLightbox}>
@@ -137,6 +142,7 @@ const Gallery = () => {
           </div>
         )}
       </div>
+
       <Footer />
     </>
   );
