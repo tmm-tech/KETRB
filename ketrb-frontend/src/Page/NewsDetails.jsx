@@ -19,9 +19,6 @@ const NewsDetails = () => {
 
         if (!response.ok) {
           throw new Error("Failed to fetch news post")
-          setAlertType("error")
-          setAlertMessage("Failed to fetch news post.")
-
         }
 
         const data = await response.json()
