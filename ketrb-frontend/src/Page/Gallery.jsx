@@ -18,10 +18,15 @@ const Gallery = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch('https://ketrb-backend.onrender.com/images/images');
+        const response = await fetch('https://ketrb-backend.onrender.com/images/images', {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         const result = await response.json();
 
-        if (response.ok && result.images) {
+        if (response.ok) {
           setImages(result.images); // Assuming result.images is an array of URLs
         } else {
           setAlertType("error");
