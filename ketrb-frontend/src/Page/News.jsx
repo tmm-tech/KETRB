@@ -5,19 +5,31 @@ import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 
-const News = ({ articles }) => {
+const News = () => {
   const [loading, setLoading] = useState(true);
-
+  const [news, setNews] = useState([]);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertType, setAlertType] = useState("success");
   useEffect(() => {
-
-    const loadData = async () => {
-
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setLoading(false);
-    };
-
-    loadData();
+    fetchNews();
   }, []);
+
+  const fetchNews = async () => {
+    try {
+      const response = await fetch("https://ketrb-backend.onrender.com/news/news/");
+      if (!response.ok) {
+        throw new Error("Failed to fetch news posts");
+      }
+      const data = await response.json();
+      setNews(data);
+    } catch (error) { 
+      setAlertType("error");
+      console.error("Error fetching news:", error);
+      setAlertMessage("Failed to load news. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   if (loading) {
     return <Loading />;
@@ -30,7 +42,7 @@ const News = ({ articles }) => {
     return description;
   };
 
-  const sortedArticles = articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+  const sortedArticles = news.sort((a, b) => new Date(b.published_date) - new Date(a.published_date));
 
   return (
     <>
@@ -40,12 +52,12 @@ const News = ({ articles }) => {
         <div className="news-list">
           {sortedArticles.map((article, index) => (
             <div key={index} className="news-item">
-              <img src={article.image} alt={article.title} className="news-image" />
+              <img src={article.imageUrl || "https://via.placeholder.com/150"} alt={article.title} className="news-image" />
               <div className="news-content">
                 <h3 className="news-item-title">{article.title}</h3>
-                <p className="news-date">Published on: {new Date(article.date).toLocaleDateString()}</p>
-                <p className="news-description"> {truncateDescription(article.description, 100)}</p>
-                <Link to={`/news&events/${index}`} className="news-link">Read more</Link>
+                <p className="news-date">Published on: {new Date(article.published_date).toLocaleDateString()}</p>
+                <p className="news-description"> {truncateDescription(article.content, 100)}</p>
+                <Link to={`/news&events/${article.id}`} className="news-link">Read more</Link>
               </div>
             </div>
           ))}

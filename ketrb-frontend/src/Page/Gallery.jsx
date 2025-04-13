@@ -7,25 +7,37 @@ import {
   FaArrowLeft,
   FaArrowRight
 } from "react-icons/fa";
-// Dynamically import all images from the Gallery folder
-const importAll = (requireContext) => requireContext.keys().map(requireContext);
-
-const images = importAll(
-  require.context("../Asset/Gallery", false, /\.(png|jpe?g|svg|JPG)$/)
-);
 
 const Gallery = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertType, setAlertType] = useState("success");
   useEffect(() => {
-    const loadData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setLoading(false);
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('https://ketrb-backend.onrender.com/images/images');
+        const result = await response.json();
+
+        if (response.ok && result.images) {
+          setImages(result.images); // Assuming result.images is an array of URLs
+        } else {
+          setAlertType("error");
+          setAlertMessage("Failed to fetch images.");
+        }
+      } catch (error) {
+        setAlertType("error");
+        console.log('Error fetching images:', error);
+        setAlertMessage("An error occurred while fetching images.");
+      } finally {
+        setLoading(false);
+      }
     };
 
-    loadData();
+    fetchImages();
   }, []);
+
 
   if (loading) {
     return <Loading />;
@@ -54,7 +66,17 @@ const Gallery = () => {
   return (
     <>
       <TopBar />
-      <div style={{ paddingTop: '30px' }}  className="gallery">
+      {alertMessage && (
+        <div className="fixed top-0 left-0 w-full z-50">
+          <Alert
+            className={`max-w-md mx-auto mt-4 ${alertType === "error" ? "bg-red-100 border-red-500" : "bg-green-100 border-green-500"}`}
+          >
+            <AlertTitle>{alertType === "error" ? "Error" : "Success"}</AlertTitle>
+            <AlertDescription>{alertMessage}</AlertDescription>
+          </Alert>
+        </div>
+      )}
+      <div style={{ paddingTop: '30px' }} className="gallery">
         <h1 className="gallery-title">Gallery</h1>
         <div className="gallery-grid">
           {images.map((src, index) => (
@@ -91,7 +113,7 @@ const Gallery = () => {
                   showPreviousImage();
                 }}
               >
-                <FaArrowLeft/>
+                <FaArrowLeft />
               </button>
             )}
 
@@ -103,7 +125,7 @@ const Gallery = () => {
                   showNextImage();
                 }}
               >
-                <FaArrowRight/>
+                <FaArrowRight />
               </button>
             )}
           </div>

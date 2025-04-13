@@ -4,19 +4,35 @@ import TopBar from "../Component/Topbar";
 import Footer from "../Component/Footer";
 import Loading from "../Component/Loading";
 
-const NewsDetails = ({ articles }) => {
+const NewsDetails = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
-  const article = articles.find((_, index) => index === parseInt(id));
+  const [article, setArticle] = useState(null)
 
   useEffect(() => {
-    const loadData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setLoading(false);
-    };
+    const fetchNewsDetails = async () => {
+      try {
+        setLoading(true)
+        const response = await fetch(`https://ketrb-backend.onrender.com/news/${id}`)
 
-    loadData();
-  }, []);
+        if (!response.ok) {
+          throw new Error("Failed to fetch news post")
+        }
+
+        const data = await response.json()
+        setArticle(data)
+        setLoading(false)
+      } catch (error) {
+        console.error("Error fetching news post:", error)
+        setError("Failed to load news post. Please try again later.")
+        setLoading(false)
+      }
+    }
+
+    fetchNewsDetails()
+  }, [id])
+
+
 
   if (!article) {
     return <div>Article not found</div>;
@@ -41,13 +57,13 @@ const NewsDetails = ({ articles }) => {
                   {article.title}
                 </h1>
                 <p className="text-gray-700 md:text-lg">
-                  {article.description.length > 150
-                    ? `${article.description.substring(0, 100)}...`
-                    : article.description}
+                  {article.content.length > 150
+                    ? `${article.content.substring(0, 100)}...`
+                    : article.content}
                 </p>
               </div>
               <img
-                src={article.image}
+                src={article.imageUrl || "https://via.placeholder.com/150"}
                 alt={article.title}
                 className="w-full h-auto rounded-lg object-cover"
               />
@@ -66,12 +82,12 @@ const NewsDetails = ({ articles }) => {
                   <div className="flex items-center gap-2 text-gray-600">
                     <CalendarIcon className="h-5 w-5 text-gray-500" />
                     <p className="text-sm font-medium">
-                      {new Date(article.date).toLocaleDateString()}
+                      {new Date(article.published_date).toLocaleDateString()}
                     </p>
                   </div>
                 </div>
                 <div className="prose prose-lg max-w-none text-gray-800">
-                  <p>{article.description}</p>
+                  <p>{article.content}</p>
                 </div>
               </div>
             </div>
