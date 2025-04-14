@@ -57,7 +57,7 @@ const TopBar = () => {
         { id: "faq", label: "FAQ", path: "/faq" },
       ],
     },
-    { id: "careers", label: "Careers", path: "/careers" },
+    //{ id: "careers", label: "Careers", path: "/careers" },
     
   ]
   const toggleDropdown = (id, e) => {
