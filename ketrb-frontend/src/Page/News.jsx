@@ -59,7 +59,7 @@ const News = () => {
         </div>
       )}
       <div style={{ paddingTop: '30px' }} className="news-container">
-        <h2 className="news-title">Latest News</h2>
+        <h2 className="news-title">News</h2>
         <div className="news-list">
           {sortedArticles.map((article, index) => (
             <div key={index} className="news-item">
