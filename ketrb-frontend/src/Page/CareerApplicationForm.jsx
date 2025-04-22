@@ -29,6 +29,7 @@ import { Separator } from "../Component/separator";
 import Footer from "../Component/Footer";
 import TopBar from "../Component/Topbar";
 import Loading from "../Component/Loading";
+import { Alert, AlertDescription, AlertTitle } from "../Component/alert";
 
 const CareerApplicationForm = () => {
   const { id } = useParams();
@@ -38,6 +39,8 @@ const CareerApplicationForm = () => {
   const [jobDetails, setJobDetails] = useState(null);
   const [formStatus, setFormStatus] = useState({ type: "", message: "" });
   const [formStep, setFormStep] = useState(1);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertType, setAlertType] = useState("success");
   const totalSteps = 4
 
   // Form data state
@@ -265,7 +268,7 @@ const CareerApplicationForm = () => {
       if (response.ok) {
         setAlertType("success")
         setAlertMessage("Employee added successfully.")
-       
+
         // window.location.href = '/employees';
         navigate(`/careersuccess/${id}`)
       } else {
@@ -817,7 +820,16 @@ const CareerApplicationForm = () => {
   return (
     <>
       <TopBar />
-
+      {alertMessage && (
+        <div className="fixed top-0 left-0 w-full z-50">
+          <Alert
+            className={`max-w-md mx-auto mt-4 ${alertType === "error" ? "bg-red-100 border-red-500" : "bg-green-100 border-green-500"}`}
+          >
+            <AlertTitle>{alertType === "error" ? "Error" : "Success"}</AlertTitle>
+            <AlertDescription>{alertMessage}</AlertDescription>
+          </Alert>
+        </div>
+      )}
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#5b92e5] to-[#3a7bd5] text-white py-12">
         <div className="container px-4 md:px-6 mx-auto">
