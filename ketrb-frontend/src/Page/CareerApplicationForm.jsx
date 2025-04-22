@@ -261,6 +261,7 @@ const CareerApplicationForm = () => {
       formDataToSend.append("consent_to_process", formData.consent_to_contact);
       formDataToSend.append("consent_to_contact", formData.consent_to_contact);
       formDataToSend.append("created_at", new Date().toISOString());
+      formDataToSend.append("careerid", id);
       const response = await fetch("https://ketrb-backend.onrender.com/employees/add", {
         method: "POST",
         body: formDataToSend,
@@ -444,7 +445,7 @@ const CareerApplicationForm = () => {
                           Browse Files
                         </span>
                         <input
-                          id="resume-upload"
+                          id="resume"
                           name="resume"
                           type="file"
                           accept=".pdf,.doc,.docx"
