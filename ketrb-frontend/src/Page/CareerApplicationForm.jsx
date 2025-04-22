@@ -440,7 +440,7 @@ const CareerApplicationForm = () => {
                     <div className="flex flex-col items-center">
                       <Upload className="h-12 w-12 text-gray-400 mb-2" />
                       <p className="text-gray-500 mb-2">Drag and drop your resume here, or</p>
-                      <label htmlFor="resume-upload" className="cursor-pointer">
+                      <label htmlFor="resume" className="cursor-pointer">
                         <span className="bg-[#5b92e5] hover:bg-[#4a7fcf] text-white font-medium py-2 px-4 rounded-md inline-block">
                           Browse Files
                         </span>
