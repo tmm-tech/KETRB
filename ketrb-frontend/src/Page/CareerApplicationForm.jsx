@@ -268,19 +268,19 @@ const CareerApplicationForm = () => {
       console.log("Form data being sent:", formData);
       if (response.ok) {
         setAlertType("success")
-        setAlertMessage("Employee added successfully.")
+        setAlertMessage("Job Applied successfully.")
 
         // window.location.href = '/employees';
         navigate(`/careersuccess/${id}`)
       } else {
         const errorData = await response.json()
         setAlertType("error")
-        setAlertMessage(errorData.message || "Failed to add employee.")
+        setAlertMessage(errorData.message || "Failed to send Job application.")
       }
     } catch (error) {
-      console.error("Error adding employee:", error)
+      console.error("Error applying job:", error)
       setAlertType("error")
-      setAlertMessage("An error occurred while adding the employee.")
+      setAlertMessage("An error occurred while applying for a job.")
     } finally {
       setLoading(false);
       setSubmitting(false);
