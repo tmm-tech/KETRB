@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState, useEffect} from "react";
+import { Link, useParams} from "react-router-dom";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowLeft, FileText, Download } from "lucide-react";
 import { Button } from "../Component/button";
