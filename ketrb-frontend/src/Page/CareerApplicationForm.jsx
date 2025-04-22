@@ -262,7 +262,7 @@ const CareerApplicationForm = () => {
       formDataToSend.append("consent_to_contact", formData.consent_to_contact);
       formDataToSend.append("created_at", new Date().toISOString());
       formDataToSend.append("careerid", id);
-      const response = await fetch("https://ketrb-backend.onrender.com/employees/add", {
+      const response = await fetch("https://ketrb-backend.onrender.com/careers/apply", {
         method: "POST",
         body: formDataToSend,
       });
