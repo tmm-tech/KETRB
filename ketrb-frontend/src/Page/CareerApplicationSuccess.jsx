@@ -1,16 +1,18 @@
 import React from 'react';
-import { useState, useEffect} from "react";
-import { Link, useParams} from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowLeft, FileText, Download } from "lucide-react";
 import { Button } from "../Component/button";
 import Footer from "../Component/Footer";
 import TopBar from "../Component/Topbar";
+import Loading from "../Component/Loading";
 
 const CareerApplicationSuccess = () => {
   const { id } = useParams();
   const [jobDetails, setJobDetails] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [formStatus, setFormStatus] = useState({ type: "", message: "" });
   useEffect(() => {
     const fetchJobDetails = async () => {
       try {
@@ -46,7 +48,22 @@ const CareerApplicationSuccess = () => {
   return (
     <>
       <TopBar />
-
+      {/* Form Status Alert */}
+      {formStatus.message && (
+        <div
+          className={`mb-6 p-4 rounded-lg flex items-start space-x-3 ${formStatus.type === "error" ? "bg-red-50 text-red-700" : "bg-green-50 text-green-700"
+            }`}
+        >
+          {formStatus.type === "error" ? (
+            <AlertCircle className="h-5 w-5 flex-shrink-0" />
+          ) : (
+            <CheckCircle className="h-5 w-5 flex-shrink-0" />
+          )}
+          <div>
+            <p>{formStatus.message}</p>
+          </div>
+        </div>
+      )}
       {/* Success Section */}
       <section className="bg-gradient-to-r from-[#5b92e5] to-[#3a7bd5] text-white py-12">
         <div className="container px-4 md:px-6 mx-auto">
@@ -59,7 +76,7 @@ const CareerApplicationSuccess = () => {
             </h1>
             <p className="text-xl mb-2">Thank you for applying to KETRB</p>
 
-            {appliedJobTitle && (
+            {jobDetails.title && (
               <p className="text-lg font-medium">
                 You applied for the role of <span className="font-semibold">{jobDetails.title}</span>.
               </p>
