@@ -90,20 +90,16 @@ const CareerApplicationForm = () => {
   useEffect(() => {
     const fetchJobDetails = async () => {
       try {
-        // In a real application, you would fetch the job details from your API
-        // For now, we'll simulate a delay and use mock data
-        await new Promise((resolve) => setTimeout(resolve, 1000))
+        setLoading(true)
+        const response = await fetch(`https://ketrb-backend.onrender.com/careers/${id}`)
 
-        // Mock job data - replace with actual API call
-        setJobDetails({
-          id: id,
-          title: "Senior Engineering Technology Officer",
-          department: "Engineering Registration",
-          location: "Nairobi",
-          type: "Full-time",
-          posted: "2 weeks ago",
-          deadline: "March 31, 2025",
-        })
+        if (!response.ok) {
+          throw new Error("Failed to fetch career details")
+        }
+
+        const data = await response.json()
+        setJobDetails(data)
+
 
         setLoading(false)
       } catch (error) {
@@ -227,24 +223,63 @@ const CareerApplicationForm = () => {
       window.scrollTo(0, 0)
       return
     }
-
-    setSubmitting(true)
-
+    setLoading(true);
+    setSubmitting(true);
     try {
-      // In a real application, you would submit the form data to your API
-      // For now, we'll simulate a delay and success
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-
-      // Redirect to success page
-      navigate(`/careersuccess`)
+      const formDataToSend = new FormData();
+      formDataToSend.append("first_name", formData.first_name);
+      formDataToSend.append("last_name", formData.last_name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("phone", formData.phone);
+      formDataToSend.append("address", formData.address);
+      formDataToSend.append("city", formData.city);
+      formDataToSend.append("state", formData.state);
+      formDataToSend.append("zip_code", formData.zip_code);
+      formDataToSend.append("country", formData.country);
+      formDataToSend.append("resume", formData.resume);
+      formDataToSend.append("cover_letter", formData.cover_letter);
+      formDataToSend.append("linkedin_url", formData.linkedin_url);
+      formDataToSend.append("portfolio_url", formData.portfolio_url);
+      formDataToSend.append("current_employer", formData.current_employer);
+      formDataToSend.append("current_job_title", formData.current_job_title);
+      formDataToSend.append("years_of_experience", formData.years_of_experience);
+      formDataToSend.append("highest_education", formData.highest_education);
+      formDataToSend.append("field_of_study", formData.field_of_study);
+      formDataToSend.append("school_name", formData.school_name);
+      formDataToSend.append("graduation_year", formData.graduation_year);
+      formDataToSend.append("referral_source", formData.referral_source);
+      formDataToSend.append("other_referral_source", formData.other_referral_source);
+      formDataToSend.append("willing_to_relocate", formData.willing_to_relocate);
+      formDataToSend.append("available_start_date", formData.available_start_date);
+      formDataToSend.append("salary_expectation", formData.salary_expectation);
+      formDataToSend.append("authorized_to_work", formData.authorized_to_work);
+      formDataToSend.append("require_sponsorship", formData.require_sponsorship);
+      formDataToSend.append("consent_to_process", formData.consent_to_contact);
+      formDataToSend.append("consent_to_contact", formData.consent_to_contact);
+      formDataToSend.append("created_at", new Date().toISOString());
+      const response = await fetch("https://ketrb-backend.onrender.com/employees/add", {
+        method: "POST",
+        body: formDataToSend,
+      });
+      console.log("Form data being sent:", formData);
+      if (response.ok) {
+        setAlertType("success")
+        setAlertMessage("Employee added successfully.")
+       
+        // window.location.href = '/employees';
+        navigate(`/careersuccess/${id}`)
+      } else {
+        const errorData = await response.json()
+        setAlertType("error")
+        setAlertMessage(errorData.message || "Failed to add employee.")
+      }
     } catch (error) {
-      console.error("Error submitting application:", error)
-      setFormStatus({
-        type: "error",
-        message: "An error occurred while submitting your application. Please try again later.",
-      })
-      setSubmitting(false)
-      window.scrollTo(0, 0)
+      console.error("Error adding employee:", error)
+      setAlertType("error")
+      setAlertMessage("An error occurred while adding the employee.")
+    } finally {
+      setLoading(false);
+      setSubmitting(false);
     }
   }
 
@@ -346,28 +381,28 @@ const CareerApplicationForm = () => {
                 <Label htmlFor="city" className="text-gray-700">
                   City
                 </Label>
-                <Input id="city" name="city" value={formData.city} onChange={handleChange} className="px-3"/>
+                <Input id="city" name="city" value={formData.city} onChange={handleChange} className="px-3" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="state" className="text-gray-700">
                   State/Province
                 </Label>
-                <Input id="state" name="state" value={formData.state} onChange={handleChange} className="px-3"/>
+                <Input id="state" name="state" value={formData.state} onChange={handleChange} className="px-3" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="zip_code" className="text-gray-700">
                   ZIP/Postal Code
                 </Label>
-                <Input id="zip_code" name="zip_code" value={formData.zip_code} onChange={handleChange} className="px-3"/>
+                <Input id="zip_code" name="zip_code" value={formData.zip_code} onChange={handleChange} className="px-3" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="country" className="text-gray-700">
                   Country
                 </Label>
-                <Input id="country" name="country" value={formData.country} onChange={handleChange} className="px-3"/>
+                <Input id="country" name="country" value={formData.country} onChange={handleChange} className="px-3" />
               </div>
             </div>
           </div>
@@ -554,7 +589,7 @@ const CareerApplicationForm = () => {
                   <Label htmlFor="school_name" className="text-gray-700">
                     School/University Name
                   </Label>
-                  <Input id="school_name" name="school_name" value={formData.school_name} onChange={handleChange} className="px-3"/>
+                  <Input id="school_name" name="school_name" value={formData.school_name} onChange={handleChange} className="px-3" />
                 </div>
               </div>
 
@@ -834,10 +869,10 @@ const CareerApplicationForm = () => {
                   <div key={index} className="flex flex-col items-center">
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center ${formStep > index + 1
-                          ? "bg-[#f39c12] text-white"
-                          : formStep === index + 1
-                            ? "bg-[#5b92e5] text-white"
-                            : "bg-gray-200 text-gray-500"
+                        ? "bg-[#f39c12] text-white"
+                        : formStep === index + 1
+                          ? "bg-[#5b92e5] text-white"
+                          : "bg-gray-200 text-gray-500"
                         }`}
                     >
                       {formStep > index + 1 ? <CheckCircle className="h-5 w-5" /> : index + 1}

@@ -29,7 +29,7 @@ function App() {
         <Route path="/careers" element={<CareersPage/>} />
         <Route path="/careerapplyform/:id" element={<CareerApplicationForm/>} />
         <Route path="/careerview/:id" element={<CareerViewPage/>} />
-        <Route path="/careersuccess" element={<CareerApplicationSuccess/>} />
+        <Route path="/careersuccess/:id" element={<CareerApplicationSuccess/>} />
         <Route path="/news&events" element={<News/>} />
         <Route path="/news&events/:id" element={<NewsDetails/>} />
         <Route path="/programs" element={<Programs/>} />

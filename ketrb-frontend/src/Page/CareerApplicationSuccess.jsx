@@ -1,11 +1,45 @@
 import React from 'react';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CheckCircle, ArrowLeft, FileText, Download } from "lucide-react";
 import { Button } from "../Component/button";
 import Footer from "../Component/Footer";
 import TopBar from "../Component/Topbar";
 
 const CareerApplicationSuccess = () => {
+  const { id } = useParams();
+  const [jobDetails, setJobDetails] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const fetchJobDetails = async () => {
+      try {
+        setLoading(true)
+        const response = await fetch(`https://ketrb-backend.onrender.com/careers/${id}`)
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch career details")
+        }
+
+        const data = await response.json()
+        setJobDetails(data)
+
+
+        setLoading(false)
+      } catch (error) {
+        console.error("Error fetching job details:", error)
+        setFormStatus({
+          type: "error",
+          message: "Failed to load job details. Please try again later.",
+        })
+        setLoading(false)
+      }
+    }
+
+    fetchJobDetails()
+  }, [id])
+
+  if (loading) {
+    return <Loading />
+  }
 
   return (
     <>
@@ -18,11 +52,20 @@ const CareerApplicationSuccess = () => {
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white">
               <CheckCircle className="h-12 w-12 text-[#5b92e5]" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Application Submitted Successfully!</h1>
-            <p className="text-xl">Thank you for applying to KETRB</p>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              Application Submitted Successfully!
+            </h1>
+            <p className="text-xl mb-2">Thank you for applying to KETRB</p>
+
+            {appliedJobTitle && (
+              <p className="text-lg font-medium">
+                You applied for the role of <span className="font-semibold">{jobDetails.title}</span>.
+              </p>
+            )}
           </div>
         </div>
       </section>
+
 
       {/* Details Section */}
       <section className="py-12 bg-gray-50">
