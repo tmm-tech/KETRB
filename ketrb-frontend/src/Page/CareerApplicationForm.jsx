@@ -227,7 +227,6 @@ const CareerApplicationForm = () => {
       window.scrollTo(0, 0)
       return
     }
-    setLoading(true);
     setSubmitting(true);
     try {
       const formDataToSend = new FormData();
@@ -283,7 +282,6 @@ const CareerApplicationForm = () => {
       setAlertType("error")
       setAlertMessage("An error occurred while applying for a job.")
     } finally {
-      setLoading(false);
       setSubmitting(false);
     }
   }
