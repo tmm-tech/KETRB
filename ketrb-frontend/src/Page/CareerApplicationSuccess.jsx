@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { CheckCircle, ArrowLeft, FileText, Download } from "lucide-react";
+import { AlertCircle, CheckCircle, ArrowLeft, FileText, Download } from "lucide-react";
 import { Button } from "../Component/button";
 import Footer from "../Component/Footer";
 import TopBar from "../Component/Topbar";
 import Loading from "../Component/Loading";
+
 
 const CareerApplicationSuccess = () => {
   const { id } = useParams();
